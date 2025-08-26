@@ -1,11 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
+
 <body>
-  
+  <header class="d-flex py-14 px-3 justify-content-between bg-callout">
+    <div></div>
+    <img src="../assets/images/gacha-page/Logo.png" alt="meelo logo">
+    <img src="../assets/images/gacha-page/Filter.png" alt="icon filter">
+  </header>
+
+  <main class="main bg-callout px-3 py-205 position-relative">
+    <img class="bg-card   position-absolute z-2" src="../assets/images/gacha-page/bg-card-1.png" alt="bg-card-2 ">
+    <img class="bg-card  position-absolute z-1" src="../assets/images/gacha-page/bg-card-2.png" alt="bg-card-1 ">
+
+    <div class="me-card position-absolute d-flex flex-column justify-content-end p-3 z-3"
+      style="background-image: url(../assets/images/gacha-page/nox.png)">
+      <div class="p-20 position-absolute top-0  end-0 fit"
+        style="background-image: url(../assets/images/gacha-page/fit-bg.png);">
+        <div class="text-center fit-inside  border border-white rounded-circle py-14">
+          <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
+          <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">80%</h6>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center mb-12">
+        <h3 class="mb-0 fw-bold text-white me-12">Daniel</h3>
+        <div class="badge bg-active-inverted text-accent px-2 py-1 d-flex align-items-center">
+          <img class="green-cat" src="../assets/images/gacha-page/green-cat.png" alt="green cat">
+          文青貓
+        </div>
+      </div>
+      <ul class="d-flex gap-2 list-unstyled mb-0">
+        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+          影視
+        </li>
+        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+          音樂
+        </li>
+        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+          影視
+        </li>
+        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+          攝影
+        </li>
+      </ul>
+    </div>
+    <div class="me-card position-relative d-flex flex-column justify-content-end p-3 z-3"
+      style="background-image: url(../assets/images/gacha-page/mrLee.png);">
+      <div class="p-20 position-absolute top-0  end-0 fit"
+        style="background-image: url(../assets/images/gacha-page/fit-bg.png);">
+        <div class="text-center fit-inside  border border-white rounded-circle py-14">
+          <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
+          <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">90%</h6>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center mb-12">
+        <h3 class="mb-0 fw-bold text-white me-12">阿力先生</h3>
+        <div class="badge bg-active-inverted text-accent px-2 py-1 d-flex align-items-center">
+          <img class="green-cat" src="../assets/images/gacha-page/green-cat.png" alt="green cat">
+          文青貓
+        </div>
+      </div>
+      <ul class="d-flex gap-2 list-unstyled mb-0">
+        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+          創作
+        </li>
+        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+          學習
+        </li>
+        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+          影視
+        </li>
+        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+          攝影
+        </li>
+      </ul>
+    </div>
+
+  </main>
+
+  <section class="info py-4 px-3 ">
+    <h5 class="fs-18 fw-bold text-text-primary mb-12">你們的契合度</h5>
+    <ul class="d-flex px-4 list-unstyled justify-content-between mb-4">
+      <li>
+        <img src="../assets/images/gacha-page/Avater-1.png" alt="mrLee photo">
+        <p class="text-center mb-0 text-text-secondary">阿力先生</p>
+      </li>
+      <li>
+        <div class="p-20  fit" style="background-image: url(../assets/images/gacha-page/fit-bg.png);">
+          <div class="text-center fit-inside  border border-white rounded-circle py-14">
+            <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
+            <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">90%</h6>
+          </div>
+        </div>
+      </li>
+      <li>
+        <img src="../assets/images/gacha-page/Avater-2.png" alt="Elly photo">
+        <p class="text-center mb-0 text-text-secondary">Elly</p>
+      </li>
+    </ul>
+    <h5 class="fs-18 fw-bold text-text-primary mb-12">他常出沒的地方</h5>
+
+    <h5 class="fs-18 fw-bold text-text-primary mb-12">興趣集錦</h5>
+
+  </section>
+
+  <div class="ps-3 swiper mySwiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <img src="../assets/images/gacha-page/int-3.png" alt="interest photo">
+      </div>
+      <div class="swiper-slide">
+        <img src="../assets/images/gacha-page/int-1.png" alt="interest photo">
+      </div>
+      <div class="swiper-slide">
+        <img class="swiper-slide-img" src="../assets/images/gacha-page/int-2.jpg" alt="interest photo">
+      </div>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <ul class="list-unstyled d-flex pt-2 px-2 pb-1 mb-0 justify-content-between w-100 align-items-center">
+      <li class="nav-item py-2">
+        <img class="mx-auto d-block" src="../assets/images/gacha-page/navicon-4.png" alt="icon home">
+      </li>
+      <li class="nav-item py-2">
+        <img class="mx-auto d-block" src="../assets/images/gacha-page/navicon-1.png" alt="icon home">
+      </li>
+      <li class="nav-item py-2 rounded-pill bg-callout position-relative">
+        <img class="mx-auto d-block " src="../assets/images/gacha-page/navicon-2.png" alt="icon home">
+        <img class="position-absolute red-badge" src="../assets/images/gacha-page/red-badge.png" alt="red-badge">
+      </li>
+      <li class="nav-item py-2 position-relative">
+        <img class="mx-auto d-block" src="../assets/images/gacha-page/navicon-3.png" alt="icon home">
+        <img class="position-absolute red-badge" src="../assets/images/gacha-page/red-badge.png" alt="red-badge">
+      </li>
+      <li class="nav-item py-2 ">
+        <img class="mx-auto d-block" src="../assets/images/gacha-page/User.png" alt="icon home">
+      </li>
+    </ul>
+
+  </nav>
+
+  <footer class="footer pt-20 pb-2">
+    <div class="foot bg-dark mx-auto"></div>
+
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 2.04375,
+      spaceBetween: 16,
+      // (手機板排版設定)
+    }); 
+  </script>
+  <script type="module" src="../main.js"></script>
 </body>
+
 </html>

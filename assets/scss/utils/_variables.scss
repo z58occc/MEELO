@@ -306,6 +306,13 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
+$callout:       #fdf5ed !default;
+$active-inverted:       #D4ECDF !default;
+$accent:         #569F82 !default;
+$primary-inverted-active:         #F9EBDB !default;
+$primary-default:         #DB773D !default;
+$text-primary:         #3B170F !default;
+$text-secondary:         rgb(0,0,0, 0.6) !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -317,7 +324,14 @@ $theme-colors: (
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+  "callout":    $callout,
+  "active-inverted":    $active-inverted,
+  "accent":    $accent,
+  "primary-inverted-active":    $primary-inverted-active,
+  "primary-default":    $primary-default,
+  "text-primary":    $text-primary,
+  "text-secondary":    $text-secondary
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -378,7 +392,7 @@ $enable-grid-classes:         true !default;
 $enable-container-classes:    true !default;
 $enable-cssgrid:              false !default;
 $enable-button-pointers:      true !default;
-$enable-rfs:                  true !default;
+$enable-rfs:                  false;//true !default;
 $enable-validation-icons:     true !default;
 $enable-negative-margins:     false !default;
 $enable-deprecation-messages: true !default;
@@ -415,6 +429,10 @@ $spacers: (
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
+  12:$spacer * .75,
+  14:$spacer * .875,
+  20:$spacer * 1.25,
+  205:20.5px
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -627,7 +645,7 @@ $font-weight-bolder:          bolder !default;
 $font-weight-base:            $font-weight-normal !default;
 
 $line-height-base:            1.5 !default;
-$line-height-sm:              1.25 !default;
+$line-height-sm:              1.2;//1.25 !default;
 $line-height-lg:              2 !default;
 
 $h1-font-size:                $font-size-base * 2.5 !default;
@@ -636,6 +654,9 @@ $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
+$h18-font-size:               $font-size-base * 1.125 !default;//18
+$h12-font-size:               $font-size-base * .75 !default;//12
+$h14-font-size:               $font-size-base * .875 !default;//12
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -645,7 +666,9 @@ $font-sizes: (
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size
+  6: $h6-font-size,
+  18: $h18-font-size,
+  12: $h12-font-size,
 ) !default;
 // scss-docs-end font-sizes
 
