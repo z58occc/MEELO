@@ -1,3 +1,11 @@
+.black-filter ::before {
+  content: "";
+  position: fixed;
+  inset: 0; /* 等於 top/right/bottom/left:0 */
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  pointer-events: none;
+}
 .main {
   .bg-card {
     width: calc(100% - 16.93px);
@@ -47,15 +55,14 @@
       width: 68px;
     }
   }
-  .swiper{
-    // margin-right: -16px;
-    // padding-right: -16px;
-    &-slide{
+}
+.swiper {
+  &-slide {
+    height: 160px;
+    &-img {
       height: 160px;
-      &-img{
-        height: 160px;
-        object-fit: cover;
-      }
+      object-fit: cover;
+      border-radius: 16px;
     }
   }
 }
