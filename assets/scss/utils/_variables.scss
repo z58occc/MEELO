@@ -19,6 +19,13 @@ $gray-900: #212529 !default;
 $black:    #000 !default;
 // scss-docs-end gray-color-variables
 
+// custom color by tanuki
+$bg-body: #FEFCFB;
+$bg-callout: #FDF5ED;
+$bg-avatar: #F9EBDB; 
+
+// custom color by tanuki
+
 // fusv-disable
 // scss-docs-start gray-colors-map
 $grays: (
@@ -458,7 +465,8 @@ $position-values: (
 
 $body-text-align:           null !default;
 $body-color:                $gray-900 !default;
-$body-bg:                   $white !default;
+$body-bg:                   $bg-body !default; // custom
+// $body-bg:                   $white !default;
 
 $body-secondary-color:      rgba($body-color, .75) !default;
 $body-secondary-bg:         $gray-200 !default;
@@ -539,7 +547,8 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:                12 !default;
-$grid-gutter-width:           1.5rem !default;
+$grid-gutter-width:           2rem !default; // custom
+// $grid-gutter-width:           1.5rem !default;
 $grid-row-columns:            6 !default;
 
 // Container padding

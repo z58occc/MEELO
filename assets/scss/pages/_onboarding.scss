@@ -1,0 +1,19 @@
+// base
+img {
+  max-width: 100%;
+}
+
+// icon
+.icon {
+  --icon-url: unset;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: var(--icon-url);
+  &-arrow-left {
+    --icon-url: url('/assets/images/icon/arrow-left.svg')
+  }
+  &-arrow-right {
+    --icon-url: url('/assets/images/icon/arrow-right.svg')
+  }
+}

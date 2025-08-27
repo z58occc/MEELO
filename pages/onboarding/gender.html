@@ -1,15 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="TW-zh">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meelo | onBoarding</title>
   </head>
   <body>
-    <h1 class="mb-3t">onBoarding</h1>
-    <p>你的性別是...</p>
-    <a href="interest.html">下一頁</a>
+    <main class="pt-6t">
+      <section class="container pt-6t">
+        <%- include('./layout/onboarding-progress.ejs') %>
+        <h1 class="mt-6t mb-2">Elly</h1>
+        <h2 class="mb-6t">你的性別是...</h2>
+        <div class="row g-4t">
+          <div class="col-6">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">女性</h3>
+                <img
+                  src="/assets/images/onboarding/gender-1.png"
+                  alt="性別選項-女性"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">男性</h3>
+                <img
+                  src="/assets/images/onboarding/gender-2.png"
+                  alt="性別選項-男性"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">雙性別</h3>
+                <img
+                  src="/assets/images/onboarding/gender-3.png"
+                  alt="性別選項-雙性別"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">無性別</h3>
+                <img
+                  src="/assets/images/onboarding/gender-4.png"
+                  alt="性別選項-無性別"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">不願透露</h3>
+                <img
+                  src="/assets/images/onboarding/gender-5.png"
+                  alt="性別選項-不願透露"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <%- include('./layout/onboarding-pagenation.ejs') %>
+    </main>
 
-    <script type="module" src="../main.js"></script>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>
