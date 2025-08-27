@@ -4,54 +4,75 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <title>index</title>
   </head>
   <body>
-    <%- include('./layout/header'); -%>
-
-    <h1 class="index-title">test</h1>
-
-    <div class="card" style="width: 18rem">
-      <img src="../assets/images/dog.jpg" class="card-img-top" alt="cat" />
-      <div class="card-body">
-        <h5 class="card-title">卡片元件</h5>
-        <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit, iusto odio assumenda alias id
-          nobis earum!
-        </p>
-      </div>
+   <div class="bg" style="padding-top: 50px;">
+    <div class="px-3 mb-5">
+      <div class="d-flex justify-content-between align-items-center  py-12">
+      <div class="d-flex align-items-center gap-2">
+      <div><a href="#" rel="noopener noreferrer"><img src="/assets/images/index-img/User.png" alt="Avatar / User"></a></div>
+      <div class="fw-bold fs-18 text-white ln-sm">嗨，Elly</div>
     </div>
-
-    <!-- Modal 按鈕 -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      打開 modal
-    </button>
-
-    <!-- Modal 元件 -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">內容</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            <button type="button" class="btn btn-primary">確定</button>
-          </div>
+    <div>
+      <a href="#"><img src="/assets/images/index-img/Notification.png" alt="Icon / Notification"></a>
+    </div>
+    </div>
+    <div class="fs-4 fw-bold ln-sm text-white my-4">
+      聊有趣的話題，遇見共鳴的人你想從哪裡開始？
+    </div>
+    <div class="d-flex align-items-center gap-12">
+      <a href="gacha-page.html" class="text-decoration-none position-relative d-inline-block w-100" >
+       <div class="px-12 py-4 bg-white rounded-4 position-relative" style=" height: 81px;">
+    <div>
+      <div class="fs-14 ln-base">任務 1</div>
+      <div class="fs-6 fw-bold ln-base">抽張咪卡</div>
+    </div>
+    
+    <img src="/assets/images/index-img/Image.png" alt="Home / Hero-action" class="position-absolute  end-0" style="top: -10%;">
+       </div>
+      </a>
+       <a href="#" class="text-decoration-none position-relative d-inline-block w-100" >
+       <div class="px-12 py-4 bg-white rounded-4 position-relative" style=" height: 81px;">
+    <div>
+      <div class="fs-14 ln-base">任務 2</div>
+      <div class="fs-6 fw-bold ln-base">探索新話題</div>
+    </div>
+    
+    <img src="/assets/images/index-img/Image-task-explore.png" alt="Home / Hero-action" class="position-absolute  end-0" style="top: -10%;">
+       </div>
+      </a>
+    </div>
+    </div>
+    <div class="bg-white pt-4 px-3" style="border-top-left-radius: 24px; border-top-right-radius: 24px;" >
+      <div class="d-flex justify-content-between mb-3">
+        <a href="#" class="d-inline-block text-decoration-none">
+          <div class="d-flex align-items-center gap-2">
+          <div class="fw-bold fs-5 ln-sm">旅行</div>
+          <div><img src="/assets/images/index-img/chevron-down.png" alt="Vector"></div>
+        </div>
+        </a>
+        
+        <div>
+          <nav aria-label="breadcrumb">
+             <ol class="breadcrumb">
+               <li class="breadcrumb-item"><a href="#">推薦</a></li>
+               <li class="breadcrumb-item"><a href="#">熱門</a></li>
+               <li class="breadcrumb-item active" aria-current="page">最新</li>
+             </ol>
+          </nav>
         </div>
       </div>
     </div>
+   </div>
 
-    <%- include('./layout/footer'); -%>
 
+    <%- include('./layout/footer.ejs',{active:"home"}) %>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script type="module" src="../main.js"></script>
   </body>
 </html>
