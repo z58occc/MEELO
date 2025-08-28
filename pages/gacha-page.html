@@ -8,14 +8,50 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
-<body>
+<body class="position-relative">
+  <div id="filter" class="black-filter">
+  </div>
+  <div id="hint" onclick="closeHint()" class="hint flex-column justify-content-center align-items-center">
+    <img id="close-btn" onclick="closeHint()" class="close-btn position-absolute"
+      src="../assets/images/gacha-page/close.png" alt="close-btn">
+    <img class="mb-4" src="../assets/images/gacha-page/up-arrow.png" alt="up-arrow">
+    <p class="text-white mb-28 fw-medium">上滑查看更多資訊</p>
+    <div class="d-flex gap-36">
+      <div class="d-flex flex-column align-items-center">
+        <img src="../assets/images/gacha-page/left-arrow.png" alt="left-arrow">
+        <p class="text-white mb-0 fw-medium">左滑下一位</p>
+      </div>
+      <div class="d-flex flex-column align-items-center">
+        <img src="../assets/images/gacha-page/right-arrow.png" alt="right-arrow">
+        <p class="text-white mb-0 fw-medium">右滑喜歡</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="status-bar py-3 px-4 bg-callout d-flex justify-content-between">
+    <span class="fw-medium fs-17">9:41</span>
+    <ul class="d-flex list-unstyled gap-7">
+      <li>
+        <img src="../assets/images/gacha-page/signal.png" alt="icon signal">
+      </li>
+      <li>
+        <img src="../assets/images/gacha-page/wifi.png" alt="icon wifi">
+      </li>
+      <li>
+        <img src="../assets/images/gacha-page/power.png" alt="icon power">
+      </li>
+    </ul>
+
+  </div>
+
+
   <header class="d-flex py-14 px-3 justify-content-between bg-callout">
     <div></div>
     <img src="../assets/images/gacha-page/Logo.png" alt="meelo logo">
     <img src="../assets/images/gacha-page/Filter.png" alt="icon filter">
   </header>
 
-  <main class="main bg-callout px-3 py-205 position-relative">
+  <main class="main bg-callout px-3 py-205 position-relative  ">
     <img class="bg-card   position-absolute z-2" src="../assets/images/gacha-page/bg-card-1.png" alt="bg-card-2 ">
     <img class="bg-card  position-absolute z-1" src="../assets/images/gacha-page/bg-card-2.png" alt="bg-card-1 ">
 
@@ -51,7 +87,7 @@
         </li>
       </ul>
     </div>
-    <div class="me-card position-relative d-flex flex-column justify-content-end p-3 z-3"
+    <div class="me-card position-relative d-flex flex-column justify-content-end p-3 z-3" id="me-card" id="me-card"
       style="background-image: url(../assets/images/gacha-page/mrLee.png);">
       <div class="p-20 position-absolute top-0  end-0 fit"
         style="background-image: url(../assets/images/gacha-page/fit-bg.png);">
@@ -86,46 +122,132 @@
 
   </main>
 
-  <section class="info py-4 px-3 ">
-    <h5 class="fs-18 fw-bold text-text-primary mb-12">你們的契合度</h5>
-    <ul class="d-flex px-4 list-unstyled justify-content-between mb-4">
-      <li>
-        <img src="../assets/images/gacha-page/Avater-1.png" alt="mrLee photo">
-        <p class="text-center mb-0 text-text-secondary">阿力先生</p>
-      </li>
-      <li>
-        <div class="p-20  fit" style="background-image: url(../assets/images/gacha-page/fit-bg.png);">
-          <div class="text-center fit-inside  border border-white rounded-circle py-14">
-            <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
-            <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">90%</h6>
-          </div>
-        </div>
-      </li>
-      <li>
-        <img src="../assets/images/gacha-page/Avater-2.png" alt="Elly photo">
-        <p class="text-center mb-0 text-text-secondary">Elly</p>
-      </li>
-    </ul>
-    <h5 class="fs-18 fw-bold text-text-primary mb-12">他常出沒的地方</h5>
+
+  <div id="info">
+  
+  <div id="info">
+    <section class="info py-4 px-3 ">
+        <h5 class="fs-18 fw-bold text-text-primary mb-12">你們的契合度</h5>
+        <ul class="d-flex px-4 list-unstyled justify-content-between mb-4">
+          <li>
+            <img src="../assets/images/gacha-page/Avater-1.png" alt="mrLee photo">
+            <p class="text-center mb-0 text-text-secondary">阿力先生</p>
+          </li>
+          <li>
+            <div class="p-20  fit" style="background-image: url(../assets/images/gacha-page/fit-bg.png);">
+              <div class="text-center fit-inside  border border-white rounded-circle py-14">
+                <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
+                <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">90%</h6>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/gacha-page/Avater-2.png" alt="Elly photo">
+            <p class="text-center mb-0 text-text-secondary">Elly</p>
+          </li>
+        </ul>
+        <h5 class="fs-18 fw-bold text-text-primary mb-12">他常出沒的地方</h5>
 
     <h5 class="fs-18 fw-bold text-text-primary mb-12">興趣集錦</h5>
 
   </section>
 
-  <div class="ps-3 swiper mySwiper">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-      <!-- Slides -->
-      <div class="swiper-slide">
-        <img src="../assets/images/gacha-page/int-3.png" alt="interest photo">
+      <div class="ps-3 swiper mySwiper mb-4 mb-4">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="../assets/images/gacha-page/int-3.png" alt="interest photo">
+          </div>
+          <div class="swiper-slide">
+            <img src="../assets/images/gacha-page/int-1.png" alt="interest photo">
+          </div>
+          <div class="swiper-slide">
+            <img class="swiper-slide-img" src="../assets/images/gacha-page/int-2.jpg" alt="interest photo">
+          </div>
+        </div>
       </div>
-      <div class="swiper-slide">
-        <img src="../assets/images/gacha-page/int-1.png" alt="interest photo">
-      </div>
-      <div class="swiper-slide">
-        <img class="swiper-slide-img" src="../assets/images/gacha-page/int-2.jpg" alt="interest photo">
-      </div>
-    </div>
+
+    <section class="px-3">
+      <h5 class="fs-18 fw-bold text-text-primary mb-12">關於我</h5>
+      <ul class="d-flex gap-2 list-unstyled mb-12">
+        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+          26歲
+        </li>
+        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+          男性
+        </li>
+        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+          處女座
+        </li>
+      </ul>
+      <p class="text-text-secondary mb-4">
+        嗨，我是阿力先生。
+        <br>
+        <br>
+        平常在出版社當編輯社畜，下班後會一頭栽進手帳世界，寫字、貼貼紙、跟我的貓（牠叫豬豬）一起靜靜過完一天。
+        <br>
+        <br>
+        最喜歡紙膠帶撕開的聲音，還有把情緒用顏色分類的瞬間。
+        <br>
+        <br>
+        我相信每一張便條紙都值得被好好安放，就像每段關係，都該被認真對待。
+        <br>
+        <br>
+        如果你也是細節控、熱愛慢慢了解彼此的過程，歡迎一起來交換一頁日常，期待認識你！
+      </p>
+
+      <h5 class="fs-18 fw-bold text-text-primary mb-12">職業</h5>
+      <p class="text-text-secondary mb-4">出版社編輯</p>
+
+      <h5 class="fs-18 fw-bold text-text-primary mb-12">教育背景</h5>
+      <p class="text-text-secondary mb-4">NTU</p>
+
+      <h5 class="fs-18 fw-bold text-text-primary mb-12">居住城市</h5>
+      <p class="text-text-secondary mb-4">台北</p>
+
+    </section>
+  </div>
+
+    <section class="px-3">
+      <h5 class="fs-18 fw-bold text-text-primary mb-12">關於我</h5>
+      <ul class="d-flex gap-2 list-unstyled mb-12">
+        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+          26歲
+        </li>
+        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+          男性
+        </li>
+        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+          處女座
+        </li>
+      </ul>
+      <p class="text-text-secondary mb-4">
+        嗨，我是阿力先生。
+        <br>
+        <br>
+        平常在出版社當編輯社畜，下班後會一頭栽進手帳世界，寫字、貼貼紙、跟我的貓（牠叫豬豬）一起靜靜過完一天。
+        <br>
+        <br>
+        最喜歡紙膠帶撕開的聲音，還有把情緒用顏色分類的瞬間。
+        <br>
+        <br>
+        我相信每一張便條紙都值得被好好安放，就像每段關係，都該被認真對待。
+        <br>
+        <br>
+        如果你也是細節控、熱愛慢慢了解彼此的過程，歡迎一起來交換一頁日常，期待認識你！
+      </p>
+
+      <h5 class="fs-18 fw-bold text-text-primary mb-12">職業</h5>
+      <p class="text-text-secondary mb-4">出版社編輯</p>
+
+      <h5 class="fs-18 fw-bold text-text-primary mb-12">教育背景</h5>
+      <p class="text-text-secondary mb-4">NTU</p>
+
+      <h5 class="fs-18 fw-bold text-text-primary mb-12">居住城市</h5>
+      <p class="text-text-secondary mb-4">台北</p>
+
+    </section>
   </div>
 
   <%- include('./layout/footer.ejs',{active:"gacha"}) %>
@@ -136,11 +258,100 @@
     <script>
       const swiper = new Swiper(".mySwiper", {
         slidesPerView: 2.04375,
-        spaceBetween: 16,
+        spaceBetween: 0,
         // (手機板排版設定)
       }); 
     </script>
+    <script>
+      const closeBtn = document.getElementById('close-btn');
+      const filter = document.getElementById('filter');
+      const meCard = document.getElementById('me-card');
+      const info = document.getElementById('info');
+
+
+      info.style.display = 'none';
+      filter.style.display = 'none';
+      hint.style.display = 'none';
+
+
+      function closeHint() {
+        filter.style.display = 'none';
+        hint.style.display = 'none';
+      }
+
+      let startX, startY;
+      meCard.addEventListener('touchstart', function (e) {
+
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+      })
+      meCard.addEventListener('touchend', function (e) {
+        let endX = e.changedTouches[0].clientX;
+        let endY = e.changedTouches[0].clientY;
+
+        let diffX = endX - startX;
+        let diffY = endY - startY;
+
+        if (diffY > 0) {
+          info.style.display = "none";
+        } else {
+          info.style.display = "block";
+        }
+
+      })
+
+    </script>
     <script type="module" src="../main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2.04375,
+        spaceBetween: 0,
+        // (手機板排版設定)
+      }); 
+    </script>
+    <script>
+      const closeBtn = document.getElementById('close-btn');
+      const filter = document.getElementById('filter');
+      const meCard = document.getElementById('me-card');
+      const info = document.getElementById('info');
+
+
+      info.style.display = 'none';
+      filter.style.display = 'none';
+      hint.style.display = 'none';
+
+
+      function closeHint() {
+        filter.style.display = 'none';
+        hint.style.display = 'none';
+      }
+
+      let startX, startY;
+      meCard.addEventListener('touchstart', function (e) {
+
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+      })
+      meCard.addEventListener('touchend', function (e) {
+        let endX = e.changedTouches[0].clientX;
+        let endY = e.changedTouches[0].clientY;
+
+        let diffX = endX - startX;
+        let diffY = endY - startY;
+
+        if (diffY > 0) {
+          info.style.display = "none";
+        } else {
+          info.style.display = "block";
+        }
+
+      })
+
+    </script>
+    <script type="module" src="../main.js"></script>
+
 </body>
 
 </html>
