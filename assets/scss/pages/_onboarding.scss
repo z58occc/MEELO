@@ -1,8 +1,3 @@
-// base
-img {
-  max-width: 100%;
-}
-
 // icon
 .icon {
   --icon-url: unset;
@@ -17,3 +12,46 @@ img {
     --icon-url: url('/assets/images/icon/arrow-right.svg')
   }
 }
+
+.option-card {
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 146px;
+    height: 146px;
+    top: 33px;
+    left: 43px;
+    background-color: $bg-avatar;
+    border-radius: 50%;
+  }
+  h3 {
+    margin-bottom: 94.3px;
+  }
+  img {
+    position: absolute;
+    z-index: 1;
+    width: 99px;
+    height: 99px;
+    top: 44px;
+    left: 61px;
+  }
+}
+
+$utilities: (
+  "link-opacity": (
+    css-var: true,
+    class: link-opacity,
+    state: hover,
+    values: (
+      10: .1,
+      25: .25,
+      50: .5,
+      40: .4,
+      75: .75,
+      100: 1
+    )
+  ),
+)

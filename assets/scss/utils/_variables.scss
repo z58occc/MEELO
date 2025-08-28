@@ -338,7 +338,8 @@ $theme-colors: (
   "primary-inverted-active":    $primary-inverted-active,
   "primary-default":    $primary-default,
   "text-primary":    $text-primary,
-  "text-secondary":    $text-secondary
+  "text-secondary":    $text-secondary,
+  "black":    $black, // custom
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -1388,8 +1389,10 @@ $card-title-spacer-y:               $spacer * .5 !default;
 $card-title-color:                  null !default;
 $card-subtitle-color:               null !default;
 $card-border-width:                 var(--#{$prefix}border-width) !default;
-$card-border-color:                 var(--#{$prefix}border-color-translucent) !default;
-$card-border-radius:                var(--#{$prefix}border-radius) !default;
+$card-border-color:                 rgba($black, 0.1) !default; // custom
+// $card-border-color:                 var(--#{$prefix}border-color-translucent) !default;
+$card-border-radius:                $border-radius-xl !default; // custom
+// $card-border-radius:                var(--#{$prefix}border-radius) !default;
 $card-box-shadow:                   null !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
 $card-cap-padding-y:                $card-spacer-y * .5 !default;
@@ -1398,7 +1401,8 @@ $card-cap-bg:                       rgba(var(--#{$prefix}body-color-rgb), .03) !
 $card-cap-color:                    null !default;
 $card-height:                       null !default;
 $card-color:                        null !default;
-$card-bg:                           var(--#{$prefix}body-bg) !default;
+$card-bg:                           $white !default; // custom
+// $card-bg:                           var(--#{$prefix}body-bg) !default;
 $card-img-overlay-padding:          $spacer !default;
 $card-group-margin:                 $grid-gutter-width * .5 !default;
 // scss-docs-end card-variables
@@ -1607,13 +1611,17 @@ $alert-color-scale:             40% !default; // Deprecated in v5.2.0, to be rem
 // Progress bars
 
 // scss-docs-start progress-variables
-$progress-height:                   1rem !default;
+$progress-height:                   1.5rem !default; // custom
+// $progress-height:                   1rem !default;
 $progress-font-size:                $font-size-base * .75 !default;
-$progress-bg:                       var(--#{$prefix}secondary-bg) !default;
-$progress-border-radius:            var(--#{$prefix}border-radius) !default;
+$progress-bg:                       rgba($black, 0.1) !default; // custom
+// $progress-bg:                       var(--#{$prefix}secondary-bg) !default;
+$progress-border-radius:            $border-radius-pill !default; // custom;
+// $progress-border-radius:            var(--#{$prefix}border-radius) !default;
 $progress-box-shadow:               var(--#{$prefix}box-shadow-inset) !default;
 $progress-bar-color:                $white !default;
-$progress-bar-bg:                   $primary !default;
+$progress-bar-bg:                   $primary-default !default; // custom
+// $progress-bar-bg:                   $primary !default;
 $progress-bar-animation-timing:     1s linear infinite !default;
 $progress-bar-transition:           width .6s ease !default;
 // scss-docs-end progress-variables
