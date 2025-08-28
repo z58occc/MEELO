@@ -429,17 +429,18 @@ $spacers: (
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
-  12:$spacer * .75,
-  14:$spacer * .875,
-  20:$spacer * 1.25,
-  205:20.5px,
+  12:$spacer * .75, //Leonard
+  14:$spacer * .875, //Leonard
+  20:$spacer * 1.25, //Leonard
+  205:20.5px, //Leonard
+  28:$spacer * 1.75, //Leonard
+  36:$spacer * 2.25, //Leonard
+  7:7px,  //Leonard
   3t: $spacer * 0.75, // tanuki - 12px
   4t: $spacer, // tanuki - 16px
   6t: $spacer * 1.5, // tanuki - 24px
   10t:$spacer * 2.5, // tanuki - 40px
-  28:$spacer * 1.75,
-  36:$spacer * 2.25,
-  7:7px,  
+   
 ) !default;
 // scss-docs-end spacer-variables-maps
 
