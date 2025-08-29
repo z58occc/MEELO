@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
-<body class="position-relative">
+<body class="position-relative overflow-x-hidden">
   <div id="filter" class="black-filter">
   </div>
   <div id="hint" onclick="closeHint();
@@ -52,7 +52,7 @@
     <img src="../assets/images/gacha-page/Filter.png" alt="icon filter">
   </header>
 
-  <main class="main bg-callout px-3 py-205 position-relative  ">
+  <main class="main bg-callout px-3 py-205 position-relative  overflow-x-hidden">
     <img class="bg-card   position-absolute z-2" src="../assets/images/gacha-page/bg-card-1.png" alt="bg-card-2 ">
     <img class="bg-card  position-absolute z-1" src="../assets/images/gacha-page/bg-card-2.png" alt="bg-card-1 ">
 
@@ -254,7 +254,7 @@
   <%- include('./layout/footer.ejs',{active:"gacha"}) %>
 
 
-
+    <!-- Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper(".mySwiper", {
@@ -271,21 +271,21 @@
       const hint = document.getElementById('hint');
 
       info.style.display = 'none';
-      filter.style.display = 'flex';
-      hint.style.display = 'flex';
+      filter.style.display = 'none';
+      hint.style.display = 'none';
 
-      function closeHint() {
+      function closeHint() { //關掉提示
         filter.style.display = 'none';
         hint.style.display = 'none';
       }
 
-      let startX, startY;
+      let startX, startY, deltaX, currentX;
       meCard.addEventListener('touchstart', function (e) {
-
         startX = e.touches[0].clientX;
         startY = e.touches[0].clientY;
       })
       meCard.addEventListener('touchend', function (e) {
+        //上滑開啟 下滑收合
         let endX = e.changedTouches[0].clientX;
         let endY = e.changedTouches[0].clientY;
 
@@ -293,12 +293,24 @@
         let diffY = endY - startY;
 
         if (diffY > 0) {
-          info.style.display = "none";
+          info.style.display = "none";  //下滑收合
         } else {
-          info.style.display = "block";
+          info.style.display = "block"; //上滑開啟
         }
 
+
+
       })
+
+      meCard.addEventListener('touchmove', function (e) {
+        currentX = e.touches[0].clientX;
+        deltaX = currentX - startX;
+
+        // 跟著手指移動，讓卡片偏移 & 微旋轉
+        meCard.style.transform = `translateX(${deltaX}px) rotate(${deltaX * 0.05}deg)`;
+      })
+
+
 
     </script>
 
