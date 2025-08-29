@@ -1,8 +1,31 @@
 .bg{
-    height: 992px;
+   
   background: 
-    linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #221F1E 100%),
+    
     url("/assets/images/index-img/Hero-Image-full.png") 
     no-repeat center center/cover;
   overflow: hidden;
+}
+.thread-card-radius{
+  border-bottom-left-radius: 16px ;
+  border-bottom-right-radius: 16px ;
+  border-top-left-radius: 4px ;
+  border-top-right-radius: 16px ;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;       /* for WebKit */
+  display: box;               /* 老舊瀏覽器 (已棄用，但保險可加) */
+  -webkit-box-orient: vertical;
+  box-orient: vertical;       /* 老舊屬性 */
+  -webkit-line-clamp: 2;      /* Safari/Chrome */
+  line-clamp: 2;              /* 標準草案 */
+  overflow: hidden;
+}
+
+
+$hero-action-card: linear-gradient(135deg, #fbe6da 0%, #ffffff 70%);
+
+.bg-hero-action-card {
+  background: $hero-action-card;
 }

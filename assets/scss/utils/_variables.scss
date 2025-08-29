@@ -312,7 +312,11 @@ $accent:         #569F82 !default;
 $primary-inverted-active:         #F9EBDB !default;
 $primary-default:         #DB773D !default;
 $text-primary:         #3B170F !default;
-$text-secondary:         rgb(0,0,0, 0.6) !default;
+$text-secondary:         #00000099 !default;
+$text-inactive:         #00000066 !default;
+$background-page:         #fefcfb !default;
+$border-subtle:         #E2E2E2 !default;
+$state-system-subtle:   #E2E2E2 !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -331,7 +335,11 @@ $theme-colors: (
   "primary-inverted-active":    $primary-inverted-active,
   "primary-default":    $primary-default,
   "text-primary":    $text-primary,
-  "text-secondary":    $text-secondary
+  "text-secondary":    $text-secondary,
+  "text-inactive":    $text-inactive,
+  "background-page":  $background-page,
+  "border-subtle":   $border-subtle,
+  "state-system-subtle": $state-system-subtle,
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -384,7 +392,7 @@ $escaped-characters: (
 $enable-caret:                true !default;
 $enable-rounded:              true !default;
 $enable-shadows:              false !default;
-$enable-gradients:            false !default;
+$enable-gradients:            true !default;//false !default;
 $enable-transitions:          true !default;
 $enable-reduced-motion:       true !default;
 $enable-smooth-scroll:        true !default;
