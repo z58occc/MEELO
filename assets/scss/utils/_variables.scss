@@ -309,6 +309,7 @@ $dark:          $gray-900 !default;
 $callout:       #fdf5ed !default;
 $active-inverted:       #D4ECDF !default;
 $accent:         #569F82 !default;
+$accent-300:         #95C6B3 !default;
 $primary-inverted-active:         #F9EBDB !default;
 $primary-default:         #DB773D !default;
 $text-primary:         #3B170F !default;
@@ -331,7 +332,8 @@ $theme-colors: (
   "primary-inverted-active":    $primary-inverted-active,
   "primary-default":    $primary-default,
   "text-primary":    $text-primary,
-  "text-secondary":    $text-secondary
+  "text-secondary":    $text-secondary,
+  "accent-300":    $accent-300,
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -432,9 +434,11 @@ $spacers: (
   12:$spacer * .75, //Leonard
   14:$spacer * .875, //Leonard
   20:$spacer * 1.25, //Leonard
+  100:100px, //Leonard
   205:20.5px, //Leonard
   28:$spacer * 1.75, //Leonard
   36:$spacer * 2.25, //Leonard
+  72:$spacer * 4.5, //Leonard
   7:7px,  //Leonard
   3t: $spacer * 0.75, // tanuki - 12px
   4t: $spacer, // tanuki - 16px
@@ -649,6 +653,7 @@ $font-weight-medium:          500 !default;
 $font-weight-semibold:        600 !default;
 $font-weight-bold:            700 !default;
 $font-weight-bolder:          bolder !default;
+$font-weight-900:             900 !default;
 
 $font-weight-base:            $font-weight-normal !default;
 
@@ -665,7 +670,8 @@ $h6-font-size:                $font-size-base !default;
 $h18-font-size:               $font-size-base * 1.125 !default;//18
 $h12-font-size:               $font-size-base * .75 !default;//12
 $h14-font-size:               $font-size-base * .875 !default;//14
-$h17-font-size:               17px !default;//14
+$h17-font-size:               17px !default;//17
+$h44-font-size:               44px !default;//44
 
 // scss-docs-end font-variables
 
@@ -679,7 +685,8 @@ $font-sizes: (
   6: $h6-font-size,
   18: $h18-font-size,
   12: $h12-font-size,
-  17: $h17-font-size
+  17: $h17-font-size,
+  44: $h44-font-size,
 ) !default;
 // scss-docs-end font-sizes
 

@@ -98,7 +98,7 @@
         </li>
       </ul>
     </div>
-    <div class="me-card position-relative d-flex flex-column justify-content-end p-3 z-3" id="me-card" id="me-card"
+    <div class="me-card position-relative   flex-column justify-content-end p-3 z-3" id="me-card" id="me-card"
       style="background-image: url(../assets/images/gacha-page/mrLee.png);">
       <div class="p-20 position-absolute top-0  end-0 fit"
         style="background-image: url(../assets/images/gacha-page/fit-bg.png);">
@@ -159,13 +159,17 @@
         </ul>
         <h5 class="fs-18 fw-bold text-text-primary mb-12">他常出沒的地方</h5>
         <div class="d-flex">
-          <div class="p-3 border me-3">
+          <div class="p-3  me-3 interest-card position-relative overflow-hidden">
             <h5 class="fs-18 fw-bold text-text-primary mb-2">創作</h5>
-            <p class="fs-14 text-center mb-0 text-text-secondary">點亮未知的旅程</p>
+            <p class="fs-14 mb-0 text-text-secondary">點亮未知的旅程</p>
+            <img class="position-absolute end-0  interest-card-img" src="../assets/images/gacha-page/creation.png"
+              alt="creation img">
           </div>
-          <div class="p-3 border">
-            <h5 class="fs-18 fw-bold text-text-primary mb-2">創作</h5>
-            <p class="fs-14 text-center mb-0 text-text-secondary">點亮未知的旅程</p>
+          <div class="p-3  interest-card position-relative">
+            <h5 class="fs-18 fw-bold text-text-primary mb-2">影視</h5>
+            <p class="fs-14 mb-0 text-text-secondary">追劇好片推薦</p>
+            <img class="position-absolute end-0  interest-card-img" src="../assets/images/gacha-page/movie.png"
+              alt="creation img">
           </div>
         </div>
 
@@ -293,7 +297,8 @@
       const dislikeBtn = document.getElementById('dislike-btn');
 
 
-      info.style.display = 'block';
+      meCard.style.display = 'flex';
+      info.style.display = 'none';
       filter.style.display = 'none';
       hint.style.display = 'none';
       hint.style.display = 'none';
@@ -346,13 +351,18 @@
           }
         }
 
-        if (deltaX < 148 && deltaX > -193.84) {
+        if (deltaX < 148 && deltaX > -193.84) {// 還原
           deltaX = 0;
           meCard.style.transform = `translateX(${deltaX}px) rotate(${deltaX * 0.05}deg)`;
           likeBtn.style.opacity = '0%';
           dislikeBtn.style.opacity = '0%';
         }
 
+        if (deltaX === 148) location.href = "./match.html";
+        if (deltaX === -193.84) {
+          meCard.style.display = 'none';
+          dislikeBtn.style.display = 'none';
+        }
       })
 
 
