@@ -52,12 +52,22 @@
     <img src="../assets/images/gacha-page/Filter.png" alt="icon filter">
   </header>
 
-  <main class="main bg-callout px-3 py-205 position-relative  overflow-x-hidden">
+  <main class="main bg-callout px-3 py-205 position-relative  overflow-hidden">
     <img class="bg-card   position-absolute z-2" src="../assets/images/gacha-page/bg-card-1.png" alt="bg-card-2 ">
     <img class="bg-card  position-absolute z-1" src="../assets/images/gacha-page/bg-card-2.png" alt="bg-card-1 ">
+    <div class="check  position-absolute d-none">
+      <img src="../assets/images/gacha-page/icon-check.png" alt="icon-check">
+    </div>
+    <div id="like-btn" class="like-btn  position-absolute ">
+      <img src="../assets/images/gacha-page/icon-check.png" alt="hook">
+    </div>
+    <div id="dislike-btn" class="dislike-btn  position-absolute ">
+      <img src="../assets/images/gacha-page/icon-dislike.png" alt="X">
+    </div>
 
     <div class="me-card position-absolute d-flex flex-column justify-content-end p-3 z-3"
       style="background-image: url(../assets/images/gacha-page/nox.png)">
+
       <div class="p-20 position-absolute top-0  end-0 fit"
         style="background-image: url(../assets/images/gacha-page/fit-bg.png);">
         <div class="text-center fit-inside  border border-white rounded-circle py-14">
@@ -148,6 +158,16 @@
           </li>
         </ul>
         <h5 class="fs-18 fw-bold text-text-primary mb-12">他常出沒的地方</h5>
+        <div class="d-flex">
+          <div class="p-3 border me-3">
+            <h5 class="fs-18 fw-bold text-text-primary mb-2">創作</h5>
+            <p class="fs-14 text-center mb-0 text-text-secondary">點亮未知的旅程</p>
+          </div>
+          <div class="p-3 border">
+            <h5 class="fs-18 fw-bold text-text-primary mb-2">創作</h5>
+            <p class="fs-14 text-center mb-0 text-text-secondary">點亮未知的旅程</p>
+          </div>
+        </div>
 
         <h5 class="fs-18 fw-bold text-text-primary mb-12">興趣集錦</h5>
 
@@ -269,10 +289,16 @@
       const meCard = document.getElementById('me-card');
       const info = document.getElementById('info');
       const hint = document.getElementById('hint');
+      const likeBtn = document.getElementById('like-btn');
+      const dislikeBtn = document.getElementById('dislike-btn');
 
-      info.style.display = 'none';
+
+      info.style.display = 'block';
       filter.style.display = 'none';
       hint.style.display = 'none';
+      hint.style.display = 'none';
+      likeBtn.style.opacity = '0%';
+      dislikeBtn.style.opacity = '0%';
 
       function closeHint() { //關掉提示
         filter.style.display = 'none';
@@ -283,7 +309,27 @@
       meCard.addEventListener('touchstart', function (e) {
         startX = e.touches[0].clientX;
         startY = e.touches[0].clientY;
+      });
+
+      meCard.addEventListener('touchmove', function (e) {
+        currentX = e.touches[0].clientX;
+        deltaX = currentX - startX;
+        // 148 -193.84
+        deltaX = Math.max(-193.84, Math.min(148, deltaX));
+        const maxX = 148;
+        const minX = -193.84;
+        let opacityLike = deltaX / maxX;
+        let opacityDlike = deltaX / minX;
+        opacityLike = Math.max(0, Math.min(1, opacityLike));
+        opacityDlike = Math.max(0, Math.min(1, opacityDlike));
+
+        likeBtn.style.opacity = opacityLike;
+        dislikeBtn.style.opacity = opacityDlike;
+
+        // 跟著手指移動，讓卡片偏移 & 微旋轉
+        meCard.style.transform = `translateX(${deltaX}px) rotate(${deltaX * 0.05}deg)`;
       })
+
       meCard.addEventListener('touchend', function (e) {
         //上滑開啟 下滑收合
         let endX = e.changedTouches[0].clientX;
@@ -292,23 +338,23 @@
         let diffX = endX - startX;
         let diffY = endY - startY;
 
-        if (diffY > 0) {
-          info.style.display = "none";  //下滑收合
-        } else {
-          info.style.display = "block"; //上滑開啟
+        if (Math.abs(diffX) < Math.abs(diffY)) {
+          if (diffY > 0) {
+            info.style.display = "none";  //下滑收合
+          } else {
+            info.style.display = "block"; //上滑開啟
+          }
         }
 
-
+        if (deltaX < 148 && deltaX > -193.84) {
+          deltaX = 0;
+          meCard.style.transform = `translateX(${deltaX}px) rotate(${deltaX * 0.05}deg)`;
+          likeBtn.style.opacity = '0%';
+          dislikeBtn.style.opacity = '0%';
+        }
 
       })
 
-      meCard.addEventListener('touchmove', function (e) {
-        currentX = e.touches[0].clientX;
-        deltaX = currentX - startX;
-
-        // 跟著手指移動，讓卡片偏移 & 微旋轉
-        meCard.style.transform = `translateX(${deltaX}px) rotate(${deltaX * 0.05}deg)`;
-      })
 
 
 
