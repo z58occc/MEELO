@@ -1,0 +1,41 @@
+.fw-900 {
+  font-weight: 900;
+}
+.card-lee {
+  top: 70px;
+  right: -25px;
+}
+.input-box {
+  background: rgb(0, 0, 0, 0.05);
+  border-radius: 24px;
+  .match-input {
+    width: 295px;
+    background: transparent;
+  }
+  .match-input::placeholder {
+    color: rgb(0, 0, 0, 0.4);
+  }
+}
+.icon-send {
+  width: 24px;
+  height: 24px;
+}
+.blur-bg {
+  background-image: url("/assets/images/match/Image-bg.png") ;
+  background-size: cover;
+  z-index: -1;
+  filter:blur(4px)
+  
+}
+.match-down{
+  margin-left: -16px;
+  margin-right: -16px;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  border: white solid 1px;
+}
+.match-close-btn{
+  background-color: transparent;
+  top: 66px;
+  right: 16px;
+}

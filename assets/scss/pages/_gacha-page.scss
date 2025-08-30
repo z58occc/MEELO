@@ -17,11 +17,50 @@
   }
 }
 .main {
+  height: 621px;
   .bg-card {
     width: calc(100% - 16.93px);
     height: 580px;
     left: 8px;
     top: 9px;
+  }
+  .dislike-btn {
+    width: 80px;
+    padding: 24px;
+    top: 271px;
+    left: 52px;
+    &::before {
+      content: "";
+      display: block; /* 或 inline-block */
+      position: absolute; /* 如果想覆蓋父元素 */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.5;
+      background: #ffffff80;
+      z-index: -1;
+      border-radius: 1000px;
+    }
+  }
+  .like-btn {
+    width: 80px;
+    padding: 29.16px 19px 23.18px 19px;
+    top: 271px;
+    right: 52px;
+    &::before {
+      content: "";
+      display: block; /* 或 inline-block */
+      position: absolute; /* 如果想覆蓋父元素 */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.6;
+      background: #d4ecdf;
+      z-index: -1;
+      border-radius: 1000px;
+    }
   }
   .me-card {
     width: 343px;
@@ -36,6 +75,7 @@
       width: 68px;
     }
   }
+
   .green-cat {
     width: 20px;
   }
@@ -65,6 +105,16 @@
       width: 68px;
     }
   }
+  .interest-card {
+    width: 163.5px;
+    height: 163px;
+    border: rgb(0, 0, 0, 0.1) solid;
+    border-radius: 16px;
+    &-img {
+      border-bottom-right-radius: 16px;
+      bottom: -2px;
+    }
+  }
 }
 .swiper {
   &-slide {
@@ -77,13 +127,11 @@
   }
 }
 .black-filter {
-  // content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  // inset: 0; /* 等於 top/right/bottom/left:0 */
   background: rgba(0, 0, 0, 0.5);
   z-index: 100;
   pointer-events: none;
@@ -157,4 +205,19 @@
       border-radius: 16px;
     }
   }
+}
+.z-4{
+  z-index: 4;
+}
+.z-5{
+  z-index: 5;
+}
+.z-6{
+  z-index: 6;
+}
+.z-7{
+  z-index: 7;
+}
+.z-8{
+  z-index: 8;
 }
