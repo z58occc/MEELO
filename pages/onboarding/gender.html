@@ -1,15 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="TW-zh">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meelo | onBoarding</title>
   </head>
   <body>
-    <h1 class="mb-3t">onBoarding</h1>
-    <p>你的性別是...</p>
-    <a href="interest.html">下一頁</a>
+    <main class="pt-6t position-relative">
+      <section class="container pt-6t">
+        <%- include('./layout/onboarding/progress.ejs', {progress: "14.29"}) %>
+        <h1 class="mt-6t mb-2 fs-3 fw-bold text-primary-default">Elly</h1>
+        <h2 class="mb-6t fs-4 fw-bold text-text-primary">你的性別是...</h2>
+        <form id="genderForm" class="row g-4t">
+          <div class="col-6">
+            <div class="onboarding-check rounded-4">
+              <input
+                class="onboarding-check-input d-none"
+                type="radio"
+                name="gender"
+                id="female"
+                value="female"
+              />
+              <label class="onboarding-check-label card h-100" for="female">
+                <div class="card-body">
+                  <h3 class="onboarding-check-title fs-18 fw-bold">女性</h3>
+                  <img
+                    class="onboarding-gender-img position-absolute z-1"
+                    src="/assets/images/onboarding/gender-1.png"
+                    alt="性別選項-女性"
+                  />
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="onboarding-check rounded-4">
+              <input
+                class="onboarding-check-input d-none"
+                type="radio"
+                name="gender"
+                id="male"
+                value="male"
+              />
+              <label class="onboarding-check-label card h-100" for="male">
+                <div class="card-body">
+                  <h3 class="onboarding-check-title fs-18 fw-bold">男性</h3>
+                  <img
+                    class="onboarding-gender-img position-absolute z-1"
+                    src="/assets/images/onboarding/gender-2.png"
+                    alt="性別選項-男性"
+                  />
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="onboarding-check rounded-4">
+              <input
+                class="onboarding-check-input d-none"
+                type="radio"
+                name="gender"
+                id=" bigender"
+                value="bigender"
+              />
+              <label class="onboarding-check-label card h-100" for=" bigender">
+                <div class="card-body">
+                  <h3 class="onboarding-check-title fs-18 fw-bold">雙性別</h3>
+                  <img
+                    class="onboarding-gender-img position-absolute z-1"
+                    src="/assets/images/onboarding/gender-3.png"
+                    alt="性別選項-雙性別"
+                  />
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="onboarding-check rounded-4">
+              <input
+                class="onboarding-check-input d-none"
+                type="radio"
+                name="gender"
+                id="agender"
+                value="agender"
+              />
+              <label class="onboarding-check-label card h-100" for="agender">
+                <div class="card-body">
+                  <h3 class="onboarding-check-title fs-18 fw-bold">無性別</h3>
+                  <img
+                    class="onboarding-gender-img position-absolute z-1"
+                    src="/assets/images/onboarding/gender-1.png"
+                    alt="性別選項-無性別"
+                  />
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="onboarding-check rounded-4">
+              <input
+                class="onboarding-check-input d-none"
+                type="radio"
+                name="gender"
+                id="disclose"
+                value="disclose"
+              />
+              <label class="onboarding-check-label card h-100" for="disclose">
+                <div class="card-body">
+                  <h3 class="onboarding-check-title fs-18 fw-bold">不願透露</h3>
+                  <img
+                    class="onboarding-gender-img position-absolute z-1"
+                    src="/assets/images/onboarding/gender-5.png"
+                    alt="性別選項-不願透露"
+                  />
+                </div>
+              </label>
+            </div>
+          </div>
+        </form>
+      </section>
+      <%- include('./layout/onboarding/pagenation.ejs', {prevPage: 'name.html',
+      nextPage: 'interest.html'}) %>
+    </main>
 
-    <script type="module" src="../main.js"></script>
+    <script type="module" src="/main.js"></script>
+    <script type="module">
+      const sessionStorageValue = sessionStorage.getItem("gender");
+      const form = document.querySelector("#genderForm");
+      const nextPageBtn = document.querySelector("#prevPageBtn");
+      const radios = form.querySelectorAll('input[name="gender"]');
+      let isSelected = sessionStorageValue ? true : false;
+
+      const toggleBtnDisabled = (btnDom) => {
+        if (isSelected) {
+          btnDom.classList.remove("disabled");
+          return;
+        }
+        btnDom.classList.add("disabled");
+      };
+
+      // onMounted
+      toggleBtnDisabled(nextPageBtn);
+      radios.forEach((r) => {
+        console.log(r.value === sessionStorageValue);
+        if (r.value === sessionStorageValue) r.setAttribute("checked", "");
+      });
+
+      // watch
+      form.addEventListener("change", (e) => {
+        console.dir(e.target.value);
+        isSelected = e.target.value ? true : false;
+        sessionStorage.setItem("gender", e.target.value);
+        toggleBtnDisabled(nextPageBtn);
+      });
+    </script>
   </body>
 </html>
