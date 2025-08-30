@@ -29,7 +29,6 @@
     padding: 24px;
     top: 271px;
     left: 52px;
-    z-index: 4;
     &::before {
       content: "";
       display: block; /* 或 inline-block */
@@ -49,7 +48,6 @@
     padding: 29.16px 19px 23.18px 19px;
     top: 271px;
     right: 52px;
-    z-index: 4;
     &::before {
       content: "";
       display: block; /* 或 inline-block */
@@ -210,4 +208,16 @@
 }
 .z-4{
   z-index: 4;
+}
+.z-5{
+  z-index: 5;
+}
+.z-6{
+  z-index: 6;
+}
+.z-7{
+  z-index: 7;
+}
+.z-8{
+  z-index: 8;
 }
