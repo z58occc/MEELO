@@ -1,0 +1,15 @@
+// API
+$utilities: (
+  "link-opacity": (
+    css-var: true,
+    class: link-opacity,
+    values: (
+      10: .1,
+      25: .25,
+      50: .5,
+      40: .4, // custom
+      75: .75,
+      100: 1
+    )
+  ),
+)
