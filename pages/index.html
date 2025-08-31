@@ -50,8 +50,10 @@
     </div>
     <div class="bg-background-page pt-4 px-3 position-relative" style="border-top-left-radius: 24px; border-top-right-radius: 24px;" >
       <div>
-        <a  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="position-absolute fab-btn " style="bottom: 24px;; right: 24px;;" ><img src="/assets/images/index-img/Fab-default.png" alt="Button/Fab-default"></a>
-      </div>
+      <a id="fabBtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="position-absolute fab-btn" style="bottom:24px; right:24px;">
+  <img src="/assets/images/index-img/Fab-default.png" alt="Button/Fab-default">
+</a>
+     </div>
       <div class="d-flex justify-content-between mb-3">
         <a href="#" class="d-inline-block text-decoration-none" type="button" 
         data-bs-toggle="offcanvas" 
@@ -73,8 +75,8 @@
           </nav>
         </div>
       </div>
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper d-flex flex-column gap-3 ">
+      <div class="swiper mySwiper" >
+        <div class="swiper-wrapper">
       <div class="Thread-card swiper-slide">
         <div class="d-flex align-items-center gap-2 mb-2">
           <div><img src="/assets/images/index-img/User2.png" alt="Avatar / User2"></div>
@@ -505,14 +507,17 @@
 
     <!-- JavaScript Bundle with Popper -->
      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+     <!-- swiper -->
      <script>
-     const swiper = new Swiper(".mySwiper", {
+       const swiper = new Swiper(".mySwiper", {
+        
   direction: "vertical",
-  slidesPerView: 1.3,  // 手機時顯示 1.3 張
-  spaceBetween: 0,
-  breakpoints: {
-    0: { slidesPerView: 1.3 } // 大螢幕顯示 1.3 張
-  },
+  slidesPerView: 'auto',
+  spaceBetween: 16,
+  autoHeight: true,
+  // breakpoints: {
+  //   0: { slidesPerView: 1.3 } // 大螢幕顯示 1.3 張
+  // },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -523,9 +528,27 @@
     prevEl: ".swiper-button-prev",
   }
 });
-  
      </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <!-- 浮動按鈕隱藏 -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+  const fabBtn = document.getElementById('fabBtn');
+  const offcanvasEl = document.getElementById('offcanvasRight');
+
+  const offcanvas = new bootstrap.Offcanvas(offcanvasEl);
+
+  fabBtn.addEventListener('click', () => {
+    fabBtn.style.display = 'none';
+    offcanvas.show();
+  });
+
+  offcanvasEl.addEventListener('hidden.bs.offcanvas', () => {
+    fabBtn.style.display = 'block';
+  });
+});
+
+    </script>
     <script type="module" src="../main.js"></script>
   </body>
 </html>
