@@ -1,0 +1,143 @@
+// icon
+.icon {
+  --icon-url: unset;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: var(--icon-url) center/cover no-repeat;
+
+  // mask 形式（icon 不可透明，使用自已定義變數 --btn-color 與 --btn-color-opacity）
+  &-mask {
+    --icon-url: unset;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(
+      var(--btn-color),
+      var(--btn-color-opacity, 1)
+    );
+    mask: var(--icon-url) center/cover no-repeat;
+    -webkit-mask: var(--icon-url) center/cover no-repeat;
+  }
+
+  // 尺寸
+  &-sm {
+    width: 16px;
+    height: 16px;
+  }
+
+  // icon 連結
+  &-arrow-left {
+    --icon-url: url("/assets/images/icon/arrow-left.svg");
+  }
+  &-arrow-right {
+    --icon-url: url("/assets/images/icon/arrow-right.svg");
+  }
+  &-paw {
+    --icon-url: url("/assets/images/icon/paw.svg");
+  }
+}
+
+.option-card {
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 146px;
+    height: 146px;
+    top: 33px;
+    left: 43px;
+    background-color: $bg-avatar;
+    border-radius: 50%;
+  }
+  h3 {
+    margin-bottom: 94.3px;
+  }
+  img {
+    position: absolute;
+    z-index: 1;
+    width: 99px;
+    height: 99px;
+    top: 44px;
+    left: 61px;
+  }
+}
+
+.onboarding-check {
+  position: relative;
+  height: 147.33px;
+
+  &-label {
+    --text-color: #{$text-primary};
+    color: var(--text-color);
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 146px;
+      height: 146px;
+      top: 33px;
+      left: 43px;
+      background-color: $bg-avatar;
+      border-radius: 50%;
+    }
+  }
+  // checked 樣式
+  &-input:not(:checked) + &-label {
+    overflow: hidden;
+  }
+  &:has(.onboarding-check-input:checked) {
+    overflow: hidden;
+    .card {
+      --bs-card-bg: #{$primary-active};
+      --bs-card-border-color: #{$primary-active};
+      --text-color: #{$white};
+    }
+  }
+  .onboarding-gender-img {
+    width: 99px;
+    height: 99px;
+    top: 44px;
+    left: 61px;
+  }
+}
+
+.page-scoll-mask {
+  background: linear-gradient(180deg, rgba(254, 252, 251, 0) 0%, #fefcfb 100%);
+}
+
+.btn-ghost {
+  --btn-active-bg: var(--bs-body-color-rgb);
+  --btn-active-bg-opacity: 1;
+  --btn-color: var(--bs-body-color-rgb);
+  --btn-color-opacity: 1;
+
+  border-radius: $border-radius-pill;
+  text-decoration: none;
+  padding: 12px 16px;
+  font-weight: $font-weight-bold;
+  color: rgb(var(--btn-color), var(--btn-color-opacity));
+  
+  &:active {
+    background-color: rgba(var(--btn-active-bg), var(--btn-active-bg-opacity));
+  }
+  &.disabled, &:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  
+  // 色系
+  &-accent {
+    --btn-active-bg: #{to-rgb($bg-avatar)};
+    --btn-color: #{to-rgb($primary-default)};
+  }
+  &-neutral {
+  --btn-active-bg: #{to-rgb($black)};
+  --btn-active-bg-opacity: .5;
+  --btn-color: #{to-rgb($black)};
+  --btn-color-opacity: .4;
+  }
+}

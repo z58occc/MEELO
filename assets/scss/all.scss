@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+TC:wght@100..900&display=swap');
+
 @import "../../node_modules/bootstrap/scss/functions";
 @import './utils/variables';
+
+@import './utils/utility-api';
+
 @import "../../node_modules/bootstrap";
 
 @import './layout/header.scss';
@@ -8,4 +13,8 @@
 
 @import './pages/index.scss';
 @import './pages/gacha-page.scss';
+
+@import './pages/match.scss';
+@import './pages/onboarding.scss';
+
 

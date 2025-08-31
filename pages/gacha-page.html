@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
-<body class="position-relative">
+<body class="position-relative overflow-x-hidden">
   <div id="filter" class="black-filter">
   </div>
   <div id="hint" onclick="closeHint();
@@ -52,74 +52,186 @@
     <img src="../assets/images/gacha-page/Filter.png" alt="icon filter">
   </header>
 
-  <main class="main bg-callout px-3 py-205 position-relative  ">
+  <main class="main bg-callout px-3 py-205 position-relative  overflow-hidden">
     <img class="bg-card   position-absolute z-2" src="../assets/images/gacha-page/bg-card-1.png" alt="bg-card-2 ">
     <img class="bg-card  position-absolute z-1" src="../assets/images/gacha-page/bg-card-2.png" alt="bg-card-1 ">
-
-    <div class="me-card position-absolute d-flex flex-column justify-content-end p-3 z-3"
-      style="background-image: url(../assets/images/gacha-page/nox.png)">
-      <div class="p-20 position-absolute top-0  end-0 fit"
-        style="background-image: url(../assets/images/gacha-page/fit-bg.png);">
-        <div class="text-center fit-inside  border border-white rounded-circle py-14">
-          <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
-          <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">80%</h6>
-        </div>
-      </div>
-
-      <div class="d-flex align-items-center mb-12">
-        <h3 class="mb-0 fw-bold text-white me-12">Daniel</h3>
-        <div class="badge bg-active-inverted text-accent px-2 py-1 d-flex align-items-center">
-          <img class="green-cat" src="../assets/images/gacha-page/green-cat.png" alt="green cat">
-          文青貓
-        </div>
-      </div>
-      <ul class="d-flex gap-2 list-unstyled mb-0">
-        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-          影視
-        </li>
-        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-          音樂
-        </li>
-        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-          影視
-        </li>
-        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-          攝影
-        </li>
-      </ul>
+    <div class="check  position-absolute d-none">
+      <img src="../assets/images/gacha-page/icon-check.png" alt="icon-check">
     </div>
-    <div class="me-card position-relative d-flex flex-column justify-content-end p-3 z-3" id="me-card" id="me-card"
-      style="background-image: url(../assets/images/gacha-page/mrLee.png);">
-      <div class="p-20 position-absolute top-0  end-0 fit"
-        style="background-image: url(../assets/images/gacha-page/fit-bg.png);">
-        <div class="text-center fit-inside  border border-white rounded-circle py-14">
-          <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
-          <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">90%</h6>
-        </div>
-      </div>
-
-      <div class="d-flex align-items-center mb-12">
-        <h3 class="mb-0 fw-bold text-white me-12">阿力先生</h3>
-        <div class="badge bg-active-inverted text-accent px-2 py-1 d-flex align-items-center">
-          <img class="green-cat" src="../assets/images/gacha-page/green-cat.png" alt="green cat">
-          文青貓
-        </div>
-      </div>
-      <ul class="d-flex gap-2 list-unstyled mb-0">
-        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-          創作
-        </li>
-        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-          學習
-        </li>
-        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-          影視
-        </li>
-        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-          攝影
-        </li>
-      </ul>
+    <div id="like-btn" class="like-btn  position-absolute z-8 ">
+      <img src="../assets/images/gacha-page/icon-check.png" alt="hook">
     </div>
+    <div id="dislike-btn" class="dislike-btn  position-absolute z-8 ">
+      <img src="../assets/images/gacha-page/icon-dislike.png" alt="X">
+    </div>
+
+
+    <ul class="list-unstyled card-list" id="card-list">
+      <li class="me-card position-absolute   flex-column justify-content-end p-3 z-7" id="me-card" id="me-card"
+        style="background-image: url(../assets/images/gacha-page/mrLee.png);">
+        <div class="p-20 position-absolute top-0  end-0 fit"
+          style="background-image: url(../assets/images/gacha-page/fit-bg.png);">
+          <div class="text-center fit-inside  border border-white rounded-circle py-14">
+            <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
+            <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">90%</h6>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center mb-12">
+          <h3 class="mb-0 fw-bold text-white me-12">阿力先生</h3>
+          <div class="badge bg-active-inverted text-accent px-2 py-1 d-flex align-items-center">
+            <img class="green-cat" src="../assets/images/gacha-page/green-cat.png" alt="green cat">
+            文青貓
+          </div>
+        </div>
+        <ul class="d-flex gap-2 list-unstyled mb-0">
+          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+            創作
+          </li>
+          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+            學習
+          </li>
+          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+            影視
+          </li>
+          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+            攝影
+          </li>
+        </ul>
+      </li>
+      <li class="me-card position-absolute  flex-column justify-content-end p-3 z-6"
+        style="background-image: url(../assets/images/gacha-page/nox.png)">
+
+        <div class="p-20 position-absolute top-0  end-0 fit"
+          style="background-image: url(../assets/images/gacha-page/fit-bg.png);">
+          <div class="text-center fit-inside  border border-white rounded-circle py-14">
+            <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
+            <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">80%</h6>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center mb-12">
+          <h3 class="mb-0 fw-bold text-white me-12">Daniel</h3>
+          <div class="badge bg-active-inverted text-accent px-2 py-1 d-flex align-items-center">
+            <img class="green-cat" src="../assets/images/gacha-page/green-cat.png" alt="green cat">
+            文青貓
+          </div>
+        </div>
+        <ul class="d-flex gap-2 list-unstyled mb-0">
+          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+            影視
+          </li>
+          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+            音樂
+          </li>
+          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+            影視
+          </li>
+          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+            攝影
+          </li>
+        </ul>
+      </li>
+      <li class="me-card position-absolute  flex-column justify-content-end p-3 z-4"
+        style="background-image: url(../assets/images/gacha-page/player-3.png)">
+
+        <div class="p-20 position-absolute top-0  end-0 fit"
+          style="background-image: url(../assets/images/gacha-page/fit-bg.png);">
+          <div class="text-center fit-inside  border border-white rounded-circle py-14">
+            <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
+            <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">80%</h6>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center mb-12">
+          <h3 class="mb-0 fw-bold text-white me-12">Luno</h3>
+          <div class="badge bg-active-inverted text-accent px-2 py-1 d-flex align-items-center">
+            <img class="green-cat" src="../assets/images/gacha-page/green-cat.png" alt="green cat">
+            文青貓
+          </div>
+        </div>
+        <ul class="d-flex gap-2 list-unstyled mb-0">
+          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+            影視
+          </li>
+          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+            音樂
+          </li>
+          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+            影視
+          </li>
+          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+            攝影
+          </li>
+        </ul>
+      </li>
+      <li class="me-card position-absolute  flex-column justify-content-end p-3 z-3"
+        style="background-image: url(../assets/images/gacha-page/player-9.png)">
+
+        <div class="p-20 position-absolute top-0  end-0 fit"
+          style="background-image: url(../assets/images/gacha-page/fit-bg.png);">
+          <div class="text-center fit-inside  border border-white rounded-circle py-14">
+            <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
+            <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">80%</h6>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center mb-12">
+          <h3 class="mb-0 fw-bold text-white me-12">Nox</h3>
+          <div class="badge bg-active-inverted text-accent px-2 py-1 d-flex align-items-center">
+            <img class="green-cat" src="../assets/images/gacha-page/green-cat.png" alt="green cat">
+            文青貓
+          </div>
+        </div>
+        <ul class="d-flex gap-2 list-unstyled mb-0">
+          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+            影視
+          </li>
+          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+            音樂
+          </li>
+          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+            影視
+          </li>
+          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+            攝影
+          </li>
+        </ul>
+      </li>
+      <li class="me-card position-absolute  flex-column justify-content-end p-3 z-5"
+        style="background-image: url(../assets/images/gacha-page/player-7.png)">
+
+        <div class="p-20 position-absolute top-0  end-0 fit"
+          style="background-image: url(../assets/images/gacha-page/fit-bg.png);">
+          <div class="text-center fit-inside  border border-white rounded-circle py-14">
+            <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
+            <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">80%</h6>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center mb-12">
+          <h3 class="mb-0 fw-bold text-white me-12">塔可</h3>
+          <div class="badge bg-active-inverted text-accent px-2 py-1 d-flex align-items-center">
+            <img class="green-cat" src="../assets/images/gacha-page/green-cat.png" alt="green cat">
+            文青貓
+          </div>
+        </div>
+        <ul class="d-flex gap-2 list-unstyled mb-0">
+          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+            影視
+          </li>
+          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+            音樂
+          </li>
+          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+            影視
+          </li>
+          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+            攝影
+          </li>
+        </ul>
+      </li>
+    </ul>
 
   </main>
 
@@ -148,6 +260,20 @@
           </li>
         </ul>
         <h5 class="fs-18 fw-bold text-text-primary mb-12">他常出沒的地方</h5>
+        <div class="d-flex">
+          <div class="p-3  me-3 interest-card position-relative overflow-hidden">
+            <h5 class="fs-18 fw-bold text-text-primary mb-2">創作</h5>
+            <p class="fs-14 mb-0 text-text-secondary">點亮未知的旅程</p>
+            <img class="position-absolute end-0  interest-card-img" src="../assets/images/gacha-page/creation.png"
+              alt="creation img">
+          </div>
+          <div class="p-3  interest-card position-relative">
+            <h5 class="fs-18 fw-bold text-text-primary mb-2">影視</h5>
+            <p class="fs-14 mb-0 text-text-secondary">追劇好片推薦</p>
+            <img class="position-absolute end-0  interest-card-img" src="../assets/images/gacha-page/movie.png"
+              alt="creation img">
+          </div>
+        </div>
 
         <h5 class="fs-18 fw-bold text-text-primary mb-12">興趣集錦</h5>
 
@@ -254,7 +380,7 @@
   <%- include('./layout/footer.ejs',{active:"gacha"}) %>
 
 
-
+    <!-- Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper(".mySwiper", {
@@ -266,39 +392,98 @@
     <script>
       const closeBtn = document.getElementById('close-btn');
       const filter = document.getElementById('filter');
-      const meCard = document.getElementById('me-card');
+      const meCard = document.querySelectorAll('.me-card');
       const info = document.getElementById('info');
       const hint = document.getElementById('hint');
+      const likeBtn = document.getElementById('like-btn');
+      const dislikeBtn = document.getElementById('dislike-btn');
+      const cardList = document.getElementById('card-list');
 
+
+
+      meCard.forEach(el => {
+        el.style.display = 'flex';
+      })
       info.style.display = 'none';
       filter.style.display = 'flex';
       hint.style.display = 'flex';
+      likeBtn.style.opacity = '0%';
+      dislikeBtn.style.opacity = '0%';
 
-      function closeHint() {
+      function closeHint() { //關掉提示
         filter.style.display = 'none';
         hint.style.display = 'none';
       }
 
-      let startX, startY;
-      meCard.addEventListener('touchstart', function (e) {
+      let startX, startY, deltaX, deltaY, currentX;
 
+      cardList.addEventListener('touchstart', function (e) {
+        const meCard = e.target.closest('.me-card');
         startX = e.touches[0].clientX;
         startY = e.touches[0].clientY;
-      })
-      meCard.addEventListener('touchend', function (e) {
+      }, { passive: true });
+
+      cardList.addEventListener('touchmove', function (e) {
+        const meCard = e.target.closest('.me-card');
+        currentX = e.touches[0].clientX;
+        deltaX = currentX - startX;
+        // 148 -193.84
+        deltaX = Math.max(-193.84, Math.min(148, deltaX));
+        const maxX = 148;
+        const minX = -193.84;
+        let opacityLike = deltaX / maxX;
+        let opacityDlike = deltaX / minX;
+        opacityLike = Math.max(0, Math.min(1, opacityLike));
+        opacityDlike = Math.max(0, Math.min(1, opacityDlike));
+
+        likeBtn.style.opacity = opacityLike;
+        dislikeBtn.style.opacity = opacityDlike;
+
+        deltaY = Math.min(8,Math.abs(deltaX) * 0.05405);
+        // 跟著手指移動，讓卡片偏移 & 微旋轉
+
+        meCard.style.transform = `translateX(${deltaX}px) translateY(${deltaY}px) rotate(${deltaX * 0.05405}deg)`;
+        // 0.05
+        ifMoving = false;
+      }, { passive: true })
+
+      cardList.addEventListener('touchend', function (e) {
+        const meCard = e.target.closest('.me-card');
+
+        //上滑開啟 下滑收合
         let endX = e.changedTouches[0].clientX;
         let endY = e.changedTouches[0].clientY;
 
         let diffX = endX - startX;
         let diffY = endY - startY;
 
-        if (diffY > 0) {
-          info.style.display = "none";
-        } else {
-          info.style.display = "block";
+        if (deltaX < 148 && deltaX > -193.84) {// 還原
+          deltaX = 0;
+          meCard.style.transform = `translateX(${deltaX}px) rotate(${deltaX * 0.05}deg)`;
+          likeBtn.style.opacity = '0%';
+          dislikeBtn.style.opacity = '0%';
         }
 
-      })
+        if (deltaX === 148) location.href = "./match.html";
+        if (deltaX === -193.84) {
+          meCard.style.display = 'none';
+          dislikeBtn.style.opacity = '0%';
+        }
+
+        if (Math.abs(diffX) <= 10) {
+          if (diffY > 0) {
+            info.style.display = "none";  //下滑收合
+          } else {
+            info.style.display = "block"; //上滑開啟
+          }
+        }
+      }, { passive: true });
+
+
+
+
+
+
 
     </script>
 

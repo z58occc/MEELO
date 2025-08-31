@@ -19,6 +19,15 @@ $gray-900: #212529 !default;
 $black:    #000 !default;
 // scss-docs-end gray-color-variables
 
+// custom color by tanuki
+$bg-body: #FEFCFB;
+$bg-callout: #FDF5ED;
+$bg-avatar: #F9EBDB;
+
+$primary-active: #E18F56;
+
+// custom color by tanuki
+
 // fusv-disable
 // scss-docs-start gray-colors-map
 $grays: (
@@ -309,6 +318,7 @@ $dark:          $gray-900 !default;
 $callout:       #fdf5ed !default;
 $active-inverted:       #D4ECDF !default;
 $accent:         #569F82 !default;
+$accent-300:         #95C6B3 !default;
 $primary-inverted-active:         #F9EBDB !default;
 $primary-default:         #DB773D !default;
 $text-primary:         #3B170F !default;
@@ -340,6 +350,8 @@ $theme-colors: (
   "background-page":  $background-page,
   "border-subtle":   $border-subtle,
   "state-system-subtle": $state-system-subtle,
+  "accent-300":    $accent-300,
+  "black":    $black, // custom
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -402,7 +414,8 @@ $enable-cssgrid:              false !default;
 $enable-button-pointers:      true !default;
 $enable-rfs:                  false;//true !default;
 $enable-validation-icons:     true !default;
-$enable-negative-margins:     false !default;
+$enable-negative-margins:     true !default; // custom
+// $enable-negative-margins:     false !default;
 $enable-deprecation-messages: true !default;
 $enable-important-utilities:  true !default;
 
@@ -440,9 +453,11 @@ $spacers: (
   12:$spacer * .75, //Leonard
   14:$spacer * .875, //Leonard
   20:$spacer * 1.25, //Leonard
+  100:100px, //Leonard
   205:20.5px, //Leonard
   28:$spacer * 1.75, //Leonard
   36:$spacer * 2.25, //Leonard
+  72:$spacer * 4.5, //Leonard
   7:7px,  //Leonard
   3t: $spacer * 0.75, // tanuki - 12px
   4t: $spacer, // tanuki - 16px
@@ -470,7 +485,8 @@ $position-values: (
 
 $body-text-align:           null !default;
 $body-color:                $gray-900 !default;
-$body-bg:                   $white !default;
+$body-bg:                   $bg-body !default; // custom
+// $body-bg:                   $white !default;
 
 $body-secondary-color:      rgba($body-color, .75) !default;
 $body-secondary-bg:         $gray-200 !default;
@@ -551,7 +567,8 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:                12 !default;
-$grid-gutter-width:           1.5rem !default;
+$grid-gutter-width:           2rem !default; // custom
+// $grid-gutter-width:           1.5rem !default;
 $grid-row-columns:            6 !default;
 
 // Container padding
@@ -637,7 +654,7 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      "Noto Sans TC",system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
@@ -657,6 +674,7 @@ $font-weight-medium:          500 !default;
 $font-weight-semibold:        600 !default;
 $font-weight-bold:            700 !default;
 $font-weight-bolder:          bolder !default;
+$font-weight-900:             900 !default;
 
 $font-weight-base:            $font-weight-normal !default;
 
@@ -673,7 +691,8 @@ $h6-font-size:                $font-size-base !default;
 $h18-font-size:               $font-size-base * 1.125 !default;//18
 $h12-font-size:               $font-size-base * .75 !default;//12
 $h14-font-size:               $font-size-base * .875 !default;//14
-$h17-font-size:               17px !default;//14
+$h17-font-size:               17px !default;//17
+$h44-font-size:               44px !default;//44
 
 // scss-docs-end font-variables
 
@@ -688,7 +707,8 @@ $font-sizes: (
   18: $h18-font-size,
   12: $h12-font-size,
   14: $h14-font-size,
-  17: $h17-font-size
+  17: $h17-font-size,
+  44: $h44-font-size
 ) !default;
 // scss-docs-end font-sizes
 
@@ -1388,8 +1408,10 @@ $card-title-spacer-y:               $spacer * .5 !default;
 $card-title-color:                  null !default;
 $card-subtitle-color:               null !default;
 $card-border-width:                 var(--#{$prefix}border-width) !default;
-$card-border-color:                 var(--#{$prefix}border-color-translucent) !default;
-$card-border-radius:                var(--#{$prefix}border-radius) !default;
+$card-border-color:                 rgba($black, 0.1) !default; // custom
+// $card-border-color:                 var(--#{$prefix}border-color-translucent) !default;
+$card-border-radius:                $border-radius-xl !default; // custom
+// $card-border-radius:                var(--#{$prefix}border-radius) !default;
 $card-box-shadow:                   null !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
 $card-cap-padding-y:                $card-spacer-y * .5 !default;
@@ -1398,7 +1420,8 @@ $card-cap-bg:                       rgba(var(--#{$prefix}body-color-rgb), .03) !
 $card-cap-color:                    null !default;
 $card-height:                       null !default;
 $card-color:                        null !default;
-$card-bg:                           var(--#{$prefix}body-bg) !default;
+$card-bg:                           $white !default; // custom
+// $card-bg:                           var(--#{$prefix}body-bg) !default;
 $card-img-overlay-padding:          $spacer !default;
 $card-group-margin:                 $grid-gutter-width * .5 !default;
 // scss-docs-end card-variables
@@ -1607,13 +1630,17 @@ $alert-color-scale:             40% !default; // Deprecated in v5.2.0, to be rem
 // Progress bars
 
 // scss-docs-start progress-variables
-$progress-height:                   1rem !default;
+$progress-height:                   1.5rem !default; // custom
+// $progress-height:                   1rem !default;
 $progress-font-size:                $font-size-base * .75 !default;
-$progress-bg:                       var(--#{$prefix}secondary-bg) !default;
-$progress-border-radius:            var(--#{$prefix}border-radius) !default;
+$progress-bg:                       rgba($black, 0.1) !default; // custom
+// $progress-bg:                       var(--#{$prefix}secondary-bg) !default;
+$progress-border-radius:            $border-radius-pill !default; // custom;
+// $progress-border-radius:            var(--#{$prefix}border-radius) !default;
 $progress-box-shadow:               var(--#{$prefix}box-shadow-inset) !default;
 $progress-bar-color:                $white !default;
-$progress-bar-bg:                   $primary !default;
+$progress-bar-bg:                   $primary-default !default; // custom
+// $progress-bar-bg:                   $primary !default;
 $progress-bar-animation-timing:     1s linear infinite !default;
 $progress-bar-transition:           width .6s ease !default;
 // scss-docs-end progress-variables
