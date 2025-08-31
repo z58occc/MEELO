@@ -75,8 +75,8 @@
           </nav>
         </div>
       </div>
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper d-flex flex-column gap-3 ">
+      <div class="swiper mySwiper" >
+        <div class="swiper-wrapper">
       <div class="Thread-card swiper-slide">
         <div class="d-flex align-items-center gap-2 mb-2">
           <div><img src="/assets/images/index-img/User2.png" alt="Avatar / User2"></div>
@@ -510,12 +510,14 @@
      <!-- swiper -->
      <script>
        const swiper = new Swiper(".mySwiper", {
+        
   direction: "vertical",
-  slidesPerView: 1.3,  // 手機時顯示 1.3 張
-  spaceBetween: 0,
-  breakpoints: {
-    0: { slidesPerView: 1.3 } // 大螢幕顯示 1.3 張
-  },
+  slidesPerView: 'auto',
+  spaceBetween: 16,
+  autoHeight: true,
+  // breakpoints: {
+  //   0: { slidesPerView: 1.3 } // 大螢幕顯示 1.3 張
+  // },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
