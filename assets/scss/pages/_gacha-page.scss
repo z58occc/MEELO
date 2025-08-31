@@ -116,10 +116,10 @@
     }
   }
 }
-.swiper {
-  &-slide {
+.interest-list {
+  .swiper-slide {
     height: 160px;
-    &-img {
+    .swiper-img {
       height: 160px;
       object-fit: cover;
       border-radius: 16px;
