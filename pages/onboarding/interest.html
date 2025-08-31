@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,11 +7,11 @@
   </head>
   <body>
     <main class="min-vh-100 pt-6t">
-      <section class="container d-flex flex-column pb-6t mb-10t">
+      <section class="container">
         <%- include('./layout/onboarding/progress.ejs', {progress: "42.86"}) %>
         <h1 class="mt-6t mb-2 fs-4 fw-bold text-text-primary">你的興趣是...</h1>
         <p class="mb-6t fs-14 text-black text-opacity-60">最多選三項</p>
-        <form id="interestForm" class="row g-4t flex-grow-1">
+        <form id="interestForm" class="row g-4t pb-16t">
           <div class="col-6">
             <div class="onboarding-check onboarding-check-lg rounded-4">
               <input
@@ -24,8 +24,7 @@
               <label class="onboarding-check-label card h-100" for="travel">
                 <div class="card-body">
                   <h3 class="fs-18 fw-bold">旅行</h3>
-                  <p class="onboarding-check-text mb-6t fs-14">探索世界各地</p>
-
+                  <p class="onboarding-check-text fs-14">探索世界各地</p>
                   <img
                     class="onboarding-interest-img position-absolute z-1"
                     src="/assets/images/onboarding/interest-1.png"
@@ -47,8 +46,7 @@
               <label class="onboarding-check-label card h-100" for="foodie">
                 <div class="card-body">
                   <h3 class="fs-18 fw-bold">美食</h3>
-                  <p class="onboarding-check-text mb-6t fs-14">挖掘各地美味</p>
-
+                  <p class="onboarding-check-text fs-14">挖掘各地美味</p>
                   <img
                     class="onboarding-interest-img position-absolute z-1"
                     src="/assets/images/onboarding/interest-2.png"
@@ -70,8 +68,7 @@
               <label class="onboarding-check-label card h-100" for="photograph">
                 <div class="card-body">
                   <h3 class="fs-18 fw-bold">攝影</h3>
-                  <p class="onboarding-check-text mb-6t fs-14">捕捉精彩瞬間</p>
-
+                  <p class="onboarding-check-text fs-14">捕捉精彩瞬間</p>
                   <img
                     class="onboarding-interest-img position-absolute z-1"
                     src="/assets/images/onboarding/interest-3.png"
@@ -93,10 +90,7 @@
               <label class="onboarding-check-label card h-100" for="exercise">
                 <div class="card-body">
                   <h3 class="fs-18 fw-bold">運動</h3>
-                  <p class="onboarding-check-text mb-6t fs-14">
-                    一起熱血揮灑汗水
-                  </p>
-
+                  <p class="onboarding-check-text fs-14">一起熱血揮灑汗水</p>
                   <img
                     class="onboarding-interest-img position-absolute z-1"
                     src="/assets/images/onboarding/interest-4.png"
@@ -118,10 +112,7 @@
               <label class="onboarding-check-label card h-100" for="music">
                 <div class="card-body">
                   <h3 class="fs-18 fw-bold">音樂</h3>
-                  <p class="onboarding-check-text mb-6t fs-14">
-                    旋律裡找到自己
-                  </p>
-
+                  <p class="onboarding-check-text fs-14">旋律裡找到自己</p>
                   <img
                     class="onboarding-interest-img position-absolute z-1"
                     src="/assets/images/onboarding/interest-5.png"
@@ -146,8 +137,7 @@
               >
                 <div class="card-body">
                   <h3 class="fs-18 fw-bold">影視</h3>
-                  <p class="onboarding-check-text mb-6t fs-14">追劇好片推薦</p>
-
+                  <p class="onboarding-check-text fs-14">追劇好片推薦</p>
                   <img
                     class="onboarding-interest-img position-absolute z-1"
                     src="/assets/images/onboarding/interest-6.png"
@@ -208,11 +198,13 @@
         const target = checkboxs.find((checkbox) => checkbox.value === option);
         target.checked = true;
       });
-      checkboxs.forEach((e) => {
-        if (!e.checked) {
-          e.setAttribute("disabled", "");
-        }
-      });
+      if (selectedOptions.length >= 3) {
+        checkboxs.forEach((e) => {
+          if (!e.checked) {
+            e.setAttribute("disabled", "");
+          }
+        });
+      }
 
       // watch
       form.addEventListener("change", (e) => {

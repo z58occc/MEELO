@@ -462,8 +462,8 @@ $spacers: (
   3t: $spacer * 0.75, // tanuki - 12px
   4t: $spacer, // tanuki - 16px
   6t: $spacer * 1.5, // tanuki - 24px
-  10t:$spacer * 2.5, // tanuki - 40px
-   
+  10t: $spacer * 2.5, // tanuki - 40px
+  16t: $spacer * 4, // tanuki - 64px
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -704,10 +704,9 @@ $font-sizes: (
   4: $h4-font-size,
   5: $h5-font-size,
   6: $h6-font-size,
-  14: $h14-font-size,
-  18: $h18-font-size,
   12: $h12-font-size,
   14: $h14-font-size,
+  18: $h18-font-size,
   17: $h17-font-size,
   44: $h44-font-size
 ) !default;

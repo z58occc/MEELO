@@ -89,7 +89,7 @@
     }
   }
 
-  // 大尺寸
+  // 不同尺寸與版型
   &-lg {
     height: 160px;
     .onboarding-check-label {
@@ -97,6 +97,17 @@
         top: 62px;
         left: 59px;
       }
+    }
+  }
+  &-full {
+    height: 117px;
+    .onboarding-check-label::after {
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      transform: translateY(-50%);
+      top: 50%;
+      left: -48px;
     }
   }
 
@@ -127,6 +138,11 @@
     height: 80px;
     top: 78px;
     left: 82px;
+  }
+  .onboarding-dietary-img {
+    width: 64px;
+    height: 64px;
+    left: 48px;
   }
 }
 
