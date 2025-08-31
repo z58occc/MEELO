@@ -274,12 +274,10 @@
               alt="creation img">
           </div>
         </div>
-
-        <h5 class="fs-18 fw-bold text-text-primary mb-12">興趣集錦</h5>
-
       </section>
 
       <div class="ps-3 swiper mySwiper mb-4 mb-4">
+        <h5 class="fs-18 fw-bold text-text-primary mb-12">興趣集錦</h5>
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
@@ -294,46 +292,6 @@
           </div>
         </div>
       </div>
-
-      <section class="px-3">
-        <h5 class="fs-18 fw-bold text-text-primary mb-12">關於我</h5>
-        <ul class="d-flex gap-2 list-unstyled mb-12">
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            26歲
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            男性
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            處女座
-          </li>
-        </ul>
-        <p class="text-text-secondary mb-4">
-          嗨，我是阿力先生。
-          <br>
-          <br>
-          平常在出版社當編輯社畜，下班後會一頭栽進手帳世界，寫字、貼貼紙、跟我的貓（牠叫豬豬）一起靜靜過完一天。
-          <br>
-          <br>
-          最喜歡紙膠帶撕開的聲音，還有把情緒用顏色分類的瞬間。
-          <br>
-          <br>
-          我相信每一張便條紙都值得被好好安放，就像每段關係，都該被認真對待。
-          <br>
-          <br>
-          如果你也是細節控、熱愛慢慢了解彼此的過程，歡迎一起來交換一頁日常，期待認識你！
-        </p>
-
-        <h5 class="fs-18 fw-bold text-text-primary mb-12">職業</h5>
-        <p class="text-text-secondary mb-4">出版社編輯</p>
-
-        <h5 class="fs-18 fw-bold text-text-primary mb-12">教育背景</h5>
-        <p class="text-text-secondary mb-4">NTU</p>
-
-        <h5 class="fs-18 fw-bold text-text-primary mb-12">居住城市</h5>
-        <p class="text-text-secondary mb-4">台北</p>
-
-      </section>
     </div>
 
     <section class="px-3">
@@ -439,7 +397,7 @@
         likeBtn.style.opacity = opacityLike;
         dislikeBtn.style.opacity = opacityDlike;
 
-        deltaY = Math.min(8,Math.abs(deltaX) * 0.05405);
+        deltaY = Math.min(8, Math.abs(deltaX) * 0.05405);
         // 跟著手指移動，讓卡片偏移 & 微旋轉
 
         meCard.style.transform = `translateX(${deltaX}px) translateY(${deltaY}px) rotate(${deltaX * 0.05405}deg)`;
