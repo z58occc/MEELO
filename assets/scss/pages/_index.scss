@@ -1,3 +1,58 @@
-.index-title {
-  font-size: 100px;
+.bg{
+   
+  background: 
+    url("/assets/images/index-img/Hero-Image-full.png") 
+    no-repeat center center/cover;
+  overflow: hidden;
 }
+.thread-card-radius{
+  border-bottom-left-radius: 16px ;
+  border-bottom-right-radius: 16px ;
+  border-top-left-radius: 4px ;
+  border-top-right-radius: 16px ;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;       /* for WebKit */
+  display: box;               /* 老舊瀏覽器 (已棄用，但保險可加) */
+  -webkit-box-orient: vertical;
+  box-orient: vertical;       /* 老舊屬性 */
+  -webkit-line-clamp: 2;      /* Safari/Chrome */
+  line-clamp: 2;              /* 標準草案 */
+  overflow: hidden;
+}
+
+
+$hero-action-card: linear-gradient(135deg, #fbe6da 0%, #ffffff 70%);
+
+.bg-hero-action-card {
+  background: $hero-action-card;
+}
+
+.offcanvas {
+  background-color: rgba(255, 255, 255, 1) !important; /* 白色半透明 */
+}
+// .offcanvas{
+//   background-color: rgba(255, 255, 255, 0.2) !important; /* 白色半透明 */
+//   backdrop-filter: blur(10px); /* 毛玻璃效果 */
+//   -webkit-backdrop-filter: blur(10px); /* for Safari */
+// }
+
+.offcanvas-gray{
+  background-color: rgb(179, 179, 179, 0.3) !important; /* 黑色半透明 */
+  color: #fff; /* 字體改白色，對比明顯 */
+  box-shadow: none !important; /* 移除邊框陰影 */
+}
+
+.mySwiper {
+  height: 50vh; /* 讓整個 Swiper 高度隨螢幕比例調整 */
+}
+
+.mySwiper .swiper-slide {
+  height: auto !important; /* ⚠️ 取消 Swiper 預設的 100% 高度 */
+}
+
+.fab-btn {
+  z-index: 1035; /* 比 offcanvas-backdrop (1050) 高 */
+}
+
