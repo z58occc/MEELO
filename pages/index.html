@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>index</title>
   </head>
   <body>
@@ -48,6 +49,9 @@
     </div>
     </div>
     <div class="bg-background-page pt-4 px-3 position-relative" style="border-top-left-radius: 24px; border-top-right-radius: 24px;" >
+      <div>
+        <a  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="position-absolute fab-btn " style="bottom: 24px;; right: 24px;;" ><img src="/assets/images/index-img/Fab-default.png" alt="Button/Fab-default"></a>
+      </div>
       <div class="d-flex justify-content-between mb-3">
         <a href="#" class="d-inline-block text-decoration-none" type="button" 
         data-bs-toggle="offcanvas" 
@@ -69,8 +73,9 @@
           </nav>
         </div>
       </div>
-      <div class=" d-flex flex-column gap-3">
-        <div class="Thread-card">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper d-flex flex-column gap-3 ">
+      <div class="Thread-card swiper-slide">
         <div class="d-flex align-items-center gap-2 mb-2">
           <div><img src="/assets/images/index-img/User2.png" alt="Avatar / User2"></div>
           <div class="text-text-primary ln-base fw-bold fs-14">內湖小仙女</div>
@@ -95,10 +100,10 @@
             </div>
             <div class="fs-12 ln-base text-text-inactive">20 分鐘前</div>
           </div>
-          <div>
+          <a href="#" class="text-decoration-none">
             <div class="fw-bold ln-base text-text-primary">澳洲自由行請益、求旅伴！</div>
             <div class="fs-14 ln-base text-text-secondary line-clamp-2 " >想找人一起規劃今年秋天的澳洲旅行！ 預計玩墨爾本及雪梨兩個城市，有人推薦布里斯本也要一起排嗎？</div>
-          </div>
+          </a>
           <div class="d-flex align-items-center  gap-4">
             <div class="d-flex align-items-center gap-1">
               <div class="text-text-secondary d-flex align-items-center">
@@ -140,7 +145,7 @@
           </div>
         </div>
       </div>
-       <div class="Thread-card">
+      <div class="Thread-card swiper-slide">
         <div class="d-flex align-items-center gap-2 mb-2">
           <div><img src="/assets/images/index-img/User1.png" alt="Avatar / User1"></div>
           <div class="text-text-primary ln-base fw-bold fs-14">帥破天際的小帥</div>
@@ -165,10 +170,10 @@
             </div>
             <div class="fs-12 ln-base text-text-inactive">25 分鐘前</div>
           </div>
-          <div>
+          <a href="#" class="text-decoration-none">
             <div class="fw-bold ln-base text-text-primary">你是行程控還是隨遇而安派？旅伴的差異真的很精彩😂</div>
             <div class="fs-14 ln-base text-text-secondary line-clamp-2 " >想找人一起規劃今年秋天的澳洲旅行！ 預計玩墨爾本及雪梨兩個城市，有人推薦布里斯本也要一起排嗎？</div>
-          </div>
+          </a>
           <div class="d-flex align-items-center  gap-4">
             <div class="d-flex align-items-center gap-1">
               <div class="text-text-secondary d-flex align-items-center">
@@ -210,7 +215,7 @@
           </div>
         </div>
       </div>
-       <div class="Thread-card">
+      <div class="Thread-card swiper-slide">
         <div class="d-flex align-items-center gap-2 mb-2">
           <div><img src="/assets/images/index-img/User1.png" alt="Avatar / User1"></div>
           <div class="text-text-primary ln-base fw-bold fs-14">帥破天際的小帥</div>
@@ -235,10 +240,80 @@
             </div>
             <div class="fs-12 ln-base text-text-inactive">25 分鐘前</div>
           </div>
-          <div>
+          <a href="#" class="text-decoration-none">
             <div class="fw-bold ln-base text-text-primary">你是行程控還是隨遇而安派？旅伴的差異真的很精彩😂</div>
             <div class="fs-14 ln-base text-text-secondary line-clamp-2 " >想找人一起規劃今年秋天的澳洲旅行！ 預計玩墨爾本及雪梨兩個城市，有人推薦布里斯本也要一起排嗎？</div>
+          </a>
+          <div class="d-flex align-items-center  gap-4">
+            <div class="d-flex align-items-center gap-1">
+              <div class="text-text-secondary d-flex align-items-center">
+                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.4552 6.40001C13.4552 5.68393 13.1677 4.99737 12.6562 4.49102C12.1447 3.98467 11.4512 3.7 10.7279 3.7C10.2553 3.7 9.8874 3.766 9.54717 3.9127C9.20305 4.06109 8.84913 4.30845 8.42916 4.72423C8.19247 4.95854 7.80883 4.95854 7.57215 4.72423C7.15217 4.30845 6.79825 4.06109 6.45413 3.9127C6.11391 3.766 5.746 3.7 5.27338 3.7C4.55006 3.7 3.85657 3.98467 3.34511 4.49102C2.83365 4.99737 2.54611 5.68393 2.54611 6.40001C2.54611 7.36961 3.10338 8.17497 3.84937 8.94182L8.00065 13.0516L11.8187 9.27171C12.7231 8.39441 13.4552 7.50159 13.4552 6.40001ZM14.6673 6.40001C14.6673 8.04378 13.5719 9.24929 12.671 10.1237L12.6716 10.1242L8.42916 14.3243C8.19247 14.5586 7.80883 14.5586 7.57215 14.3243L3.33683 10.1313C2.42433 9.258 1.33398 8.05181 1.33398 6.40001C1.33398 5.36567 1.74873 4.37339 2.48751 3.642C3.22629 2.9106 4.22859 2.5 5.27338 2.5C5.86743 2.5 6.4088 2.584 6.93827 2.81231C7.30992 2.97257 7.65628 3.19673 8.00065 3.48496C8.34503 3.19673 8.69138 2.97257 9.06303 2.81231C9.59251 2.584 10.1339 2.5 10.7279 2.5C11.7727 2.5 12.775 2.9106 13.5138 3.642C14.2526 4.37339 14.6673 5.36567 14.6673 6.40001Z" fill="black" fill-opacity="0.6"/>
+</svg>
+
+              </div>
+              <div class="fs-14 ln-base text-text-secondary d-flex">573</div>
+            </div>
+            <div class="d-flex align-items-center gap-1">
+              <div class="text-text-secondary d-flex align-items-center">
+                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.07889 3.10677C5.36298 2.17116 6.93892 1.7248 8.5229 1.8483C10.107 1.97188 11.5953 2.65706 12.7189 3.78059C13.8424 4.90413 14.5276 6.39245 14.6512 7.97656C14.7747 9.56054 14.3283 11.1365 13.3927 12.4206C12.457 13.7048 11.0934 14.6127 9.54764 14.9805C8.09558 15.3259 6.5727 15.173 5.22146 14.5521L1.54699 15.7982C1.30668 15.8796 1.04086 15.8174 0.861439 15.638C0.682033 15.4586 0.619826 15.1928 0.701283 14.9525L1.94673 11.2773C1.32613 9.9263 1.17361 8.40359 1.51899 6.95182C1.88675 5.40604 2.7947 4.04247 4.07889 3.10677ZM8.41938 3.17773C7.15218 3.0789 5.89134 3.43576 4.86404 4.18424C3.83669 4.9328 3.11007 6.02379 2.81587 7.26041C2.52169 8.49699 2.67908 9.79806 3.25923 10.929C3.34153 11.0895 3.35548 11.2765 3.29764 11.4473L2.3979 14.1009L5.05219 13.2018L5.11665 13.1836C5.26912 13.1485 5.42994 13.1682 5.57042 13.2402C6.70139 13.8204 8.00246 13.9778 9.23904 13.6836C10.4757 13.3894 11.5667 12.6628 12.3152 11.6354C13.0637 10.6081 13.4206 9.34729 13.3217 8.08007C13.2229 6.81278 12.675 5.62213 11.7762 4.7233C10.8773 3.82448 9.68666 3.27659 8.41938 3.17773ZM5.3393 7.83333C5.70748 7.83333 6.00595 8.13182 6.00597 8.49999C6.00597 8.86818 5.70749 9.16666 5.3393 9.16666H5.33279C4.9646 9.16666 4.66613 8.86818 4.66613 8.49999C4.66614 8.13182 4.96461 7.83333 5.33279 7.83333H5.3393ZM8.00597 7.83333C8.37415 7.83333 8.67262 8.13182 8.67264 8.49999C8.67264 8.86818 8.37416 9.16666 8.00597 9.16666H7.99946C7.63127 9.16666 7.33279 8.86818 7.33279 8.49999C7.33281 8.13182 7.63128 7.83333 7.99946 7.83333H8.00597ZM10.6726 7.83333C11.0408 7.83333 11.3393 8.13182 11.3393 8.49999C11.3393 8.86818 11.0408 9.16666 10.6726 9.16666H10.6661C10.2979 9.16666 9.99946 8.86818 9.99946 8.49999C9.99948 8.13182 10.2979 7.83333 10.6661 7.83333H10.6726Z" fill="black" fill-opacity="0.6"/>
+</svg>
+
+              </div>
+              <div class="fs-14 ln-base text-text-secondary d-flex">300</div>
+            </div>
+            <div class="d-flex align-items-center gap-1">
+              <div class="text-text-secondary d-flex align-items-center">
+                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.6673 15.167L3.33398 15.167C2.80355 15.167 2.29499 14.9561 1.91992 14.5811C1.54485 14.206 1.33398 13.6974 1.33398 13.167L1.33398 10.5003C1.33398 10.1321 1.63246 9.83366 2.00065 9.83366C2.36884 9.83366 2.66732 10.1321 2.66732 10.5003L2.66732 13.167C2.66732 13.3438 2.73761 13.5133 2.86263 13.6383C2.98765 13.7634 3.15717 13.8337 3.33398 13.8337L12.6673 13.8337C12.8441 13.8337 13.0136 13.7634 13.1387 13.6383C13.2637 13.5133 13.334 13.3438 13.334 13.167L13.334 10.5003C13.334 10.1321 13.6325 9.83366 14.0007 9.83366C14.3688 9.83366 14.6673 10.1321 14.6673 10.5003L14.6673 13.167C14.6673 13.6974 14.4565 14.206 14.0814 14.5811C13.7063 14.9561 13.1978 15.167 12.6673 15.167ZM4.19596 6.30501C3.95189 6.06094 3.93682 5.67494 4.15039 5.41309L4.19596 5.36231L7.5293 2.02897C7.78965 1.76862 8.21166 1.76862 8.472 2.02897L11.8053 5.36231C12.0657 5.62265 12.0657 6.04466 11.8053 6.30501C11.545 6.56536 11.123 6.56536 10.8626 6.30501L8.66732 4.1097L8.66732 10.5003C8.66732 10.8685 8.36884 11.167 8.00065 11.167C7.63246 11.167 7.33398 10.8685 7.33398 10.5003L7.33398 4.1097L5.13867 6.30501L5.08789 6.35059C4.82604 6.56415 4.44004 6.54909 4.19596 6.30501Z" fill="black" fill-opacity="0.6"/>
+</svg>
+
+              </div>
+              <div class="fs-14 ln-base text-text-secondary d-flex">402</div>
+            </div>
+            <div class="d-flex align-items-center gap-1">
+              <div class="text-text-secondary d-flex align-items-center">
+                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.9993 3.83301C11.9993 3.6562 11.9291 3.48668 11.804 3.36165C11.679 3.23663 11.5095 3.16634 11.3327 3.16634H4.66602C4.4892 3.16634 4.31969 3.23663 4.19466 3.36165C4.06964 3.48668 3.99935 3.6562 3.99935 3.83301V13.3506L7.66862 11.2542L7.7474 11.2158C7.93568 11.1389 8.15072 11.1517 8.33008 11.2542L11.9993 13.3506V3.83301ZM13.3327 14.4997C13.3327 14.7373 13.2062 14.9572 13.0007 15.0765C12.7951 15.1957 12.5416 15.1963 12.3353 15.0785L7.99935 12.6006L3.66341 15.0785C3.4571 15.1963 3.20358 15.1957 2.99805 15.0765C2.7925 14.9572 2.66602 14.7373 2.66602 14.4997V3.83301C2.66602 3.30257 2.87688 2.79402 3.25195 2.41895C3.62703 2.04387 4.13558 1.83301 4.66602 1.83301H11.3327C11.8631 1.83301 12.3717 2.04387 12.7467 2.41895C13.1218 2.79402 13.3327 3.30257 13.3327 3.83301V14.4997Z" fill="black" fill-opacity="0.6"/>
+</svg>
+
+
+              </div>
+              <div class="fs-14 ln-base text-text-secondary d-flex">209</div>
+            </div>
           </div>
+        </div>
+      </div>
+      <div class="Thread-card swiper-slide">
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <div><img src="/assets/images/index-img/User1.png" alt="Avatar / User1"></div>
+          <div class="text-text-primary ln-base fw-bold fs-14">帥破天際的小帥</div>
+        </div>
+        <div class="p-3 bg-white thread-card-radius border border-border-subtle  d-flex flex-column gap-2">
+          <div class="d-flex justify-content-between  align-items-center">
+            <div >
+              <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                 <ol class="breadcrumb mb-0 align-items-center">
+                   <li class="breadcrumb-item">
+                    <a href="#" class="py-1 px-2 fs-14 ln-base text-primary-default text-decoration-none bg-primary-inverted-active rounded-2 d-flex align-items-center gap-1">
+                      <div><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.4297 1.86224C13.0131 1.68276 13.662 1.63447 14.194 1.85573L14.2988 1.90325L14.3906 1.95924C14.4775 2.02192 14.5486 2.10468 14.597 2.20143C14.872 2.75143 14.8294 3.44835 14.638 4.07057C14.439 4.71725 14.0481 5.39488 13.472 5.97096L11.3965 8.04583L12.5182 13.1565C12.5191 13.1606 12.52 13.1648 12.5208 13.1689C12.6472 13.8009 12.3649 14.3101 11.9342 14.6331C11.8875 14.6681 11.8361 14.6966 11.7819 14.7184L11.4486 14.8518C10.8943 15.0735 10.2171 14.9881 9.80077 14.4332C9.79279 14.4226 9.78532 14.4111 9.77799 14.4L7.81314 11.4254L6.66731 12.1897V13.8329C6.66731 14.0098 6.59702 14.1793 6.472 14.3043L5.80533 14.971C5.6641 15.1122 5.46698 15.1827 5.26822 15.163C5.06949 15.1433 4.89007 15.0356 4.77929 14.8694L3.51952 12.9801L1.63085 11.721C1.46468 11.6102 1.35693 11.4308 1.33723 11.232C1.31755 11.0333 1.38806 10.8361 1.52929 10.6949L2.19596 10.0283L2.24478 9.98398C2.36342 9.88676 2.51258 9.83294 2.66731 9.83294H4.31054L5.07421 8.68645L2.10025 6.72226C2.08915 6.71493 2.07769 6.70746 2.06705 6.69948C1.51218 6.28316 1.42674 5.60592 1.64843 5.05169C1.66161 5.01879 1.67772 4.98703 1.69596 4.95664L1.89582 4.6233C2.16258 4.13465 2.66961 3.89261 3.21809 3.96054L3.33137 3.97942L3.34374 3.98203L8.45377 5.10312L10.5293 3.02825C11.1054 2.45217 11.783 2.06121 12.4297 1.86224ZM13.4557 3.04388C13.3004 3.03542 13.0872 3.05526 12.8216 3.13698C12.385 3.27135 11.8959 3.54709 11.472 3.97096L9.13866 6.30429C8.97792 6.46503 8.74612 6.53272 8.52408 6.48398L3.06965 5.28672L3.05207 5.28476C3.04764 5.2929 3.04382 5.30156 3.03905 5.3095L2.8776 5.57838C2.86968 5.60565 2.86743 5.62293 2.86783 5.63177L6.36783 7.94362C6.51578 8.04133 6.61914 8.19366 6.65429 8.36744C6.68943 8.54122 6.65368 8.72188 6.55533 8.8694L5.222 10.8694C5.09835 11.0549 4.89021 11.1663 4.66731 11.1663H3.20247L4.37043 11.9449L4.42317 11.984C4.4741 12.0257 4.51867 12.0748 4.55533 12.1298L5.33398 13.2978V11.8329C5.33398 11.61 5.44538 11.4019 5.63085 11.2783L7.63085 9.94492L7.68749 9.91106C7.8233 9.8388 7.98069 9.8152 8.1328 9.84596C8.30659 9.88111 8.45892 9.98446 8.55663 10.1324L10.8678 13.6324C10.8792 13.633 10.9074 13.6325 10.9531 13.6142L11.1816 13.5224C11.2041 13.4996 11.2131 13.4866 11.2148 13.4827C11.2161 13.4799 11.217 13.4772 11.2174 13.4729C11.2179 13.4681 11.2183 13.4546 11.2135 13.4306V13.4299L10.0163 7.97617C9.96753 7.75413 10.0352 7.52233 10.196 7.36159L12.5293 5.02825C12.9532 4.60438 13.2289 4.11526 13.3633 3.67864C13.4451 3.41266 13.4643 3.19924 13.4557 3.04388Z" fill="#DB773D"/>
+</svg>
+</div>
+                      旅行
+                    </a>
+                  </li>
+                   <li class="breadcrumb-item"><a href="#" class="py-1 px-2 fs-14 ln-base text-text-secondary text-decoration-none bg-state-system-subtle rounded-2 d-flex align-items-center">巴西</a></li>
+                 </ol>
+              </nav>
+            </div>
+            <div class="fs-12 ln-base text-text-inactive">25 分鐘前</div>
+          </div>
+          <a href="#" class="text-decoration-none">
+            <div class="fw-bold ln-base text-text-primary">你是行程控還是隨遇而安派？旅伴的差異真的很精彩😂</div>
+            <div class="fs-14 ln-base text-text-secondary line-clamp-2 " >想找人一起規劃今年秋天的澳洲旅行！ 預計玩墨爾本及雪梨兩個城市，有人推薦布里斯本也要一起排嗎？</div>
+          </a>
           <div class="d-flex align-items-center  gap-4">
             <div class="d-flex align-items-center gap-1">
               <div class="text-text-secondary d-flex align-items-center">
@@ -281,6 +356,8 @@
         </div>
       </div>
       </div>
+      </div>
+      
 
        <!-- Bottom Sheet Offcanvas -->
        <div class="offcanvas offcanvas-bottom" tabindex="-1" id="travelOffcanvas"
@@ -419,9 +496,7 @@
         </div>
 
 
-        <div>
-        <a  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="position-absolute " style="bottom: 24px;; right: 24px;;" ><img src="/assets/images/index-img/Fab-default.png" alt="Button/Fab-default"></a>
-        </div>
+        
        
     </div>
    </div>
@@ -429,6 +504,27 @@
     <%- include('./layout/footer.ejs',{active:"home"}) %>
 
     <!-- JavaScript Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+     <script>
+     const swiper = new Swiper(".mySwiper", {
+  direction: "vertical",
+  slidesPerView: 1.3,  // 手機時顯示 1.3 張
+  spaceBetween: 0,
+  breakpoints: {
+    0: { slidesPerView: 1.3 } // 大螢幕顯示 1.3 張
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    bulletActiveClass: "my-bullet-active",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  }
+});
+  
+     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script type="module" src="../main.js"></script>
   </body>
