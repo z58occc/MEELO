@@ -12,10 +12,7 @@
     display: block;
     width: 24px;
     height: 24px;
-    background-color: rgba(
-      var(--btn-color),
-      var(--btn-color-opacity, 1)
-    );
+    background-color: rgba(var(--btn-color), var(--btn-color-opacity, 1));
     mask: var(--icon-url) center/cover no-repeat;
     -webkit-mask: var(--icon-url) center/cover no-repeat;
   }
@@ -70,8 +67,15 @@
   height: 147.33px;
 
   &-label {
-    --text-color: #{$text-primary};
-    color: var(--text-color);
+    --title-color: #{$text-primary};
+    color: var(--title-color);
+
+    .onboarding-check-text {
+      --text-color: #{to-rgb($black)};
+      --text-color-opacity: 0.6;
+      color: rgb(var(--text-color), var(--text-color-opacity));
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -84,6 +88,18 @@
       border-radius: 50%;
     }
   }
+
+  // 大尺寸
+  &-lg {
+    height: 160px;
+    .onboarding-check-label {
+      &::after {
+        top: 62px;
+        left: 59px;
+      }
+    }
+  }
+
   // checked 樣式
   &-input:not(:checked) + &-label {
     overflow: hidden;
@@ -93,7 +109,11 @@
     .card {
       --bs-card-bg: #{$primary-active};
       --bs-card-border-color: #{$primary-active};
+      --title-color: #{$white};
+          .onboarding-check-text {
       --text-color: #{$white};
+      --text-color-opacity: 1;
+    }
     }
   }
   .onboarding-gender-img {
@@ -101,6 +121,12 @@
     height: 99px;
     top: 44px;
     left: 61px;
+  }
+  .onboarding-interest-img {
+    width: 80px;
+    height: 80px;
+    top: 78px;
+    left: 82px;
   }
 }
 
@@ -119,25 +145,26 @@
   padding: 12px 16px;
   font-weight: $font-weight-bold;
   color: rgb(var(--btn-color), var(--btn-color-opacity));
-  
+
   &:active {
     background-color: rgba(var(--btn-active-bg), var(--btn-active-bg-opacity));
   }
-  &.disabled, &:disabled {
-    opacity: .5;
+  &.disabled,
+  &:disabled {
+    opacity: 0.5;
     cursor: not-allowed;
     pointer-events: none;
   }
-  
+
   // 色系
   &-accent {
     --btn-active-bg: #{to-rgb($bg-avatar)};
     --btn-color: #{to-rgb($primary-default)};
   }
   &-neutral {
-  --btn-active-bg: #{to-rgb($black)};
-  --btn-active-bg-opacity: .5;
-  --btn-color: #{to-rgb($black)};
-  --btn-color-opacity: .4;
+    --btn-active-bg: #{to-rgb($black)};
+    --btn-active-bg-opacity: 0.5;
+    --btn-color: #{to-rgb($black)};
+    --btn-color-opacity: 0.4;
   }
 }

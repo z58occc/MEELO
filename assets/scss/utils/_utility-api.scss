@@ -12,4 +12,15 @@ $utilities: (
       100: 1
     )
   ),
+  "text-opacity": (
+  css-var: true,
+  class: text-opacity,
+  values: (
+    25: .25,
+    50: .5,
+    60: .6,
+    75: .75,
+    100: 1
+  )
+),
 )

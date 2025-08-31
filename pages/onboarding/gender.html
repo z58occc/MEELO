@@ -6,8 +6,8 @@
     <title>Meelo | onBoarding</title>
   </head>
   <body>
-    <main class="pt-6t position-relative">
-      <section class="container pt-6t">
+    <main class="min-vh-100 pt-6t">
+      <section class="container pb-6t mb-10t">
         <%- include('./layout/onboarding/progress.ejs', {progress: "14.29"}) %>
         <h1 class="mt-6t mb-2 fs-3 fw-bold text-primary-default">Elly</h1>
         <h2 class="mb-6t fs-4 fw-bold text-text-primary">你的性別是...</h2>
@@ -142,13 +142,11 @@
       // onMounted
       toggleBtnDisabled(nextPageBtn);
       radios.forEach((r) => {
-        console.log(r.value === sessionStorageValue);
         if (r.value === sessionStorageValue) r.setAttribute("checked", "");
       });
 
       // watch
       form.addEventListener("change", (e) => {
-        console.dir(e.target.value);
         isSelected = e.target.value ? true : false;
         sessionStorage.setItem("gender", e.target.value);
         toggleBtnDisabled(nextPageBtn);
