@@ -10,8 +10,22 @@
     <title>index</title>
   </head>
   <body>
-   
-   <div class="bg" style="padding-top: 50px;">
+   <div class="bg" >
+     <div class="status-bar py-3 px-4 d-flex justify-content-between">
+    <span class="fw-medium fs-17 text-white">9:41</span>
+    <ul class="d-flex list-unstyled gap-7">
+      <li>
+        <img src="../assets/images/index-img/connection.png" alt="icon signal">
+      </li>
+      <li>
+        <img src="../assets/images/index-img/wifi.png" alt="icon wifi">
+      </li>
+      <li>
+        <img src="../assets/images/index-img/battery.png" alt="icon power">
+      </li>
+    </ul>
+
+  </div>
     <div class="px-3 mb-5">
       <div class="d-flex justify-content-between align-items-center  py-12">
       <div class="d-flex align-items-center gap-2">
@@ -76,11 +90,11 @@
         </div>
       </div>
       <div class="swiper mySwipers" >
-        <div class="swiper-wrapper">
+        <div class=" swiper-wrapper">
       <div class="Thread-card swiper-slide">
         <div class="d-flex align-items-center gap-2 mb-2">
           <div><img src="/assets/images/index-img/User2.png" alt="Avatar / User2"></div>
-          <div class="text-text-primary ln-base fw-bold fs-14">內湖小仙女</div>
+          <div class="text-text-primary ln-base fw-bold fs-14 ">內湖小仙女</div>
         </div>
         <div class="p-3 bg-white thread-card-radius border border-border-subtle  d-flex flex-column gap-2">
           <div class="d-flex justify-content-between  align-items-center">
@@ -102,7 +116,7 @@
             </div>
             <div class="fs-12 ln-base text-text-inactive">20 分鐘前</div>
           </div>
-          <a href="#" class="text-decoration-none">
+          <a href="detail-page.html" class="text-decoration-none">
             <div class="fw-bold ln-base text-text-primary">澳洲自由行請益、求旅伴！</div>
             <div class="fs-14 ln-base text-text-secondary line-clamp-2 " >想找人一起規劃今年秋天的澳洲旅行！ 預計玩墨爾本及雪梨兩個城市，有人推薦布里斯本也要一起排嗎？</div>
           </a>
@@ -503,8 +517,45 @@
     </div>
    </div>
 
-    <%- include('./layout/footer.ejs',{active:"home"}) %>
+     <nav class="nav bg-white">
+  <ul class="list-unstyled d-flex pt-2 px-2 pb-1 mb-0 justify-content-between w-100 align-items-center">
+    <li class="nav-item py-2" data-tab="home">
+      <img class="mx-auto d-block" src="../assets/images/index-img/Vector.png" alt="icon home">
+    </li>
+    <li class="nav-item py-2" data-tab="explore">
+      <img class="mx-auto d-block" src="../assets/images/gacha-page/navicon-1.png" alt="icon explore">
+    </li>
+    <li class="nav-item py-2 rounded-pill position-relative" data-tab="gacha">
+      <img class="mx-auto d-block" src="../assets/images/index-img/Vector2.png" alt="icon gacha">
+      <img class="position-absolute red-badge" src="../assets/images/gacha-page/red-badge.png" alt="red-badge">
+    </li>
+    <li class="nav-item py-2 position-relative" data-tab="message">
+      <img class="mx-auto d-block" src="../assets/images/gacha-page/navicon-3.png" alt="icon message">
+      <img class="position-absolute red-badge" src="../assets/images/gacha-page/red-badge.png" alt="red-badge">
+    </li>
+    <li class="nav-item py-2" data-tab="user">
+      <img class="mx-auto d-block" src="../assets/images/gacha-page/User.png" alt="icon user">
+    </li>
+  </ul>
+    </nav>
+    <footer class="footer pt-20 pb-2 bg-white ">
+      <div class="foot bg-dark mx-auto"></div>
+    </footer>
+    <script>
+  // 預設 active
+  let activeTab = "home";
 
+  document.querySelectorAll(".nav-item").forEach(item => {
+    item.addEventListener("click", () => {
+      document.querySelectorAll(".nav-item").forEach(el => el.classList.remove("bg-callout"));
+      item.classList.add("bg-callout");
+      activeTab = item.dataset.tab;
+    });
+  });
+
+  // 初始化時加上 active
+  document.querySelector(`[data-tab="${activeTab}"]`).classList.add("bg-callout");
+</script>
     <!-- JavaScript Bundle with Popper -->
      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
      <!-- swiper -->
