@@ -327,6 +327,7 @@ $text-inactive:          #999999!default;
 $background-page:         #fefcfb !default;
 $border-subtle:         #e6e6e6!default;
 $state-system-subtle:   #e6e6e6!default;
+$input-background:   #f2f2f2!default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -350,6 +351,7 @@ $theme-colors: (
   "background-page":  $background-page,
   "border-subtle":   $border-subtle,
   "state-system-subtle": $state-system-subtle,
+  "input-background": $input-background,
   "accent-300":    $accent-300,
   "black":    $black, // custom
 ) !default;
