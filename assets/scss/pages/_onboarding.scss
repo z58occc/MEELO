@@ -62,6 +62,21 @@
   }
 }
 
+.optionLayout {
+  @media (max-width: 287px) {
+    > * {
+      width: 100%;
+    }
+  }
+}
+
+.dietaryLayout{
+  display: grid;
+  gap: 16px;
+  grid-template-rows: repeat(4, minmax(104px, 1fr));
+  height: 100%;
+}
+
 .onboarding-check {
   position: relative;
   height: 147.33px;
@@ -82,8 +97,8 @@
       display: block;
       width: 146px;
       height: 146px;
-      top: 33px;
-      left: 43px;
+      bottom: -32px;
+      right: -24px;
       background-color: $bg-avatar;
       border-radius: 50%;
     }
@@ -94,20 +109,21 @@
     height: 160px;
     .onboarding-check-label {
       &::after {
-        top: 62px;
-        left: 59px;
+        bottom: -48px;
+        right: -41.5px;
       }
     }
   }
   &-full {
-    height: 117px;
+    height: 100%;
+
     .onboarding-check-label::after {
       position: absolute;
       width: 160px;
       height: 160px;
       transform: translateY(-50%);
       top: 50%;
-      left: -48px;
+      left: -64px;
     }
   }
 
@@ -130,14 +146,14 @@
   .onboarding-gender-img {
     width: 99px;
     height: 99px;
-    top: 44px;
-    left: 61px;
+    bottom: 4.33px;
+    right: 3.5px;
   }
   .onboarding-interest-img {
     width: 80px;
     height: 80px;
-    top: 78px;
-    left: 82px;
+    bottom: 2px;
+    right: 1.5px;
   }
   .onboarding-dietary-img {
     width: 64px;
@@ -147,7 +163,36 @@
 }
 
 .page-scoll-mask {
-  background: linear-gradient(180deg, rgba(254, 252, 251, 0) 0%, #fefcfb 100%);
+  &-t::after {
+    content: "";
+    display: block;
+    width: 100%;
+    margin-top: -1px;
+    height: 25px;
+    background: linear-gradient(180deg, #FEFCFB 0%, rgba(254, 252, 251, 0) 100%);
+  }
+  &-b::before {
+    content: "";
+    display: block;
+    width: 100%;
+    margin-bottom: -1px;
+    height: 25px;
+    background: linear-gradient(180deg, rgba(254, 252, 251, 0) 0%, rgba(254, 252, 251, 1) 100%);
+  }
+}
+
+
+.option-contain {
+  overflow: scroll;
+  margin-top: -24px;
+  padding-top: 24px;
+
+  // Chrome / Safari / Edge
+  &::-webkit-scrollbar {
+  display: none;
+  }
+  // Firefox
+  scrollbar-width: none;
 }
 
 .btn-ghost {
