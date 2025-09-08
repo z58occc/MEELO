@@ -6,12 +6,14 @@
     <title>Meelo | onBoarding</title>
   </head>
   <body>
-    <main class="min-vh-100 pt-6t">
-      <section class="container">
+    <main class="vh-100 pt-6t d-flex flex-column">
+      <section class="container position-sticky z-2  page-scoll-mask-t">
         <%- include('./layout/onboarding/progress.ejs', {progress: "42.86"}) %>
         <h1 class="mt-6t mb-2 fs-4 fw-bold text-text-primary">你的興趣是...</h1>
-        <p class="mb-6t fs-14 text-black text-opacity-60">最多選三項</p>
-        <form id="interestForm" class="row g-4t pb-16t">
+        <p class="mb-0 fs-14 text-black text-opacity-60">最多選三項</p>
+      </section>
+      <section class="container option-contain">
+        <form id="interestForm" class="optionLayout row g-4t pb-16t">
           <div class="col-6">
             <div class="onboarding-check onboarding-check-lg rounded-4">
               <input
@@ -142,6 +144,106 @@
                     class="onboarding-interest-img position-absolute z-1"
                     src="/assets/images/onboarding/interest-6.png"
                     alt="興趣選項-影視"
+                  />
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="onboarding-check onboarding-check-lg rounded-4">
+              <input
+                class="onboarding-check-input d-none"
+                type="checkbox"
+                name="interest"
+                id="read"
+                value="read"
+              />
+              <label
+                class="onboarding-check-label card h-100"
+                for="read"
+              >
+                <div class="card-body">
+                  <h3 class="fs-18 fw-bold">閱讀</h3>
+                  <p class="onboarding-check-text fs-14">在字裡尋找世界</p>
+                  <img
+                    class="onboarding-interest-img position-absolute z-1"
+                    src="/assets/images/onboarding/interest-7.png"
+                    alt="興趣選項-閱讀"
+                  />
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="onboarding-check onboarding-check-lg rounded-4">
+              <input
+                class="onboarding-check-input d-none"
+                type="checkbox"
+                name="interest"
+                id="learning"
+                value="learning"
+              />
+              <label
+                class="onboarding-check-label card h-100"
+                for="learning"
+              >
+                <div class="card-body">
+                  <h3 class="fs-18 fw-bold">學習</h3>
+                  <p class="onboarding-check-text fs-14">點亮未知的旅程</p>
+                  <img
+                    class="onboarding-interest-img position-absolute z-1"
+                    src="/assets/images/onboarding/interest-8.png"
+                    alt="興趣選項-學習"
+                  />
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="onboarding-check onboarding-check-lg rounded-4">
+              <input
+                class="onboarding-check-input d-none"
+                type="checkbox"
+                name="interest"
+                id="video-games"
+                value="video-games"
+              />
+              <label
+                class="onboarding-check-label card h-100"
+                for="video-games"
+              >
+                <div class="card-body">
+                  <h3 class="fs-18 fw-bold">遊戲</h3>
+                  <p class="onboarding-check-text fs-14">享受每場冒險樂趣</p>
+                  <img
+                    class="onboarding-interest-img position-absolute z-1"
+                    src="/assets/images/onboarding/interest-9.png"
+                    alt="興趣選項-遊戲"
+                  />
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="onboarding-check onboarding-check-lg rounded-4">
+              <input
+                class="onboarding-check-input d-none"
+                type="checkbox"
+                name="interest"
+                id="outdoor-activities"
+                value="outdoor-activities"
+              />
+              <label
+                class="onboarding-check-label card h-100"
+                for="outdoor-activities"
+              >
+                <div class="card-body">
+                  <h3 class="fs-18 fw-bold">戶外活動</h3>
+                  <p class="onboarding-check-text fs-14">探索世界各地</p>
+                  <img
+                    class="onboarding-interest-img position-absolute z-1"
+                    src="/assets/images/onboarding/interest-10.png"
+                    alt="興趣選項-戶外活動"
                   />
                 </div>
               </label>

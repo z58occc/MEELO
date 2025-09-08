@@ -6,12 +6,14 @@
     <title>Meelo | onBoarding</title>
   </head>
   <body>
-    <main class="min-vh-100 pt-6t">
-      <section class="container">
+    <main class="vh-100 pt-6t d-flex flex-column">
+      <section class="container position-sticky z-2 page-scoll-mask-t">
         <%- include('./layout/onboarding/progress.ejs', {progress: "14.29"}) %>
         <h1 class="mt-6t mb-2 fs-3 fw-bold text-primary-default">Elly</h1>
-        <h2 class="mb-6t fs-4 fw-bold text-text-primary">你的性別是...</h2>
-        <form id="genderForm" class="row g-4t pb-16t">
+        <h2 class="mb-0 fs-4 fw-bold text-text-primary">你的性別是...</h2>
+      </section>
+      <section class="container option-contain flex-grow-1 mb-16t">
+        <form id="genderForm" class="optionLayout row g-4t">
           <div class="col-6">
             <div class="onboarding-check rounded-4">
               <input
