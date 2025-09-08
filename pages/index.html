@@ -80,15 +80,15 @@
       </a>
     </div>
     </div>
-    
-    <div class=" bg-background-page pt-4 px-3 position-relative" style="border-top-left-radius: 24px; border-top-right-radius: 24px;" >
+    <div class="bottom-sheet-wrapper">
+    <div class=" bg-background-page pt-4 px-3 position-relative " style="border-top-left-radius: 24px; border-top-right-radius: 24px;" >
     
     <div class="fab-container position-absolute "  style="bottom:24px; right:24px;">
-  <button id="fabBtn" class="fab-main">
+    <button id="fabBtn" class="fab-main">
      <div>
       <img src="/assets/images/index-img/Fab-default.png" alt="#">
      </div>
-  </button>
+    </button>
     </div>
 
     
@@ -761,7 +761,7 @@
       </div>
       </div>
       </div>
-       
+    </div>
     </div>
 
    </div>
@@ -896,7 +896,7 @@
     </svg>
   </button>
      </div>
-      </div>
+      </div> 
     <!-- 底部導覽列 -->
      <nav class="nav bg-white">
   <ul class="list-unstyled d-flex pt-2 px-2 pb-1 mb-0 justify-content-between w-100 align-items-center">
@@ -919,14 +919,31 @@
     </li>
   </ul>
     </nav>
-    <footer class="footer pt-20 pb-2 bg-white ">
+    <footer class="footer pt-20 pb-2 bg-white">
       <div class="foot bg-dark mx-auto"></div>
     </footer>
+    
 
+    <script>
+    (() => {
+  const sheet = document.querySelector(".bottom-sheet-wrapper");
 
+  sheet.addEventListener("click", (e) => {
+    // 如果點到 FAB 或 A 按鈕，不切換
+    if (e.target.closest(".fab-container") || e.target.closest("a")) return;
 
+    // 切換半展開 / 全展開
+    if (sheet.classList.contains("half")) {
+      sheet.classList.remove("half");
+      sheet.classList.add("full");
+    } else {
+      sheet.classList.remove("full");
+      sheet.classList.add("half");
+    }
+  });
+})();
 
-    <!-- JS -->
+    </script>
     <script>
   // 預設 active
   let activeTab = "home";
@@ -965,6 +982,14 @@
     prevEl: ".swiper-button-prev",
   }
 });
+   // 監聽 bottom sheet 的高度變化
+const bottomSheet = document.querySelector(".bottom-sheet-wrapper");
+if (bottomSheet) {
+  const resizeObserver = new ResizeObserver(() => {
+    swiper.update();   // 重新計算 Swiper 寬高
+  });
+  resizeObserver.observe(bottomSheet);
+}
      </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <!-- 浮動按鈕隱藏 -->

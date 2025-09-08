@@ -30,11 +30,14 @@ $hero-action-card: linear-gradient(135deg, #fbe6da 0%, #ffffff 70%);
 .bg-hero-action-card {
   background: $hero-action-card;
 }
+// .mySwipers {
+//   height: 60vh; /* 讓整個 Swiper 高度隨螢幕比例調整 */
+// }
+
 .mySwipers {
-  height: 50vh; /* 讓整個 Swiper 高度隨螢幕比例調整 */
+  flex: 1;              /* 佔滿剩餘空間 */
+  min-height: 0;        /* 修正 flex 滾動問題 */
 }
-
-
 
 /* FAB 固定右下角 */
 .fab-container {
@@ -112,3 +115,52 @@ $hero-action-card: linear-gradient(135deg, #fbe6da 0%, #ffffff 70%);
   opacity: 1; transform: translateY(0); transition-delay: 0.1s;
 }
 
+.bottom-sheet-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45vh; /* 初始高度 */
+  transition: height 0.3s ease;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.bottom-sheet-wrapper.half {
+  height: 45vh; /* 半展開 */
+}
+
+.bottom-sheet-wrapper.full {
+  height: 80vh; /* 全展開 */
+}
+
+/* Bottom Sheet 內容容器 */
+.bottom-sheet-wrapper .bg-background-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: url('../assets/images/bg.png') no-repeat center/cover;
+}
+
+/* FAB 固定在 Bottom Sheet 內部右下角 */
+.bottom-sheet-wrapper .fab-container {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1050;
+}
+
+/* Swiper */
+.mySwipers {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.mySwipers .swiper-slide {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
