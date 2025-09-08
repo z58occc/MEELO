@@ -19,10 +19,16 @@
 .main {
   height: 621px;
   .bg-card {
-    max-width: 91.46666%;
+    width: 95.48533%;
     height: 580px;
     left: 8px;
     top: 9px;
+  }
+  .me-card {
+    width: 91.46666%;
+    height: 580px;
+    background-size: cover;
+    border-radius: 24px;
   }
   .dislike-btn {
     width: 80px;
@@ -62,12 +68,7 @@
       border-radius: 1000px;
     }
   }
-  .me-card {
-    max-width: 91.46666%;
-    height: 580px;
-    background-size: cover;
-    border-radius: 24px;
-  }
+
   .fit {
     width: 108px;
     background-size: cover;
@@ -146,56 +147,21 @@
     right: 24px;
   }
 }
-.main {
-  .bg-card {
-    width: calc(100% - 16.93px);
-    height: 580px;
-    left: 8px;
-    top: 9px;
-  }
-  .me-card {
-    width: 343px;
-    height: 580px;
-    background-size: cover;
-    border-radius: 24px;
-  }
-  .fit {
-    width: 108px;
-    background-size: cover;
-    &-inside {
-      width: 68px;
-    }
-  }
-  .green-cat {
-    width: 20px;
-  }
-}
-.nav {
-  border-top: 0.5px rgb(0, 0, 0, 0.1) solid;
-  &-item {
-    width: 20%;
-    .red-badge {
-      top: 6px;
-      left: 46.3px;
-    }
-  }
-}
-.footer {
-  .foot {
-    width: 139px;
-    height: 5px;
-    border-radius: 100px;
-  }
-}
-.info {
-  .fit {
-    width: 108px;
-    background-size: cover;
-    &-inside {
-      width: 68px;
-    }
-  }
-}
+// .main {
+//   .bg-card {
+//     width: calc(100% - 16.93px);
+//     height: 580px;
+//     left: 8px;
+//     top: 9px;
+//   }
+//   .me-card {
+//     width: 343px;
+//     height: 580px;
+//     background-size: cover;
+//     border-radius: 24px;
+//   }
+// }
+
 .swiper {
   &-slide {
     height: 160px;
