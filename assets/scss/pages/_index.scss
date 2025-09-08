@@ -4,6 +4,8 @@
     url("/assets/images/index-img/Hero-Image-full.png") 
     no-repeat center center/cover;
   overflow: hidden;
+   min-height: 100vh;
+  
 }
 .thread-card-radius{
   border-bottom-left-radius: 16px ;
@@ -39,7 +41,7 @@ $hero-action-card: linear-gradient(135deg, #fbe6da 0%, #ffffff 70%);
   position: fixed;
   bottom: 24px;
   right: 24px;
-  z-index: 1051;
+  z-index: 1036;
 }
 
 /* 主按鈕 (FAB 與 X) */
@@ -60,10 +62,17 @@ $hero-action-card: linear-gradient(135deg, #fbe6da 0%, #ffffff 70%);
 /* 灰色遮罩 */
 .fab-overlay {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
   background: rgba(0,0,0,0.3);
   display: none;
   z-index: 1050;
+
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 /* 選單 (在 FAB 上方) */
@@ -102,5 +111,4 @@ $hero-action-card: linear-gradient(135deg, #fbe6da 0%, #ffffff 70%);
 .fab-menu.show .fab-item:nth-child(3) {
   opacity: 1; transform: translateY(0); transition-delay: 0.1s;
 }
-
 
