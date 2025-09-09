@@ -9,7 +9,7 @@
 
 <body>
 
-  <main class="  overflow-hidden position-relative">
+  <main class="  position-relative vh-100">
     <div class="status-bar py-3 px-4  d-flex justify-content-between mb-100">
       <span class="fw-medium fs-17 text-white">9:41</span>
       <ul class="d-flex list-unstyled gap-7">
@@ -29,16 +29,17 @@
       <img id="close-btn" src="../assets/images/match/close.png" alt="close-btn">
     </button>
     <div class="blur-bg position-absolute top-0 start-0 end-0 bottom-0 "></div>
-    <div class="px-3">
-      <img class="mx-auto d-block mb-2" src="../assets/images/match/match.png" alt="match">
+    <div class="px-3 ">
+      <img class="mx-auto d-block mb-2" src="../assets/images/match/match.svg" alt="match">
       <p class="fs-18 text-center lh-sm text-white">你和 阿力先生 配對成功</p>
-      <div class="pt-10t pb-72 position-relative">
-        <img class="card-lily   " src="../assets/images/match/character-card-lily.png" alt="character-card-lily">
-        <img class="card-lee position-absolute " src="../assets/images/match/character-card-mrlee.png"
+      <div class="pt-10t pb-5 position-relative mb-72">
+        <img class="object-fit-cover card-lily    " src="../assets/images/match/match-lily.png"
+          alt="character-card-lily">
+        <img class="object-fit-cover card-lee position-absolute " src="../assets/images/match/match-mrlee.png"
           alt="character-card-mrlee">
       </div>
 
-      <div class="pt-6t bg-white match-down p-3">
+      <div class="pt-6t bg-white match-down p-3 sticky-bottom">
         <h5 class="text-text-primary mb-12">你們的共同興趣為</h5>
         <ul class="list-unstyled d-flex mb-3">
           <li>
@@ -69,7 +70,7 @@
 
   <script>
     const closeBtn = document.getElementById('close-btn');
-    
+
     closeBtn.addEventListener('click', function (e) {
       location.href = "./gacha-page.html";
     })

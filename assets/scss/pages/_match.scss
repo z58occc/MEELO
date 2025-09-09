@@ -1,9 +1,22 @@
 .fw-900 {
   font-weight: 900;
 }
+.card-lily,
 .card-lee {
-  top: 70px;
-  right: -25px;
+  width: 152px;
+  border: white solid 2px;
+  border-radius: 16px;
+  height: 199px;
+}
+.card-lily {
+  margin-top: 10px;
+  transform: rotate(-9deg);
+  margin-left: 20px;
+}
+.card-lee {
+  top: 90px;
+  right: 25px;
+  transform: rotate(9deg);
 }
 .input-box {
   background: rgb(0, 0, 0, 0.05);
@@ -21,20 +34,19 @@
   height: 24px;
 }
 .blur-bg {
-  background-image: url("/assets/images/match/Image-bg.png") ;
+  background-image: url("/assets/images/match/Image-bg.png");
   background-size: cover;
   z-index: -1;
-  filter:blur(4px)
-  
+  filter: blur(4px);
 }
-.match-down{
+.match-down {
   margin-left: -16px;
   margin-right: -16px;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
   border: white solid 1px;
 }
-.match-close-btn{
+.match-close-btn {
   background-color: transparent;
   top: 66px;
   right: 16px;
