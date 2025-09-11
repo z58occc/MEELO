@@ -81,8 +81,8 @@ $hero-action-card: linear-gradient(135deg, #fbe6da 0%, #ffffff 70%);
 /* 選單 (在 FAB 上方) */
 .fab-menu {
   position: absolute;
-  bottom: 100px; /* 距離 FAB */
-  right: 24px;
+  bottom: 108px; /* 距離 FAB */
+  right: 16px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -142,7 +142,7 @@ $hero-action-card: linear-gradient(135deg, #fbe6da 0%, #ffffff 70%);
 }
 
 /* FAB 固定在 Bottom Sheet 內部右下角 */
-.bottom-sheet-wrapper .fab-container {
+.fab-container {
   position: absolute;
   bottom: 24px;
   right: 24px;
