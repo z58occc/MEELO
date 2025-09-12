@@ -40,11 +40,13 @@
   filter: blur(4px);
 }
 .match-down {
-  margin-left: -16px;
-  margin-right: -16px;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
   border: white solid 1px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .match-close-btn {
   background-color: transparent;
