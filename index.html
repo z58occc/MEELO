@@ -13,8 +13,8 @@
         padding-right: 0 !important;  
       }
     </style>
-    <script type="module" crossorigin src="/MEELO/assets/main-C2qhQS6K.js"></script>
-    <link rel="stylesheet" crossorigin href="/MEELO/assets/main-Dz5QAHCE.css">
+    <script type="module" crossorigin src="/MEELO/assets/main-C_4OKUaE.js"></script>
+    <link rel="stylesheet" crossorigin href="/MEELO/assets/main-CLFIibUE.css">
   </head>
   <body>
    <div class="bg" >
@@ -83,12 +83,12 @@
     </div>
     </div>
     <div class="bottom-sheet-wrapper">
-    <div class=" bg-background-page pt-4 px-3 position-relative " style="border-top-left-radius: 24px; border-top-right-radius: 24px;" >
+    <div class=" bg-background-page pt-4 px-3 " style="border-top-left-radius: 24px; border-top-right-radius: 24px;" >
     
-    <div class="fab-container position-absolute "  style="bottom:24px; right:24px;">
+    <div class="fab-container" >
     <button id="fabBtn" class="fab-main">
      <div>
-      <img src="/MEELO/assets/Fab-default-CAOAp2fS.png" alt="#">
+      <img src="/MEELO/assets/Fab-default-CSpKhH5R.svg" alt="Icon / Plus">
      </div>
     </button>
     </div>
@@ -96,13 +96,18 @@
     
       <!-- 分類 -->
       <div class="d-flex justify-content-between mb-3 category-bar">
-        <a href="#" class="d-inline-block text-decoration-none" type="button" 
+        <a class="d-inline-block text-decoration-none" type="button" 
         data-bs-toggle="offcanvas" 
         data-bs-target="#travelOffcanvas" 
         aria-controls="travelOffcanvas">
           <div class="d-flex align-items-center gap-2">
           <div class="fw-bold fs-5 ln-sm text-text-primary">旅行</div>
-          <div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAZCAYAAAArK+5dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACvSURBVHgB7ZExCgIxEEUnLCKyrKZR0yxewTpa5Ci5ifFmCh7AM7iNpYWK2sSJIOiS3Uz6eTBMSD7/8wkAwzBF7FJPpa3LwbK5v45AIFcPq/nEh9Gz8SZpjpqvPvYebbCoRgKXEUKYuhxCc3vuu8xR48IZ9/Z0fexIAUGYCmmbH84XB9QGqRCqeW9AVwiOoZp/NEBgraTz3v99OMU8UACB3yY55tloJa1WlQWGYbJ4Azf1TvXenod6AAAAAElFTkSuQmCC" alt="Vector"></div>
+          <div>
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.2929 8.79289C17.6834 8.40237 18.3164 8.40237 18.707 8.79289C19.0975 9.18342 19.0975 9.81643 18.707 10.207L12.707 16.207C12.3164 16.5975 11.6834 16.5975 11.2929 16.207L5.29289 10.207C4.90237 9.81643 4.90237 9.18342 5.29289 8.79289C5.68342 8.40237 6.31643 8.40237 6.70696 8.79289L11.9999 14.0859L17.2929 8.79289Z" fill="#3B170F"/>
+</svg>
+
+          </div>
         </div>
         </a>
         
@@ -770,14 +775,14 @@
     
 
        <!-- Bottom Sheet Offcanvas -->
-       <div class="offcanvas offcanvas-bottom" tabindex="-1" id="travelOffcanvas" aria-labelledby="travelOffcanvasLabel" style="height: 80%; border-radius: 24px 24px 0 0;">
+       <div class="offcanvas offcanvas-bottom" tabindex="-1" id="travelOffcanvas" aria-labelledby="travelOffcanvasLabel" data-bs-dismiss="offcanvas" style="height: 80%; border-radius: 24px 24px 0 0;">
       <!-- 上面灰色小橫條 -->
        <div class="w-100 d-flex justify-content-center pt-2">
-       <div style="width: 40px; height: 4px; background: #ddd; border-radius: 2px;"></div>
+       <div  style="width: 40px; height: 4px; background: #ddd; border-radius: 2px;"></div>
        </div>
  
       <!-- Body -->
-      <div class="offcanvas-body d-flex flex-column p-4">
+      <div class="offcanvas-body d-flex flex-column py-4 px-3 ">
       <!-- 興趣版清單 -->
       <div class="flex-grow-1 overflow-auto">
        <div class="offcanvas-title fs-14 lh-base text-text-secondary mb-2" >你追蹤的興趣版</div>
@@ -851,7 +856,7 @@
 
     <!-- 固定底部按鈕 -->
       <div class="pt-3 ">
-      <button class="btn btn-primary-default text-white  fw-bold w-100 py-12 rounded-pill">完成</button>
+      <button  class="btn btn-primary-default text-white  fw-bold w-100 py-12 rounded-pill" data-bs-dismiss="offcanvas" >完成</button>
       </div>
       <footer class="footer pt-20 pb-2">
       <div class="foot bg-dark mx-auto"></div>
@@ -860,7 +865,7 @@
       </div>
        </div>
         <!-- Bottom -->
-       <div id="fabOverlay" class="fab-overlay mb-12">
+       <div id="fabOverlay" class="fab-overlay ">
      <div class="fab-menu d-flex flex-column align-items-end gap-12">
     <a href="#" class="fab-item d-flex  align-items-center gap-2 py-12 px-3">
       <div>
@@ -896,28 +901,28 @@
       <line x1="18" y1="6" x2="6" y2="18" stroke="#333" stroke-width="2" stroke-linecap="round"/>
       <line x1="6" y1="6" x2="18" y2="18" stroke="#333" stroke-width="2" stroke-linecap="round"/>
     </svg>
-  </button>
+     </button>
      </div>
       </div> 
     <!-- 底部導覽列 -->
      <nav class="nav bg-white">
   <ul class="list-unstyled d-flex pt-2 px-2 pb-1 mb-0 justify-content-between w-100 align-items-center">
-    <li class="nav-item py-2" data-tab="home">
-      <img class="mx-auto d-block" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAK+SURBVHgBlZS/bhNBEMZnzxcXFNgdFbItREEVahoIT0CegFg0dHEKRCgcnI4uQdAiqAAhwJRUxCBeIBUSTSyQMBJNSsztzjB/dtcmCg5Y3uzeOfvbb7757hyc8Pk+3FonpB4E3yJfvZ9OfbfT3R0v2uMW/TgZbt0FpAEDgXjwTOTDuAy0eubGg/3/gh48HjRPnQ47BLDGMBIohuAgBGC1fEAAQN87e/PR/X+CTp5ttmmpHBaFW0bvFaQKGZqAplrmX4PW+tPthVABQn1pj5ftI6r4ayBe0NxhgJXf7dx+uXEs9Mfr/mUE94aAGuTFQ1aWfBRPvV3LcHwP4z2Hut6fVn71wuDtWFiF/Pn2qt/z5EZI1ExAUQGyFoW8WRRCLDv6a0Cv6+U6hr1Pm1faCp286K+x3B3niMggTmY0eC49KiWB28ERGK8Z3KoRinVQUgHXxAMtFc0znmNZAuKNFBtlFZhizHZYKnhdALU+37p0seQdDbsZVKFD/QeC3OU5O9LIZesBzipi8xx/avVmyZvJ/FIIMz2rDBJyKy02TEuUA6Xz8rsdYEDiRDOPZwLnocRUiqq0Tueg61zJgS4q1uFyTk2hAJ2gdapBqT4G8zF6aHBMZaMeSJjtSF7PFEpP5uJZcsC5HNuYPEM1Xy0hSn7nfIotojBQArqINySXrxujdxFKqbT8AJjnsdtHPeQwCjCuTWmOipWXQOhx+9yd4QCOe+FwyCvOJCPaWWU+pIRiFhs1n+yZllE14C+fw59wmNZZpfogStmmrw+vv2MPVzQm6YkSz3xsijYJuUYkOuH9a+DaSukr/4XrnWXOspg6zSpQm0LRr7xXqo1x+pMqTxaEJ7NnvVJl4CvKuUScNSUBxcfZZb7H34Pz9z6Ois7G81EIvusQx/n1JhGTvMrONObAyQbHb/IklBx8KJ2/Kuvf5qEp+hBk76IAAAAASUVORK5CYII=" alt="icon home">
+    <li class="nav-item py-2 rounded-pill" data-tab="home">
+      <img class="mx-auto d-block" src="data:image/svg+xml,%3csvg%20width='25'%20height='24'%20viewBox='0%200%2025%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M12.5654%201.01172C13.0913%201.05829%2013.5957%201.24301%2014.0273%201.54688L14.2373%201.70898L14.2422%201.71289L21.2373%207.70801L21.3594%207.81641C21.6364%208.07767%2021.8618%208.39004%2022.0225%208.73633C22.2059%209.13182%2022.3007%209.56305%2022.3008%209.99902V19C22.3007%2019.7956%2021.9844%2020.5595%2021.4219%2021.1221C20.8593%2021.6845%2020.0962%2022%2019.3008%2022H5.30078C4.50529%2022%203.74224%2021.6845%203.17969%2021.1221C2.61714%2020.5595%202.30082%2019.7956%202.30078%2019V9.99902C2.30084%209.56305%202.39563%209.13182%202.5791%208.73633C2.76275%208.34061%203.0311%207.98963%203.36426%207.70801L10.3594%201.71289L10.3643%201.70898C10.9057%201.25134%2011.5918%201%2012.3008%201L12.5654%201.01172ZM9.30078%2016C8.74872%2016.0001%208.30104%2016.4479%208.30078%2017C8.30078%2017.5523%208.74855%2018.0009%209.30078%2018.001H15.3008C15.8531%2018.001%2016.3008%2017.5523%2016.3008%2017C16.3005%2016.4479%2015.8529%2016%2015.3008%2016H9.30078Z'%20fill='url(%23paint0_linear_6146_11179)'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_6146_11179'%20x1='7.30078'%20y1='5.5'%20x2='21.8008'%20y2='20'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%23E7AD7E'/%3e%3cstop%20offset='0.601612'%20stop-color='%23DB773D'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e" alt="icon home">
     </li>
-    <li class="nav-item py-2" data-tab="explore">
-      <img class="mx-auto d-block" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAWCAMAAAAcqPc3AAAANlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC3dmhyAAAAEnRSTlMAZg1ZBk1AYBpTLCY2IBNURi1yN+HkAAAAyklEQVQoz11QURbDIAgjUHRObbv7X3ZA5bk3PhRihBBacbxVgHb3I8pEBzJkbPg0qk62pCvQeMFccWVOUyD8wIJCO7hBIym4fiax8z7+DvAWBRz0QjVVA2WDgFiqeBE1OxwWoOodpLefQNA7pB+LdKJZewm8YVIWdu20ZoP17AoCsckSbUyQ5tyGWwGn57eBEUu4nEkR8syq7KuoW5zSHh/UWgaYfvXY6M83Sb/OuqwNLWLFpqDM0xL36OL9tyCjDvoN7loBuT9r/hf3rATQdaqzMgAAAABJRU5ErkJggg==" alt="icon explore">
+    <li class="nav-item py-2 rounded-pill" data-tab="explore">
+      <img class="mx-auto d-block" src="data:image/svg+xml,%3csvg%20width='25'%20height='24'%20viewBox='0%200%2025%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.1404%207.76L15.3364%2013.171C15.2382%2013.4656%2015.0728%2013.7333%2014.8532%2013.9528C14.6336%2014.1724%2014.366%2014.3378%2014.0714%2014.436L8.66039%2016.24L10.4644%2010.829C10.5626%2010.5344%2010.728%2010.2667%2010.9476%2010.0472C11.1671%209.82761%2011.4348%209.66218%2011.7294%209.564L17.1404%207.76Z'%20stroke='black'%20stroke-opacity='0.4'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12.9004%2022C18.4232%2022%2022.9004%2017.5228%2022.9004%2012C22.9004%206.47715%2018.4232%202%2012.9004%202C7.37754%202%202.90039%206.47715%202.90039%2012C2.90039%2017.5228%207.37754%2022%2012.9004%2022Z'%20stroke='black'%20stroke-opacity='0.4'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="icon explore">
     </li>
     <li class="nav-item py-2 rounded-pill position-relative" data-tab="gacha">
-      <img class="mx-auto d-block" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAUCAYAAABroNZJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAERSURBVHgBrZS9CsJAEIRHDQoSC20EK0GwUgvtbPQFAra+gI9nZStY2WkTQbAWrAQhVQTRWW7DafDnAg58WS/IZDObuxyMamRIGnDXmaykFnjxyYRUkU1l0iJ7j5cmKZGDOrtqTNpCXg1Ekd6caf2lSGspjz/IS60PSqIOTOBrsvtk8q0TCXygvwe6zmRSJAFMXpHWQO87m8iTK2qw0CrrvquJTKZL4ieDha57eDO5X9O5pypcO5HphLA5+LD5hHid3kcT0QY2hwA2n61rJ6IrbA4V2HziLCZIPTnp7K08fFeoJJLJjJHaqH/bO8l7+g7/f95bI61xDuZTnsIeCVkkDczlZLuRI6nDnFauOpEluTwAKhg3qutkwBIAAAAASUVORK5CYII=" alt="icon gacha">
+      <img class="mx-auto d-block" src="data:image/svg+xml,%3csvg%20width='25'%20height='24'%20viewBox='0%200%2025%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M16.6121%2017.0051C17.1162%2017.0565%2017.51%2017.4821%2017.51%2017.9998C17.51%2018.552%2017.0617%2018.9994%2016.5095%2018.9995H16.5C15.9477%2018.9995%2015.4995%2018.552%2015.4995%2017.9998C15.4995%2017.4475%2015.9477%2017%2016.5%2017H16.5095L16.6121%2017.0051Z'%20fill='black'%20fill-opacity='0.4'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M12.4995%207.00024C12.8143%207.00024%2013.1105%207.14834%2013.2993%207.40015L16.2993%2011.3999C16.5659%2011.7555%2016.566%2012.2448%2016.2993%2012.6003L13.2993%2016.6001C13.1105%2016.8517%2012.8142%2017%2012.4995%2017C12.1849%2017%2011.8886%2016.8518%2011.6997%2016.6001L8.69971%2012.6003C8.43307%2012.2448%208.43312%2011.7554%208.69971%2011.3999L11.6997%207.40015L11.7751%207.31079C11.9627%207.11364%2012.224%207.00026%2012.4995%207.00024ZM10.749%2011.9998L12.4995%2014.3333L14.2493%2011.9998L12.4995%209.66626L10.749%2011.9998Z'%20fill='black'%20fill-opacity='0.4'/%3e%3cpath%20d='M8.61182%205.00513C9.11606%205.05635%209.50977%205.482%209.50977%205.99976C9.50977%206.51752%209.11606%206.94317%208.61182%206.99438L8.51001%206.99951H8.49976C7.94747%206.99951%207.5%206.55204%207.5%205.99976C7.5%205.44747%207.94747%205%208.49976%205H8.51001L8.61182%205.00513Z'%20fill='black'%20fill-opacity='0.4'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M17.4998%202C18.2952%202.00005%2019.0583%202.31576%2019.6208%202.87817C20.1834%203.44077%2020.4998%204.20439%2020.4998%205V18.9995C20.4998%2019.7951%2020.1834%2020.5587%2019.6208%2021.1213C19.0583%2021.6838%2018.2952%2021.9995%2017.4998%2021.9995H7.5C6.70439%2021.9995%205.94077%2021.6839%205.37817%2021.1213C4.81556%2020.5587%204.5%2019.7952%204.5%2018.9995V5C4.5%204.20435%204.81556%203.44078%205.37817%202.87817C5.94077%202.31562%206.70439%202%207.5%202H17.4998ZM7.5%203.99951C7.23483%203.99951%206.98001%204.105%206.79248%204.29248C6.60494%204.48002%206.49951%204.73478%206.49951%205V18.9995C6.49951%2019.2647%206.60494%2019.5195%206.79248%2019.707C6.98001%2019.8945%207.23483%2020%207.5%2020H17.4998C17.7648%2020%2018.0191%2019.8944%2018.2065%2019.707C18.394%2019.5195%2018.4995%2019.2647%2018.4995%2018.9995V5C18.4995%204.73483%2018.394%204.48001%2018.2065%204.29248C18.0191%204.10514%2017.7648%203.99956%2017.4998%203.99951H7.5Z'%20fill='black'%20fill-opacity='0.4'/%3e%3c/svg%3e" alt="icon gacha">
       <img class="position-absolute red-badge" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAEBAMAAAC0HehzAAAAElBMVEXvgIDsfX3sfX3rfX3sfX3sfX3E36dOAAAABXRSTlMQv69wYFczzQwAAAAYSURBVAjXY2AMYmBwDTVgMA11YGAKZAAAEe0COyDVwa8AAAAASUVORK5CYII=" alt="red-badge">
     </li>
-    <li class="nav-item py-2 position-relative" data-tab="message">
-      <img class="mx-auto d-block" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAMAAACeyVWkAAAAM1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACjBUbJAAAAEXRSTlMAZjNZDRkGXydTJkBNLCBHOYeG8LwAAACBSURBVBjTZdDbDsMgDANQOxAIt27//7VTpK5QOBIvkbEgALRnTqXCCTdfT5KSMFnmABoFL8oAFCreMhMCI6Byq4BP/PiFv7RML7nZmp3WqT6lZ6+X4ui1LXu897P/rTIce0g10+bOBBiZrsFdnU4jXTdMwtLYsEmBZMROvfpkA48f2x0C+cYEiVwAAAAASUVORK5CYII=" alt="icon message">
+    <li class="nav-item py-2 rounded-pill position-relative" data-tab="message">
+      <img class="mx-auto d-block" src="data:image/svg+xml,%3csvg%20width='25'%20height='24'%20viewBox='0%200%2025%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M20.1016%207C20.1016%205.34315%2018.7584%204%2017.1016%204H7.10156C5.44471%204%204.10156%205.34315%204.10156%207V14C4.10156%2015.6569%205.44471%2017%207.10156%2017H9.2666C9.98915%2017%2010.6555%2017.3898%2011.0098%2018.0195L12.1016%2019.96L13.1934%2018.0195C13.5476%2017.3898%2014.214%2017%2014.9365%2017H17.1016C18.7584%2017%2020.1016%2015.6569%2020.1016%2014V7ZM22.1016%2014C22.1016%2016.7614%2019.863%2019%2017.1016%2019H14.9365L13.4092%2021.7158C12.8357%2022.7351%2011.3674%2022.7351%2010.7939%2021.7158L9.2666%2019H7.10156C4.34014%2019%202.10156%2016.7614%202.10156%2014V7C2.10156%204.23858%204.34014%202%207.10156%202H17.1016C19.863%202%2022.1016%204.23858%2022.1016%207V14Z'%20fill='black'%20fill-opacity='0.4'/%3e%3cpath%20d='M16.1016%207.5C16.6538%207.5%2017.1016%207.94772%2017.1016%208.5C17.1016%209.05228%2016.6538%209.5%2016.1016%209.5H8.10156C7.54928%209.5%207.10156%209.05228%207.10156%208.5C7.10156%207.94772%207.54928%207.5%208.10156%207.5H16.1016Z'%20fill='black'%20fill-opacity='0.4'/%3e%3cpath%20d='M13.1016%2011.5C13.6538%2011.5%2014.1016%2011.9477%2014.1016%2012.5C14.1016%2013.0523%2013.6538%2013.5%2013.1016%2013.5H8.10156C7.54928%2013.5%207.10156%2013.0523%207.10156%2012.5C7.10156%2011.9477%207.54928%2011.5%208.10156%2011.5H13.1016Z'%20fill='black'%20fill-opacity='0.4'/%3e%3c/svg%3e" alt="icon message">
       <img class="position-absolute red-badge" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAEBAMAAAC0HehzAAAAElBMVEXvgIDsfX3sfX3rfX3sfX3sfX3E36dOAAAABXRSTlMQv69wYFczzQwAAAAYSURBVAjXY2AMYmBwDTVgMA11YGAKZAAAEe0COyDVwa8AAAAASUVORK5CYII=" alt="red-badge">
     </li>
-    <li class="nav-item py-2" data-tab="user">
-      <img class="mx-auto d-block" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAgCAMAAACrZuH4AAAC/VBMVEUAAAD////////////////////////////////////////////////////////////569v36dr++/f+/fz67d99u+eWyvBPirmMxu2Hwutvs+T16NhSj79Ni7z79OqLwuibj9Z1bbaf0PN/veltrd1kpNRfmspTk8T///+d1fqMyfL99u6Lw+yFv+h2t+f78ORqreB4sdyek9qCesPfz8H9+PKczfB4u+xyt+lrtOl1s+BoqNjw49Voo89dns9bmsxYmMqUqchPi7x7c7xLh7jSt7JCf61qY6ZkXKC4mZ0kUnCccWBtTz8SGiz0+P6YzvJ9wvC11e6vz+f78eaEvOZur+Fxrdutn9aTiNN7qNDg1M5wos3o2ctblsRfkbpGiLlJhLfXs65wZ665pK0wZY09SXmshXanemqNal01OEUEBRLG8v/m+PqCyfnt7Pjh7vGCwO2Txuuny+eVw+R3teKnmuCRvt/o5N62rt5iqd7X291bpNxvqdZboNV9r9SuwdBWm8+Pg81knMvLzcqKf8nCvMVak8OVhMF7dLZHgrE2fLDJs6+sp6o+e6qsm6nHrqiVj6hqhag3eKHFpJ1eV5hVU4ybgYs5ZIZjboVIZ4Rxa3tlbXq5iHSyg3GSb2SLZVhmWFUKN1UjOFB/Wkl6VkeDU0BPOzYJHDEfHioNEiWk3v626PuSz/um0/R+xfPAsPPc1/Kt1fHf3fDE3fD68urJw+jg5uXNyeTDvuOCt+Hn4tqNu9qVu9e1odXg2tKGq9K+v8ysn8jTz8fVx8dLkseUjseJeMWbqcO0rMCljr9/b71wmbyBb7yKfLuVobloebfKv7Vwa7OYmrHevq1Xh62Bfa14iquZn6dQbqHTq56wk5mrkZl7i5hMdZhBbJbBk5FTco5YcYrLm4e+l4dQToepi4ZHVoV3eYHJl4CwjICffICCb36ZgXpOYHVhZ3I2Um7BhWuedmt+a2s0QGoVQmMSSGGXa1p1XVqhW1OLYFBjUVAUJjovLjVzRDEKChqHdqEqAAAAEHRSTlMAv0Df7xCAIHBgr8+gj1AwaCJnegAAA1JJREFUOMttlFOYHEEUhUeZ3Wx0u3t67Mns7HAHWdu2bcS2bdu2bdu2bZtfqpP9srNJ/pd+uKdv1a06p2h2ODg6MVkuLkx6PQbtfzDohF7K4QBwXPU409Hh77oDHXeFajhuzNo1BbVZ66AmHKJeLTsBO74lYGAPBlua1amWOMZnkUs72ktE0IzfPZn+Zw+EcewIMmEDhkFuI4QIRKKmggETRresV6VgdswqCjujatXl7J2Yz/Pnx0y7nNvUEPjk6qi2BOP3Lt36BoUNPdhNmPN9QePJWenfFsQ+13lNunBlhMGV/rsFBylG5vQxe+Vzl2h16ctanesqzBvyNKrEADiDaoHDnp1FQR4BRuVypVLprnTncmWWcEn3qJIOkEI1cZKCL1kU5eyuXL02KYGbwNUlJcuMmwumRJ3oCUCgiVkcwAQlQVyEOx9hEJCp7by9LZqbXU9hgNen1SJAFPalT9vWfL6AJFUqFWlKa4jo5pc/sQIwPZvGwLHcR9M+6mSyxHB/D5PJJGzYWTLc7KNW334VMxSkdZECxpZPn8qXNZ/zcNF1T6Ewzfxy0ZQ5QrX/rekzyiHFiVLcjamYakgtGNY4rklzodDcC32H7fMPnFwx87UvOpEGOJTPrJxkJPOvLY5rssLkmSb+Ebf4oiZAM/HD3EpftIoDAY/nzTsqE3junb0wWttmV2uPrwvf9fdqqB48N7YS9Gxq2pGxs3RGgSAxeatWO+HTaJVHjzaJpFnd+UXsM2paWl0p3H+TY/HuIFMJLKTXEE//vHbelm1+Gt6sGY0w6sQYuAhA66fu4eOT3ksyvDQ0vCAgUCOWiH12ACb9dXUsV2SYJGcEVRFLQiXBEh6Pl+qLLIX/cisbp0zXxc95gFgcHIxqoTyeOK8noNZSZpWDUgCheHAjPFgSWlhYOHhMadn4bIxyc1VwGhAoJf0jihURZe+jo6Nnvx1XXBwxCv3kxv7jZIKDZfcbFBnZ+0DpmEtHQsaX3Rt3CAN9Hbs0ENhKudXa3hZx7GSkLdIWEnJ6YLYbSkM19Vnre2dut8oV7eVym+2wQqHY3aJurZqpdGrRyZohV1jlmf1CBh4/v5HlSPub2vT4VZ32Z2TKB2VsWsNi2zewfx3quPzzOvwEFsHrAeEsXOMAAAAASUVORK5CYII=" alt="icon user">
+    <li class="nav-item py-2 rounded-pill" data-tab="user">
+      <img class="mx-auto d-block" src="/MEELO/assets/User-T6SV4Tx-.svg" alt="icon user">
     </li>
   </ul>
     </nav>
