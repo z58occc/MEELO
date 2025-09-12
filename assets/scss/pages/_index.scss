@@ -4,7 +4,7 @@
     url("/assets/images/index-img/Hero-Image-full.png") 
     no-repeat center center/cover;
   overflow: hidden;
-   min-height: 100vh;
+   min-height: 100dvh;
   
 }
 .thread-card-radius{
@@ -33,6 +33,7 @@ $hero-action-card: linear-gradient(135deg, #fbe6da 0%, #ffffff 70%);
 // .mySwipers {
 //   height: 60vh; /* 讓整個 Swiper 高度隨螢幕比例調整 */
 // }
+
 
 .mySwipers {
   flex: 1;              /* 佔滿剩餘空間 */
@@ -119,18 +120,18 @@ $hero-action-card: linear-gradient(135deg, #fbe6da 0%, #ffffff 70%);
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 45vh; /* 初始高度 */
+  height: 45dvh; /* 初始高度 */
   transition: height 0.3s ease;
   z-index: 1000;
   overflow: hidden;
 }
 
 .bottom-sheet-wrapper.half {
-  height: 45vh; /* 半展開 */
+  height: 45dvh; /* 半展開 */
 }
 
 .bottom-sheet-wrapper.full {
-  height: 80vh; /* 全展開 */
+  height: 80dvh; /* 全展開 */
 }
 
 /* Bottom Sheet 內容容器 */
@@ -142,7 +143,7 @@ $hero-action-card: linear-gradient(135deg, #fbe6da 0%, #ffffff 70%);
 }
 
 /* FAB 固定在 Bottom Sheet 內部右下角 */
-.fab-container {
+.bottom-sheet-wrapper .fab-container {
   position: absolute;
   bottom: 24px;
   right: 24px;
