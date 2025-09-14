@@ -301,13 +301,13 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
-          <div class="swiper-slide">
+          <div class="swiper-slide interest-list-item">
             <img class="w-100" src="../assets/images/gacha-page/int-3.png" alt="interest photo">
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide interest-list-item">
             <img class="w-100" src="../assets/images/gacha-page/int-1.png" alt="interest photo">
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide interest-list-item">
             <img class="w-100 swiper-slide-img" src="../assets/images/gacha-page/int-2.jpg" alt="interest photo">
           </div>
         </div>
@@ -376,6 +376,14 @@
       const likeBtn = document.getElementById('like-btn');
       const dislikeBtn = document.getElementById('dislike-btn');
       const cardList = document.getElementById('card-list');
+      const nav = document.querySelector('.nav');
+      const navItems = document.querySelectorAll('.nav-item');
+
+      nav.addEventListener('click', function (e) {
+        navItems.forEach(el => el.classList.remove('bg-callout'));
+        const navItem = e.target.closest('.nav-item');
+        navItem.classList.add("bg-callout");
+      })
 
 
 

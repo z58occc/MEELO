@@ -44,10 +44,24 @@
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
   border: white solid 1px;
-  position: fixed;
-  bottom: 0;
+  position: absolute;
+  bottom: -220px;
   left: 0;
   right: 0;
+  animation-name: slide-in-up;
+  animation-duration: 0.55s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+@keyframes slide-in-up {
+  from {
+    position: absolute;
+    bottom: -220px;
+  }
+  to {
+    position: absolute;
+    bottom: 0;
+  }
 }
 .match-close-btn {
   background-color: transparent;
@@ -99,7 +113,7 @@
     transform: rotate(6.5deg);
   }
 }
-.animate__animated.animate__fadeIn,
-.animate__animated.animate__slideInUp {
-  animation-delay: 0.4s;
+
+.animate__animated.animate__fadeIn {
+  animation-delay: 0.3s;
 }

@@ -1,21 +1,23 @@
 <nav class="nav">
   <ul class="list-unstyled d-flex pt-2 px-2 pb-1 mb-0 justify-content-between w-100 align-items-center">
     <li class="nav-item py-2 <%= active === 'home' ? 'bg-callout' : '' %>">
-      <img class="mx-auto d-block" src="../assets/images/gacha-page/navicon-4.png" alt="icon home">
+      <a href="./index.html">
+        <img class="mx-auto d-block" src="../assets/images/nav-icon/Home.svg" alt="icon home">
+      </a>
     </li>
     <li class="nav-item py-2 <%= active === 'explore' ? 'bg-callout' : '' %>">
-      <img class="mx-auto d-block" src="../assets/images/gacha-page/navicon-1.png" alt="icon explore">
+      <img class="mx-auto d-block" src="../assets/images/nav-icon/Explore.svg" alt="icon explore">
     </li>
     <li class="nav-item py-2 <%= active === 'gacha' ? 'bg-callout' : '' %> rounded-pill  position-relative">
-      <img class="mx-auto d-block " src="../assets/images/gacha-page/navicon-2.png" alt="icon gacha">
-      <img class="position-absolute red-badge" src="../assets/images/gacha-page/red-badge.png" alt="red-badge">
+      <img class="mx-auto d-block " src="../assets/images/nav-icon/Card-fill.svg" alt="icon gacha">
+      <img class="position-absolute red-badge" src="../assets/images/nav-icon/red-badge.svg" alt="red-badge">
     </li>
     <li class="nav-item py-2 <%= active === 'message' ? 'bg-callout' : '' %> position-relative">
-      <img class="mx-auto d-block" src="../assets/images/gacha-page/navicon-3.png" alt="icon message">
-      <img class="position-absolute red-badge" src="../assets/images/gacha-page/red-badge.png" alt="red-badge">
+      <img class="mx-auto d-block" src="../assets/images/nav-icon/Chat.svg" alt="icon message">
+      <img class="position-absolute red-badge" src="../assets/images/nav-icon/red-badge.svg" alt="red-badge">
     </li>
     <li class="nav-item py-2 <%= active === 'user' ? 'bg-callout' : '' %> ">
-      <img class="mx-auto d-block" src="../assets/images/gacha-page/User.png" alt="icon user">
+      <img class="mx-auto d-block" src="../assets/images/nav-icon/User.svg" alt="icon user">
     </li>
   </ul>
 
