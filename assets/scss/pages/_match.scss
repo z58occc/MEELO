@@ -9,14 +9,15 @@
   height: 199px;
 }
 .card-lily {
-  margin-top: 10px;
-  transform: rotate(-9deg);
-  margin-left: 20px;
+  position: absolute;
+  transform: rotate(-5.08deg);
+  left: 26.67px;
+  top: 45.52px;
 }
 .card-lee {
-  top: 90px;
-  right: 25px;
-  transform: rotate(9deg);
+  top: 88.31px;
+  left: 176.63px;
+  transform: rotate(6.5deg);
 }
 .input-box {
   background: rgb(0, 0, 0, 0.05);
@@ -37,7 +38,7 @@
   background-image: url("/assets/images/match/Image-bg.png");
   background-size: cover;
   z-index: -1;
-  filter:brightness(0.65) blur(4px);
+  filter: brightness(0.65) blur(4px);
 }
 .match-down {
   border-top-left-radius: 24px;
@@ -52,4 +53,53 @@
   background-color: transparent;
   top: 66px;
   right: 16px;
+}
+
+.move-right {
+  animation-name: move-right;
+  animation-duration: 0.85s;
+}
+.move-left {
+  animation-name: move-left;
+  animation-duration: 0.85s;
+}
+@keyframes move-right {
+  0% {
+    left: -211.93px;
+    top: 80.64px;
+    transform: rotate(-21.31deg);
+  }
+  35.29411% {
+    left: 57.65px;
+    top: 43.32px;
+    transform: rotate(-4.47deg);
+  }
+
+  100% {
+    left: 26.67px;
+    top: 45.52px;
+    transform: rotate(-5.08deg);
+  }
+}
+@keyframes move-left {
+  0% {
+    left: 378px;
+    top: 124.38px;
+    transform: rotate(21.31deg);
+  }
+  35.29411% {
+    left: 147.78px;
+    top: 90.39px;
+    transform: rotate(3.31deg);
+  }
+
+  100% {
+    left: 176.63px;
+    top: 88.31px;
+    transform: rotate(6.5deg);
+  }
+}
+.animate__animated.animate__fadeIn,
+.animate__animated.animate__slideInUp {
+  animation-delay: 0.4s;
 }
