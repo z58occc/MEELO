@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../assets/scss/devices/devices.css">
 </head>
 
-<body class="position-relative   overflow-x-hidden">
+<body class="position-relative   overflow-x-hidden vh-100 ">
   <div id="filter" class="black-filter">
   </div>
   <div id="hint" onclick="closeHint();
@@ -53,7 +53,7 @@
     <img class="object-fit-cover" src="../assets/images/gacha-page/Filter.png" alt="icon filter">
   </header>
 
-  <main class="main bg-callout px-3 py-205 position-relative  overflow-hidden">
+  <main class="main bg-callout px-3 py-205 position-relative overflow-hidden">
     <img class="bg-card   position-absolute z-2" src="../assets/images/gacha-page/bg-card-1.png" alt="bg-card-2 ">
     <img class="bg-card  position-absolute z-1" src="../assets/images/gacha-page/bg-card-2.png" alt="bg-card-1 ">
     <div class="check  position-absolute d-none">
@@ -301,13 +301,13 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
-          <div class="swiper-slide">
+          <div class="swiper-slide interest-list-item">
             <img class="w-100" src="../assets/images/gacha-page/int-3.png" alt="interest photo">
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide interest-list-item">
             <img class="w-100" src="../assets/images/gacha-page/int-1.png" alt="interest photo">
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide interest-list-item">
             <img class="w-100 swiper-slide-img" src="../assets/images/gacha-page/int-2.jpg" alt="interest photo">
           </div>
         </div>
@@ -376,6 +376,20 @@
       const likeBtn = document.getElementById('like-btn');
       const dislikeBtn = document.getElementById('dislike-btn');
       const cardList = document.getElementById('card-list');
+      const nav = document.querySelector('.nav');
+      const navItems = document.querySelectorAll('.nav-item');
+      const navImgs = document.querySelectorAll('.nav-item-img');
+
+      nav.addEventListener('click', function (e) {
+        navImgs.forEach(el => el.src = el.src.replace("-on", "-off"));
+        navItems.forEach(el => el.classList.remove("bg-callout", "rounded-pill"))
+
+        const navItem = e.target.closest('.nav-item');
+        const navImg = navItem.querySelector(".nav-item-img")
+
+        navImg.src = navImg.src.replace("-off", "-on");
+        navItem.classList.add('bg-callout', 'rounded-pill');
+      })
 
 
 

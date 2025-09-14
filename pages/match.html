@@ -5,11 +5,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
 
   <main class="  position-relative vh-100">
+    <!-- 動畫星星 -->
+    <ul class="mb-0 list-unstyled animate-stars">
+      <li>
+        <img class="position-absolute star-1" src="../assets/images/star-icon/Star 1.png" alt="star-1">
+      </li>
+      <li>
+        <img class="position-absolute star-2" src="../assets/images/star-icon/Star 2.png" alt="star-2">
+      </li>
+      <li>
+        <img class="position-absolute star-3" src="../assets/images/star-icon/Star 3.png" alt="star-3">
+      </li>
+      <li>
+        <img class="position-absolute star-4" src="../assets/images/star-icon/Star 4.png" alt="star-4">
+      </li>
+      <li>
+        <img class="position-absolute star-5" src="../assets/images/star-icon/Star 5.png" alt="star-5">
+      </li>
+      <li>
+        <img class="position-absolute star-6" src="../assets/images/star-icon/Star 6.png" alt="star-6">
+      </li>
+      <li>
+        <img class="position-absolute star-7" src="../assets/images/star-icon/Star 7.png" alt="star-7">
+      </li>
+      <li>
+        <img class="position-absolute star-8" src="../assets/images/star-icon/Star 8.png" alt="star-8">
+      </li>
+      <li>
+        <img class="position-absolute star-9" src="../assets/images/star-icon/Star 9.png" alt="star-9">
+      </li>
+      <li>
+        <img class="position-absolute star-10" src="../assets/images/star-icon/Star 10.png" alt="star-10">
+      </li>
+      <li>
+        <img class="position-absolute star-11" src="../assets/images/star-icon/Star 11.png" alt="star-11">
+      </li>
+      <li>
+        <img class="position-absolute star-12" src="../assets/images/star-icon/Star 12.png" alt="star-12">
+      </li>
+      <li>
+        <img class="position-absolute star-20" src="../assets/images/star-icon/Star 20.png" alt="star-20">
+      </li>
+      <li>
+        <img class="position-absolute star-30" src="../assets/images/star-icon/Star 30.png" alt="star-30">
+      </li>
+    </ul>
+
+
     <div class="status-bar py-3 px-4  d-flex justify-content-between mb-100">
       <span class="fw-medium fs-17 text-white">9:41</span>
       <ul class="d-flex list-unstyled gap-7">
@@ -26,16 +74,19 @@
 
     </div>
     <button class="match-close-btn border-0 position-absolute" type="button">
-      <img id="close-btn" src="../assets/images/match/close.png" alt="close-btn">
+      <img class="animate__animated animate__fadeIn" id="close-btn" src="../assets/images/match/close.png"
+        alt="close-btn">
     </button>
     <div class="blur-bg position-absolute top-0 start-0 end-0 bottom-0 "></div>
     <div class="px-3 ">
-      <img class="mx-auto d-block mb-2" src="../assets/images/match/match.svg" alt="match">
-      <p class="fs-18 text-center lh-sm text-white">你和 阿力先生 配對成功</p>
-      <div class="pt-10t pb-5 position-relative mb-72">
-        <img class="object-fit-cover card-lily    " src="../assets/images/match/match-lily.png"
-          alt="character-card-lily">
-        <img class="object-fit-cover card-lee position-absolute " src="../assets/images/match/match-mrlee.png"
+      <img class="animate__animated animate__fadeIn 
+      mx-auto d-block mb-2" src="../assets/images/match/match.svg" alt="match">
+      <p class="fs-18 text-center lh-sm text-white  animate__animated animate__fadeIn">你和 阿力先生 配對成功</p>
+      <div class="pt-10t  position-relative mb-72">
+        <img class="move-right
+        object-fit-cover card-lily    " src="../assets/images/match/match-lily.png" alt="character-card-lily">
+        <img class="move-left
+        object-fit-cover card-lee position-absolute " src="../assets/images/match/match-mrlee.png"
           alt="character-card-mrlee">
       </div>
 
