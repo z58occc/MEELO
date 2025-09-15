@@ -1,9 +1,16 @@
+.header{
+  .logo{
+    height: 28px;
+  }
+}
+.status-bar{
+  border-top-left-radius: 1000px;
+  border-top-right-radius: 1000px;
+}
 .black-filter {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  border-radius: 10px;
+  inset: 18px;
   background: rgba(0, 0, 0, 0.5);
   z-index: 100;
 }
@@ -12,22 +19,24 @@
   inset: 0;
   z-index: 101;
   .close-btn {
-    top: 24px;
-    right: 24px;
+    top: 42px;
+    right: 42px;
   }
 }
-.header{
+.header {
   max-width: 100%;
 }
 .main {
   height: 621px;
+  overflow-y: auto;
   .bg-card {
     width: 95.48533%;
     height: 580px;
     left: 8px;
     top: 9px;
   }
-  .me-card {
+  .me-card,
+  .no-card {
     width: 91.46666%;
     height: 580px;
     background-size: cover;
@@ -130,12 +139,10 @@
       border-radius: 16px;
     }
   }
-  &-item{
+  &-item {
     max-width: 163px;
   }
 }
-
-
 
 .swiper {
   &-slide {
@@ -167,4 +174,9 @@
 }
 .rounded-1000 {
   border-radius: 1000px;
+}
+.frame{
+  width: 427px;
+  height: 858px;
+  background-repeat: no-repeat;
 }
