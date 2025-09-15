@@ -233,7 +233,7 @@
           </li>
         </ul>
       </li>
-      <li class="me-card position-absolute   p-3 z-3"
+      <li class="d-flex no-card position-absolute   p-3 z-3"
         style="background-image: url(../assets/images/gacha-page/gacha-end.png)">
 
         <div class="pt-84 w-100 d-flex flex-column pb-10t justify-content-between">
@@ -380,7 +380,15 @@
       const navItems = document.querySelectorAll('.nav-item');
       const navImgs = document.querySelectorAll('.nav-item-img');
 
-      nav.addEventListener('click', function (e) {
+      document.querySelectorAll('a').forEach(el => {//防止瀏覽器在同一頁面觸發跳轉
+        el.addEventListener('click', function (e) {
+          if (el.href === window.location.href) {
+            e.preventDefault();
+          }
+        })
+      })
+
+      nav.addEventListener('click', function (e) {//導覽列icon切換
         navImgs.forEach(el => el.className = el.className.replace("-on", "-off"));
         navItems.forEach(el => el.classList.remove("bg-callout", "rounded-pill"))
 
@@ -394,6 +402,10 @@
       })
 
 
+      function closeHint() { //遮罩關閉
+        filter.style.display = 'none';
+        hint.style.display = 'none';
+      }
 
       meCard.forEach(el => {
         el.style.display = 'flex';
@@ -404,10 +416,6 @@
       likeBtn.style.opacity = '0%';
       dislikeBtn.style.opacity = '0%';
 
-      function closeHint() { //關掉提示
-        filter.style.display = 'none';
-        hint.style.display = 'none';
-      }
 
       let startX, startY, deltaX, deltaY, currentX;
 
@@ -419,9 +427,9 @@
 
       cardList.addEventListener('touchmove', function (e) {
         const meCard = e.target.closest('.me-card');
+        if (!meCard) return;
         currentX = e.touches[0].clientX;
         deltaX = currentX - startX;
-        // 148 -193.84
         deltaX = Math.max(-193.84, Math.min(148, deltaX));
         const maxX = 148;
         const minX = -193.84;
@@ -443,7 +451,7 @@
 
       cardList.addEventListener('touchend', function (e) {
         const meCard = e.target.closest('.me-card');
-
+        if (!meCard) return;
         //上滑開啟 下滑收合
         let endX = e.changedTouches[0].clientX;
         let endY = e.changedTouches[0].clientY;
