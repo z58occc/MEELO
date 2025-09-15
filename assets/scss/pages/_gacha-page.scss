@@ -16,7 +16,7 @@
     right: 24px;
   }
 }
-.header{
+.header {
   max-width: 100%;
 }
 .main {
@@ -130,12 +130,10 @@
       border-radius: 16px;
     }
   }
-  &-item{
+  &-item {
     max-width: 163px;
   }
 }
-
-
 
 .swiper {
   &-slide {
@@ -167,4 +165,8 @@
 }
 .rounded-1000 {
   border-radius: 1000px;
+}
+.test {
+  height: 400px;
+  overflow: auto !important;
 }

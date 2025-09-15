@@ -9,469 +9,135 @@
   <link rel="stylesheet" href="../assets/scss/devices/devices.css">
 </head>
 
-<body class="position-relative   overflow-x-hidden">
-  <div id="filter" class="black-filter">
-  </div>
-  <div id="hint" onclick="closeHint();
-  " class="hints flex-column justify-content-center align-items-center">
-    <img id="close-btn" onclick="closeHint()" class="close-btn position-absolute"
-      src="../assets/images/gacha-page/close.png" alt="close-btn">
-    <img class="mb-4" src="../assets/images/gacha-page/up-arrow.png" alt="up-arrow">
-    <p class="text-white mb-28 fw-medium">上滑查看更多資訊</p>
-    <div class="d-flex gap-36">
-      <div class="d-flex flex-column align-items-center">
-        <img src="../assets/images/gacha-page/left-arrow.png" alt="left-arrow">
-        <p class="text-white mb-0 fw-medium">左滑下一位</p>
-      </div>
-      <div class="d-flex flex-column align-items-center">
-        <img src="../assets/images/gacha-page/right-arrow.png" alt="right-arrow">
-        <p class="text-white mb-0 fw-medium">右滑喜歡</p>
-      </div>
+<div class="device device-iphone-x ">
+
+  <body class="position-relative   overflow-x-hidden">
+    <div class="device-frame ">
+      <%- include('./layout/gacha-page.ejs') %>
     </div>
-  </div>
-
-  <div class="status-bar py-3 px-4 bg-callout d-flex  justify-content-between">
-    <span class="fw-medium fs-17">9:41</span>
-    <ul class="d-flex list-unstyled gap-7">
-      <li>
-        <img src="../assets/images/gacha-page/signal.png" alt="icon signal">
-      </li>
-      <li>
-        <img src="../assets/images/gacha-page/wifi.png" alt="icon wifi">
-      </li>
-      <li>
-        <img src="../assets/images/gacha-page/power.png" alt="icon power">
-      </li>
-    </ul>
-
-  </div>
-
-
-  <header class="d-flex py-14 px-3 justify-content-between bg-callout ">
-    <div></div>
-    <img src="../assets/images/gacha-page/logo.svg" alt="meelo logo">
-    <img class="object-fit-cover" src="../assets/images/gacha-page/Filter.png" alt="icon filter">
-  </header>
-
-  <main class="main bg-callout px-3 py-205 position-relative overflow-hidden">
-    <img class="bg-card   position-absolute z-2" src="../assets/images/gacha-page/bg-card-1.png" alt="bg-card-2 ">
-    <img class="bg-card  position-absolute z-1" src="../assets/images/gacha-page/bg-card-2.png" alt="bg-card-1 ">
-    <div class="check  position-absolute d-none">
-      <img src="../assets/images/gacha-page/icon-check.png" alt="icon-check">
-    </div>
-    <div id="like-btn" class="like-btn  position-absolute z-100 ">
-      <img src="../assets/images/gacha-page/icon-check.png" alt="hook">
-    </div>
-    <div id="dislike-btn" class="dislike-btn  position-absolute z-100 ">
-      <img src="../assets/images/gacha-page/icon-dislike.png" alt="X">
-    </div>
-
-
-    <ul class="list-unstyled card-list" id="card-list">
-
-      <li class="me-card position-absolute   flex-column justify-content-end p-3 z-8" id="me-card" id="me-card"
-        style="background-image: url(../assets/images/gacha-page/mrLee.png);">
-        <div class="p-20 position-absolute top-0  end-0 fit"
-          style="background-image: url(../assets/images/gacha-page/fit-bg.png);">
-          <div class="text-center fit-inside  border border-white rounded-circle py-14">
-            <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
-            <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">90%</h6>
-          </div>
-        </div>
-
-        <div class="d-flex align-items-center mb-12">
-          <h3 class="mb-0 fw-bold text-white me-12">阿力先生</h3>
-          <div class="badge bg-active-inverted text-accent px-2 py-1 d-flex align-items-center">
-            <img class="green-cat" src="../assets/images/gacha-page/green-cat.png" alt="green cat">
-            文青貓
-          </div>
-        </div>
-        <ul class="d-flex gap-2 list-unstyled mb-0">
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            創作
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            學習
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            影視
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            攝影
-          </li>
-        </ul>
-      </li>
-      <li class="me-card position-absolute  flex-column justify-content-end p-3 z-7"
-        style="background-image: url(../assets/images/gacha-page/player-9.png)">
-
-        <div class="p-20 position-absolute top-0  end-0 fit"
-          style="background-image: url(../assets/images/gacha-page/fit-bg.png);">
-          <div class="text-center fit-inside  border border-white rounded-circle py-14">
-            <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
-            <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">80%</h6>
-          </div>
-        </div>
-
-        <div class="d-flex align-items-center mb-12">
-          <h3 class="mb-0 fw-bold text-white me-12">Nox</h3>
-          <div class="badge bg-active-inverted text-accent px-2 py-1 d-flex align-items-center">
-            <img class="green-cat" src="../assets/images/gacha-page/green-cat.png" alt="green cat">
-            文青貓
-          </div>
-        </div>
-        <ul class="d-flex gap-2 list-unstyled mb-0">
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            影視
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            音樂
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            影視
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            攝影
-          </li>
-        </ul>
-      </li>
-      <li class="me-card position-absolute  flex-column justify-content-end p-3 z-6"
-        style="background-image: url(../assets/images/gacha-page/nox.png)">
-
-        <div class="p-20 position-absolute top-0  end-0 fit"
-          style="background-image: url(../assets/images/gacha-page/fit-bg.png);">
-          <div class="text-center fit-inside  border border-white rounded-circle py-14">
-            <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
-            <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">80%</h6>
-          </div>
-        </div>
-
-        <div class="d-flex align-items-center mb-12">
-          <h3 class="mb-0 fw-bold text-white me-12">Daniel</h3>
-          <div class="badge bg-active-inverted text-accent px-2 py-1 d-flex align-items-center">
-            <img class="green-cat" src="../assets/images/gacha-page/green-cat.png" alt="green cat">
-            文青貓
-          </div>
-        </div>
-        <ul class="d-flex gap-2 list-unstyled mb-0">
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            影視
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            音樂
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            影視
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            攝影
-          </li>
-        </ul>
-      </li>
-      <li class="me-card position-absolute  flex-column justify-content-end p-3 z-5"
-        style="background-image: url(../assets/images/gacha-page/player-7.png)">
-
-        <div class="p-20 position-absolute top-0  end-0 fit"
-          style="background-image: url(../assets/images/gacha-page/fit-bg.png);">
-          <div class="text-center fit-inside  border border-white rounded-circle py-14">
-            <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
-            <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">80%</h6>
-          </div>
-        </div>
-
-        <div class="d-flex align-items-center mb-12">
-          <h3 class="mb-0 fw-bold text-white me-12">塔可</h3>
-          <div class="badge bg-active-inverted text-accent px-2 py-1 d-flex align-items-center">
-            <img class="green-cat" src="../assets/images/gacha-page/green-cat.png" alt="green cat">
-            文青貓
-          </div>
-        </div>
-        <ul class="d-flex gap-2 list-unstyled mb-0">
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            影視
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            音樂
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            影視
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            攝影
-          </li>
-        </ul>
-      </li>
-      <li class="me-card position-absolute  flex-column justify-content-end p-3 z-4"
-        style="background-image: url(../assets/images/gacha-page/player-3.png)">
-
-        <div class="p-20 position-absolute top-0  end-0 fit"
-          style="background-image: url(../assets/images/gacha-page/fit-bg.png);">
-          <div class="text-center fit-inside  border border-white rounded-circle py-14">
-            <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
-            <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">80%</h6>
-          </div>
-        </div>
-
-        <div class="d-flex align-items-center mb-12">
-          <h3 class="mb-0 fw-bold text-white me-12">Luno</h3>
-          <div class="badge bg-active-inverted text-accent px-2 py-1 d-flex align-items-center">
-            <img class="green-cat" src="../assets/images/gacha-page/green-cat.png" alt="green cat">
-            文青貓
-          </div>
-        </div>
-        <ul class="d-flex gap-2 list-unstyled mb-0">
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            影視
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            音樂
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            影視
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            攝影
-          </li>
-        </ul>
-      </li>
-      <li class="me-card position-absolute   p-3 z-3"
-        style="background-image: url(../assets/images/gacha-page/gacha-end.png)">
-
-        <div class="pt-84 w-100 d-flex flex-column pb-10t justify-content-between">
-          <h3 class="text-center text-white">今日推薦已結束</h3>
-
-          <div class="px-12">
-            <p class="fs-18 lh-sm fw-bold text-white text-center">訂閱 Meelo 糧食包</p>
-            <p class="fs-18 lh-sm fw-bold text-white text-center">解鎖無限抽卡的專屬時光！</p>
-            <button type="button" class="btn btn-primary-default text-white py-12 w-100 rounded-1000">
-              查看訂閱方案
-            </button>
-          </div>
-        </div>
-
-      </li>
-
-
-    </ul>
-
-  </main>
-
-
-  <div id="info">
-
-    <div id="info">
-      <section class="info py-4 px-3 ">
-        <h5 class="fs-18 fw-bold text-text-primary mb-12">你們的契合度</h5>
-        <ul class="d-flex list-unstyled justify-content-between mb-4 row">
-          <li class="col-4 text-center">
-            <img src="../assets/images/gacha-page/Avater-1.png" alt="mrLee photo">
-            <p class="text-center mb-0 text-text-secondary">阿力先生</p>
-          </li>
-          <li class="col-4 text-center d-flex justify-content-center ">
-            <div class="p-20  fit" style="background-image: url(../assets/images/gacha-page/fit-bg.png);">
-              <div class="text-center fit-inside  border border-white rounded-circle py-14">
-                <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
-                <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">90%</h6>
-              </div>
-            </div>
-          </li>
-          <li class="col-4 text-center  ">
-            <img src="../assets/images/gacha-page/Avater-2.png" alt="Elly photo">
-            <p class="text-center mb-0 text-text-secondary">Elly</p>
-          </li>
-        </ul>
-        <h5 class="fs-18 fw-bold text-text-primary mb-12">他常出沒的地方</h5>
-        <div class="d-flex">
-          <div class="p-3  me-3 interest-card position-relative overflow-hidden">
-            <h5 class="fs-18 fw-bold text-text-primary mb-2">創作</h5>
-            <p class="fs-14 mb-0 text-text-secondary">點亮未知的旅程</p>
-            <img class="position-absolute end-0  interest-card-img" src="../assets/images/gacha-page/creation.png"
-              alt="creation img">
-          </div>
-          <div class="p-3  interest-card position-relative">
-            <h5 class="fs-18 fw-bold text-text-primary mb-2">影視</h5>
-            <p class="fs-14 mb-0 text-text-secondary">追劇好片推薦</p>
-            <img class="position-absolute end-0  interest-card-img" src="../assets/images/gacha-page/movie.png"
-              alt="creation img">
-          </div>
-        </div>
-      </section>
-
-      <div class="interest-list  ps-3 swiper mySwiper mb-4 mb-4">
-        <h5 class="fs-18 fw-bold text-text-primary mb-12">興趣集錦</h5>
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide interest-list-item">
-            <img class="w-100" src="../assets/images/gacha-page/int-3.png" alt="interest photo">
-          </div>
-          <div class="swiper-slide interest-list-item">
-            <img class="w-100" src="../assets/images/gacha-page/int-1.png" alt="interest photo">
-          </div>
-          <div class="swiper-slide interest-list-item">
-            <img class="w-100 swiper-slide-img" src="../assets/images/gacha-page/int-2.jpg" alt="interest photo">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <section class="px-3">
-      <h5 class="fs-18 fw-bold text-text-primary mb-12">關於我</h5>
-      <ul class="d-flex gap-2 list-unstyled mb-12">
-        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-          26歲
-        </li>
-        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-          男性
-        </li>
-        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-          處女座
-        </li>
-      </ul>
-      <p class="text-text-secondary mb-4">
-        嗨，我是阿力先生。
-        <br>
-        <br>
-        平常在出版社當編輯社畜，下班後會一頭栽進手帳世界，寫字、貼貼紙、跟我的貓（牠叫豬豬）一起靜靜過完一天。
-        <br>
-        <br>
-        最喜歡紙膠帶撕開的聲音，還有把情緒用顏色分類的瞬間。
-        <br>
-        <br>
-        我相信每一張便條紙都值得被好好安放，就像每段關係，都該被認真對待。
-        <br>
-        <br>
-        如果你也是細節控、熱愛慢慢了解彼此的過程，歡迎一起來交換一頁日常，期待認識你！
-      </p>
-
-      <h5 class="fs-18 fw-bold text-text-primary mb-12">職業</h5>
-      <p class="text-text-secondary mb-4">出版社編輯</p>
-
-      <h5 class="fs-18 fw-bold text-text-primary mb-12">教育背景</h5>
-      <p class="text-text-secondary mb-4">NTU</p>
-
-      <h5 class="fs-18 fw-bold text-text-primary mb-12">居住城市</h5>
-      <p class="text-text-secondary mb-4">台北</p>
-
-    </section>
-  </div>
-
-  <%- include('./layout/footer.ejs',{active:"gacha"}) %>
-
-
-    <!-- Swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      const swiper = new Swiper(".mySwiper", {
-        slidesPerView: 2.04375,
-        spaceBetween: 16,
-        // (手機板排版設定)
-      }); 
-    </script>
-    <script>
-      const closeBtn = document.getElementById('close-btn');
-      const filter = document.getElementById('filter');
-      const meCard = document.querySelectorAll('.me-card');
-      const info = document.getElementById('info');
-      const hint = document.getElementById('hint');
-      const likeBtn = document.getElementById('like-btn');
-      const dislikeBtn = document.getElementById('dislike-btn');
-      const cardList = document.getElementById('card-list');
-      const nav = document.querySelector('.nav');
-      const navItems = document.querySelectorAll('.nav-item');
-      const navImgs = document.querySelectorAll('.nav-item-img');
-
-      nav.addEventListener('click', function (e) {
-        navImgs.forEach(el => el.className = el.className.replace("-on", "-off"));
-        navItems.forEach(el => el.classList.remove("bg-callout", "rounded-pill"))
-
-        const navItem = e.target.closest('.nav-item');
-        if (!navItem) return;
-        const navImg = navItem.querySelector(".nav-item-img")
-
-
-        navImg.className = navImg.className.replace("-off", "-on")
-        navItem.classList.add('bg-callout', 'rounded-pill');
-      })
+    <div class="device-stripe "></div>
+    <div class="device-header "></div>
+    <div class="device-sensors  "></div>
+    <div class="device-btns"></div>
+    <div class="device-power"></div>
+</div>
 
 
 
-      meCard.forEach(el => {
-        el.style.display = 'flex';
-      })
-      info.style.display = 'none';
-      filter.style.display = 'flex';
-      hint.style.display = 'flex';
-      likeBtn.style.opacity = '0%';
-      dislikeBtn.style.opacity = '0%';
+  <!-- Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 2.04375,
+      spaceBetween: 16,
+      // (手機板排版設定)
+    }); 
+  </script>
+  <script>
+    const closeBtn = document.getElementById('close-btn');
+    const filter = document.getElementById('filter');
+    const meCard = document.querySelectorAll('.me-card');
+    const info = document.getElementById('info');
+    const hint = document.getElementById('hint');
+    const likeBtn = document.getElementById('like-btn');
+    const dislikeBtn = document.getElementById('dislike-btn');
+    const cardList = document.getElementById('card-list');
+    const nav = document.querySelector('.nav');
+    const navItems = document.querySelectorAll('.nav-item');
+    const navImgs = document.querySelectorAll('.nav-item-img');
 
-      function closeHint() { //關掉提示
-        filter.style.display = 'none';
-        hint.style.display = 'none';
+    nav.addEventListener('click', function (e) {
+      navImgs.forEach(el => el.className = el.className.replace("-on", "-off"));
+      navItems.forEach(el => el.classList.remove("bg-callout", "rounded-pill"))
+
+      const navItem = e.target.closest('.nav-item');
+      if (!navItem) return;
+      const navImg = navItem.querySelector(".nav-item-img")
+
+
+      navImg.className = navImg.className.replace("-off", "-on")
+      navItem.classList.add('bg-callout', 'rounded-pill');
+    })
+
+
+
+    meCard.forEach(el => {
+      el.style.display = 'flex';
+    })
+    info.style.display = 'none';
+    filter.style.display = 'flex';
+    hint.style.display = 'flex';
+    likeBtn.style.opacity = '0%';
+    dislikeBtn.style.opacity = '0%';
+
+    function closeHint() { //關掉提示
+      filter.style.display = 'none';
+      hint.style.display = 'none';
+    }
+
+    let startX, startY, deltaX, deltaY, currentX;
+
+    cardList.addEventListener('touchstart', function (e) {
+      const meCard = e.target.closest('.me-card');
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+    }, { passive: true });
+
+    cardList.addEventListener('touchmove', function (e) {
+      const meCard = e.target.closest('.me-card');
+      currentX = e.touches[0].clientX;
+      deltaX = currentX - startX;
+      // 148 -193.84
+      deltaX = Math.max(-193.84, Math.min(148, deltaX));
+      const maxX = 148;
+      const minX = -193.84;
+      let opacityLike = deltaX / maxX;
+      let opacityDlike = deltaX / minX;
+      opacityLike = Math.max(0, Math.min(1, opacityLike));
+      opacityDlike = Math.max(0, Math.min(1, opacityDlike));
+
+      likeBtn.style.opacity = opacityLike;
+      dislikeBtn.style.opacity = opacityDlike;
+
+      deltaY = Math.min(8, Math.abs(deltaX) * 0.05405);
+      // 跟著手指移動，讓卡片偏移 & 微旋轉
+
+      meCard.style.transform = `translateX(${deltaX}px) translateY(${deltaY}px) rotate(${deltaX * 0.05405}deg)`;
+      // 0.05
+      ifMoving = false;
+    }, { passive: true })
+
+    cardList.addEventListener('touchend', function (e) {
+      const meCard = e.target.closest('.me-card');
+
+      //上滑開啟 下滑收合
+      let endX = e.changedTouches[0].clientX;
+      let endY = e.changedTouches[0].clientY;
+
+      let diffX = endX - startX;
+      let diffY = endY - startY;
+
+      if (deltaX < 148 && deltaX > -193.84) {// 還原
+        deltaX = 0;
+        meCard.style.transform = `translateX(${deltaX}px) rotate(${deltaX * 0.05}deg)`;
+        likeBtn.style.opacity = '0%';
+        dislikeBtn.style.opacity = '0%';
       }
 
-      let startX, startY, deltaX, deltaY, currentX;
+      if (deltaX === 148) location.href = "./match.html";
+      if (deltaX === -193.84) {
+        meCard.style.display = 'none';
+        dislikeBtn.style.opacity = '0%';
+      }
 
-      cardList.addEventListener('touchstart', function (e) {
-        const meCard = e.target.closest('.me-card');
-        startX = e.touches[0].clientX;
-        startY = e.touches[0].clientY;
-      }, { passive: true });
-
-      cardList.addEventListener('touchmove', function (e) {
-        const meCard = e.target.closest('.me-card');
-        currentX = e.touches[0].clientX;
-        deltaX = currentX - startX;
-        // 148 -193.84
-        deltaX = Math.max(-193.84, Math.min(148, deltaX));
-        const maxX = 148;
-        const minX = -193.84;
-        let opacityLike = deltaX / maxX;
-        let opacityDlike = deltaX / minX;
-        opacityLike = Math.max(0, Math.min(1, opacityLike));
-        opacityDlike = Math.max(0, Math.min(1, opacityDlike));
-
-        likeBtn.style.opacity = opacityLike;
-        dislikeBtn.style.opacity = opacityDlike;
-
-        deltaY = Math.min(8, Math.abs(deltaX) * 0.05405);
-        // 跟著手指移動，讓卡片偏移 & 微旋轉
-
-        meCard.style.transform = `translateX(${deltaX}px) translateY(${deltaY}px) rotate(${deltaX * 0.05405}deg)`;
-        // 0.05
-        ifMoving = false;
-      }, { passive: true })
-
-      cardList.addEventListener('touchend', function (e) {
-        const meCard = e.target.closest('.me-card');
-
-        //上滑開啟 下滑收合
-        let endX = e.changedTouches[0].clientX;
-        let endY = e.changedTouches[0].clientY;
-
-        let diffX = endX - startX;
-        let diffY = endY - startY;
-
-        if (deltaX < 148 && deltaX > -193.84) {// 還原
-          deltaX = 0;
-          meCard.style.transform = `translateX(${deltaX}px) rotate(${deltaX * 0.05}deg)`;
-          likeBtn.style.opacity = '0%';
-          dislikeBtn.style.opacity = '0%';
+      if (Math.abs(diffX) <= 10) {
+        if (diffY > 0) {
+          info.style.display = "none";  //下滑收合
+        } else {
+          info.style.display = "block"; //上滑開啟
         }
-
-        if (deltaX === 148) location.href = "./match.html";
-        if (deltaX === -193.84) {
-          meCard.style.display = 'none';
-          dislikeBtn.style.opacity = '0%';
-        }
-
-        if (Math.abs(diffX) <= 10) {
-          if (diffY > 0) {
-            info.style.display = "none";  //下滑收合
-          } else {
-            info.style.display = "block"; //上滑開啟
-          }
-        }
-      }, { passive: true });
+      }
+    }, { passive: true });
 
 
 
@@ -479,11 +145,11 @@
 
 
 
-    </script>
+  </script>
 
-    <script type="module" src="../main.js"></script>
+  <script type="module" src="../main.js"></script>
 
 
-</body>
+  </body>
 
 </html>
