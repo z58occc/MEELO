@@ -81,12 +81,12 @@
     </div>
     </div>
     <div class="bottom-sheet-wrapper">
-    <div class=" bg-background-page pt-4 px-3 position-relative " style="border-top-left-radius: 24px; border-top-right-radius: 24px;" >
+    <div class=" bg-background-page pt-4 px-3 " style="border-top-left-radius: 24px; border-top-right-radius: 24px;" >
     
-    <div class="fab-container position-absolute "  style="bottom:24px; right:24px;">
+    <div class="fab-container" >
     <button id="fabBtn" class="fab-main">
      <div>
-      <img src="/assets/images/index-img/Fab-default.png" alt="#">
+      <img src="/assets/images/index-img/Fab-default.svg" alt="Icon / Plus">
      </div>
     </button>
     </div>
@@ -94,13 +94,18 @@
     
       <!-- 分類 -->
       <div class="d-flex justify-content-between mb-3 category-bar">
-        <a href="#" class="d-inline-block text-decoration-none" type="button" 
+        <a class="d-inline-block text-decoration-none" type="button" 
         data-bs-toggle="offcanvas" 
         data-bs-target="#travelOffcanvas" 
         aria-controls="travelOffcanvas">
           <div class="d-flex align-items-center gap-2">
           <div class="fw-bold fs-5 ln-sm text-text-primary">旅行</div>
-          <div><img src="/assets/images/index-img/chevron-down.png" alt="Vector"></div>
+          <div>
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.2929 8.79289C17.6834 8.40237 18.3164 8.40237 18.707 8.79289C19.0975 9.18342 19.0975 9.81643 18.707 10.207L12.707 16.207C12.3164 16.5975 11.6834 16.5975 11.2929 16.207L5.29289 10.207C4.90237 9.81643 4.90237 9.18342 5.29289 8.79289C5.68342 8.40237 6.31643 8.40237 6.70696 8.79289L11.9999 14.0859L17.2929 8.79289Z" fill="#3B170F"/>
+</svg>
+
+          </div>
         </div>
         </a>
         
@@ -768,14 +773,14 @@
     
 
        <!-- Bottom Sheet Offcanvas -->
-       <div class="offcanvas offcanvas-bottom" tabindex="-1" id="travelOffcanvas" aria-labelledby="travelOffcanvasLabel" style="height: 80%; border-radius: 24px 24px 0 0;">
+       <div class="offcanvas offcanvas-bottom" tabindex="-1" id="travelOffcanvas" aria-labelledby="travelOffcanvasLabel" data-bs-dismiss="offcanvas" style="height: 80%; border-radius: 24px 24px 0 0;">
       <!-- 上面灰色小橫條 -->
        <div class="w-100 d-flex justify-content-center pt-2">
-       <div style="width: 40px; height: 4px; background: #ddd; border-radius: 2px;"></div>
+       <div  style="width: 40px; height: 4px; background: #ddd; border-radius: 2px;"></div>
        </div>
  
       <!-- Body -->
-      <div class="offcanvas-body d-flex flex-column p-4">
+      <div class="offcanvas-body d-flex flex-column py-4 px-3 ">
       <!-- 興趣版清單 -->
       <div class="flex-grow-1 overflow-auto">
        <div class="offcanvas-title fs-14 lh-base text-text-secondary mb-2" >你追蹤的興趣版</div>
@@ -849,7 +854,7 @@
 
     <!-- 固定底部按鈕 -->
       <div class="pt-3 ">
-      <button class="btn btn-primary-default text-white  fw-bold w-100 py-12 rounded-pill">完成</button>
+      <button  class="btn btn-primary-default text-white  fw-bold w-100 py-12 rounded-pill" data-bs-dismiss="offcanvas" >完成</button>
       </div>
       <footer class="footer pt-20 pb-2">
       <div class="foot bg-dark mx-auto"></div>
@@ -858,7 +863,7 @@
       </div>
        </div>
         <!-- Bottom -->
-       <div id="fabOverlay" class="fab-overlay mb-12">
+       <div id="fabOverlay" class="fab-overlay ">
      <div class="fab-menu d-flex flex-column align-items-end gap-12">
     <a href="#" class="fab-item d-flex  align-items-center gap-2 py-12 px-3">
       <div>
@@ -894,28 +899,28 @@
       <line x1="18" y1="6" x2="6" y2="18" stroke="#333" stroke-width="2" stroke-linecap="round"/>
       <line x1="6" y1="6" x2="18" y2="18" stroke="#333" stroke-width="2" stroke-linecap="round"/>
     </svg>
-  </button>
+     </button>
      </div>
       </div> 
     <!-- 底部導覽列 -->
      <nav class="nav bg-white">
   <ul class="list-unstyled d-flex pt-2 px-2 pb-1 mb-0 justify-content-between w-100 align-items-center">
-    <li class="nav-item py-2" data-tab="home">
-      <img class="mx-auto d-block" src="../assets/images/index-img/Vector.png" alt="icon home">
+    <li class="nav-item py-2 rounded-pill" data-tab="home">
+      <img class="mx-auto d-block" src="../assets/images/index-img/Home-fill.svg" alt="icon home">
     </li>
-    <li class="nav-item py-2" data-tab="explore">
-      <img class="mx-auto d-block" src="../assets/images/gacha-page/navicon-1.png" alt="icon explore">
+    <li class="nav-item py-2 rounded-pill" data-tab="explore">
+      <img class="mx-auto d-block" src="../assets/images/index-img/Explore.svg" alt="icon explore">
     </li>
     <li class="nav-item py-2 rounded-pill position-relative" data-tab="gacha">
-      <img class="mx-auto d-block" src="../assets/images/index-img/Vector2.png" alt="icon gacha">
+      <img class="mx-auto d-block" src="../assets/images/index-img/card.svg" alt="icon gacha">
       <img class="position-absolute red-badge" src="../assets/images/gacha-page/red-badge.png" alt="red-badge">
     </li>
-    <li class="nav-item py-2 position-relative" data-tab="message">
-      <img class="mx-auto d-block" src="../assets/images/gacha-page/navicon-3.png" alt="icon message">
+    <li class="nav-item py-2 rounded-pill position-relative" data-tab="message">
+      <img class="mx-auto d-block" src="../assets/images/index-img/Chat.svg" alt="icon message">
       <img class="position-absolute red-badge" src="../assets/images/gacha-page/red-badge.png" alt="red-badge">
     </li>
-    <li class="nav-item py-2" data-tab="user">
-      <img class="mx-auto d-block" src="../assets/images/gacha-page/User.png" alt="icon user">
+    <li class="nav-item py-2 rounded-pill" data-tab="user">
+      <img class="mx-auto d-block" src="../assets/images/index-img/User.svg" alt="icon user">
     </li>
   </ul>
     </nav>

@@ -1,9 +1,23 @@
 .fw-900 {
   font-weight: 900;
 }
+.card-lily,
 .card-lee {
-  top: 70px;
-  right: -25px;
+  width: 152px;
+  border: white solid 2px;
+  border-radius: 16px;
+  height: 199px;
+}
+.card-lily {
+  position: absolute;
+  transform: rotate(-5.08deg);
+  left: 26.67px;
+  top: 45.52px;
+}
+.card-lee {
+  top: 88.31px;
+  left: 176.63px;
+  transform: rotate(6.5deg);
 }
 .input-box {
   background: rgb(0, 0, 0, 0.05);
@@ -21,21 +35,90 @@
   height: 24px;
 }
 .blur-bg {
-  background-image: url("/assets/images/match/Image-bg.png") ;
+  background-image: url("/assets/images/match/Image-bg.png");
   background-size: cover;
-  z-index: -1;
-  filter:blur(4px)
-  
+  z-index: 1;
+  filter: brightness(0.65) blur(4px);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
 }
-.match-down{
-  margin-left: -16px;
-  margin-right: -16px;
+.match-down {
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
+  border-bottom-left-radius:40px ;
+  border-bottom-right-radius:40px ;
+  
   border: white solid 1px;
+  position: absolute;
+  bottom: -220px;
+  left: 0;
+  right: 0;
+  animation-name: slide-in-up;
+  animation-duration: 0.55s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
 }
-.match-close-btn{
+@keyframes slide-in-up {
+  from {
+    position: absolute;
+    bottom: -220px;
+  }
+  to {
+    position: absolute;
+    bottom: 0;
+  }
+}
+.match-close-btn {
   background-color: transparent;
   top: 66px;
   right: 16px;
+}
+
+.move-right {
+  animation-name: move-right;
+  animation-duration: 0.85s;
+}
+.move-left {
+  animation-name: move-left;
+  animation-duration: 0.85s;
+}
+@keyframes move-right {
+  0% {
+    left: -211.93px;
+    top: 80.64px;
+    transform: rotate(-21.31deg);
+  }
+  35.29411% {
+    left: 57.65px;
+    top: 43.32px;
+    transform: rotate(-4.47deg);
+  }
+
+  100% {
+    left: 26.67px;
+    top: 45.52px;
+    transform: rotate(-5.08deg);
+  }
+}
+@keyframes move-left {
+  0% {
+    left: 378px;
+    top: 124.38px;
+    transform: rotate(21.31deg);
+  }
+  35.29411% {
+    left: 147.78px;
+    top: 90.39px;
+    transform: rotate(3.31deg);
+  }
+
+  100% {
+    left: 176.63px;
+    top: 88.31px;
+    transform: rotate(6.5deg);
+  }
+}
+
+.animate__animated.animate__fadeIn {
+  animation-delay: 0.3s;
 }

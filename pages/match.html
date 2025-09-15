@@ -5,40 +5,97 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
-
-  <main class="  overflow-hidden position-relative">
-    <div class="status-bar py-3 px-4  d-flex justify-content-between mb-100">
-      <span class="fw-medium fs-17 text-white">9:41</span>
-      <ul class="d-flex list-unstyled gap-7">
+  <div class="frame position-relative  p-18 overflow-hidden  vh-100"
+    style="background-image: url(/assets/images/gacha-page/iphone-11-pro.png);">
+    <main class="  position-relative h-100">
+      <!-- 動畫星星 -->
+      <ul class="position-relative mb-0 list-unstyled animate-stars z-100">
         <li>
-          <img src="../assets/images/match/signal.png" alt="icon signal">
+          <img class="position-absolute star-1" src="../assets/images/star-icon/Star 1.png" alt="star-1">
         </li>
         <li>
-          <img src="../assets/images/match/wifi.png" alt="icon wifi">
+          <img class="position-absolute star-2" src="../assets/images/star-icon/Star 2.png" alt="star-2">
         </li>
         <li>
-          <img src="../assets/images/match/power.png" alt="icon power">
+          <img class="position-absolute star-3" src="../assets/images/star-icon/Star 3.png" alt="star-3">
+        </li>
+        <li>
+          <img class="position-absolute star-4" src="../assets/images/star-icon/Star 4.png" alt="star-4">
+        </li>
+        <li>
+          <img class="position-absolute star-5" src="../assets/images/star-icon/Star 5.png" alt="star-5">
+        </li>
+        <li>
+          <img class="position-absolute star-6" src="../assets/images/star-icon/Star 6.png" alt="star-6">
+        </li>
+        <li>
+          <img class="position-absolute star-7" src="../assets/images/star-icon/Star 7.png" alt="star-7">
+        </li>
+        <li>
+          <img class="position-absolute star-8" src="../assets/images/star-icon/Star 8.png" alt="star-8">
+        </li>
+        <li>
+          <img class="position-absolute star-9" src="../assets/images/star-icon/Star 9.png" alt="star-9">
+        </li>
+        <li>
+          <img class="position-absolute star-10" src="../assets/images/star-icon/Star 10.png" alt="star-10">
+        </li>
+        <li>
+          <img class="position-absolute star-11" src="../assets/images/star-icon/Star 11.png" alt="star-11">
+        </li>
+        <li>
+          <img class="position-absolute star-12" src="../assets/images/star-icon/Star 12.png" alt="star-12">
+        </li>
+        <li>
+          <img class="position-absolute star-20" src="../assets/images/star-icon/Star 20.png" alt="star-20">
+        </li>
+        <li>
+          <img class="position-absolute star-30" src="../assets/images/star-icon/Star 30.png" alt="star-30">
         </li>
       </ul>
 
-    </div>
-    <button class="match-close-btn border-0 position-absolute" type="button">
-      <img id="close-btn" src="../assets/images/match/close.png" alt="close-btn">
-    </button>
-    <div class="blur-bg position-absolute top-0 start-0 end-0 bottom-0 "></div>
-    <div class="px-3">
-      <img class="mx-auto d-block mb-2" src="../assets/images/match/match.png" alt="match">
-      <p class="fs-18 text-center lh-sm text-white">你和 阿力先生 配對成功</p>
-      <div class="pt-10t pb-72 position-relative">
-        <img class="card-lily   " src="../assets/images/match/character-card-lily.png" alt="character-card-lily">
-        <img class="card-lee position-absolute " src="../assets/images/match/character-card-mrlee.png"
-          alt="character-card-mrlee">
-      </div>
 
-      <div class="pt-6t bg-white match-down p-3">
+      <div class=" position-relative status-bar pt-3 pb-12 px-4  d-flex justify-content-between mb-100 z-100">
+        <span class="fw-medium fs-17 text-white">9:41</span>
+        <ul class="d-flex list-unstyled gap-7 mb-0">
+          <li>
+            <img src="../assets/images/match/signal.png" alt="icon signal">
+          </li>
+          <li>
+            <img src="../assets/images/match/wifi.png" alt="icon wifi">
+          </li>
+          <li>
+            <img src="../assets/images/match/power.png" alt="icon power">
+          </li>
+        </ul>
+
+      </div>
+      <button class="z-100 match-close-btn border-0 position-absolute" type="button">
+        <img class="animate__animated animate__fadeIn" id="close-btn" src="../assets/images/match/close.png"
+          alt="close-btn">
+      </button>
+      <div class="blur-bg position-absolute top-0 start-0 end-0 bottom-0  z-1"></div>
+      <div class="position-relative px-3 z-100">
+        <img class="animate__animated animate__fadeIn 
+      mx-auto d-block mb-2" src="../assets/images/match/match.svg" alt="match">
+        <p class="fs-18 text-center lh-sm text-white  animate__animated animate__fadeIn">你和 阿力先生 配對成功</p>
+        <div class="pt-10t  position-relative mb-72">
+          <img class="move-right
+        object-fit-cover card-lily    " src="../assets/images/match/match-lily.png" alt="character-card-lily">
+          <img class="move-left
+        object-fit-cover card-lee position-absolute " src="../assets/images/match/match-mrlee.png"
+            alt="character-card-mrlee">
+        </div>
+
+
+
+
+      </div>
+      <div class="pt-6t bg-white match-down p-3 z-100">
         <h5 class="text-text-primary mb-12">你們的共同興趣為</h5>
         <ul class="list-unstyled d-flex mb-3">
           <li>
@@ -60,16 +117,13 @@
         <%- include("./layout/bottomLine") %>
       </div>
 
-
-    </div>
-
-
-  </main>
+    </main>
 
 
+  </div>
   <script>
     const closeBtn = document.getElementById('close-btn');
-    
+
     closeBtn.addEventListener('click', function (e) {
       location.href = "./gacha-page.html";
     })

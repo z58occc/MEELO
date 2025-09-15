@@ -1,21 +1,25 @@
-<nav class="nav">
+<nav class="nav bg-white">
   <ul class="list-unstyled d-flex pt-2 px-2 pb-1 mb-0 justify-content-between w-100 align-items-center">
     <li class="nav-item py-2 <%= active === 'home' ? 'bg-callout' : '' %>">
-      <img class="mx-auto d-block" src="../assets/images/gacha-page/navicon-4.png" alt="icon home">
+      <a href="./index.html">
+        <img class="nav-img-1-off nav-item-img mx-auto d-block" alt="icon home">
+      </a>
     </li>
     <li class="nav-item py-2 <%= active === 'explore' ? 'bg-callout' : '' %>">
-      <img class="mx-auto d-block" src="../assets/images/gacha-page/navicon-1.png" alt="icon explore">
+      <img class="nav-img-2-off nav-item-img mx-auto d-block" alt="icon explore">
     </li>
-    <li class="nav-item py-2 <%= active === 'gacha' ? 'bg-callout' : '' %> rounded-pill  position-relative">
-      <img class="mx-auto d-block " src="../assets/images/gacha-page/navicon-2.png" alt="icon gacha">
-      <img class="position-absolute red-badge" src="../assets/images/gacha-page/red-badge.png" alt="red-badge">
+    <li class=" nav-item py-2 <%= active === 'gacha' ? 'bg-callout' : '' %> rounded-pill  position-relative">
+      <a href="./gacha-page.html">
+        <img class="nav-img-3-on mx-auto d-block nav-item-img" alt="icon gacha">
+        <img class="position-absolute red-badge" src="/assets/images/nav-icon/red-badge.svg" alt="red-badge">
+      </a>
     </li>
     <li class="nav-item py-2 <%= active === 'message' ? 'bg-callout' : '' %> position-relative">
-      <img class="mx-auto d-block" src="../assets/images/gacha-page/navicon-3.png" alt="icon message">
-      <img class="position-absolute red-badge" src="../assets/images/gacha-page/red-badge.png" alt="red-badge">
+      <img class="nav-img-4-off nav-item-img mx-auto d-block" alt="icon message">
+      <img class="position-absolute red-badge" src="/assets/images/nav-icon/red-badge.svg" alt="red-badge">
     </li>
-    <li class="nav-item py-2 <%= active === 'user' ? 'bg-callout' : '' %> ">
-      <img class="mx-auto d-block" src="../assets/images/gacha-page/User.png" alt="icon user">
+    <li class="nav-item py-1 <%= active === 'user' ? 'bg-callout' : '' %> ">
+      <img class="nav-img-5-off nav-item-img mx-auto d-block" alt="icon user">
     </li>
   </ul>
 
