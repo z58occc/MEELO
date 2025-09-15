@@ -1,3 +1,49 @@
+// 手機框
+.mobile-frame {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .mobile-container {
+    background: $bg-body;
+    width: 375px;
+    height: 812px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+    }
+    &::before {
+      height: 50px;
+      background: url("/assets/images/onboarding/status-bar.png") center / cover
+        no-repeat;
+    }
+    &::after {
+      height: 33px;
+      background: url("/assets/images/onboarding/bottom-nav-bar.png") center /
+        cover no-repeat;
+    }
+
+    &.content-full {
+      position: relative;
+      &::before {
+        position: fixed;
+        z-index: 1;
+        width: 375px;
+      }
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
 // icon
 .icon {
   --icon-url: unset;
@@ -33,6 +79,12 @@
   &-paw {
     --icon-url: url("/assets/images/icon/paw.svg");
   }
+  &-check {
+    --icon-url: url("/assets/images/icon/check.svg");
+  }
+  &-dice {
+    --icon-url: url("/assets/images/icon/dice.svg");
+  }
 }
 
 .option-card {
@@ -62,6 +114,15 @@
   }
 }
 
+// 開始頁 start
+.meelo-observer {
+  width: 300px;
+  transform: rotate(-25deg);
+  bottom: 20px;
+  left: 119.5px;
+}
+// 開始頁 end
+
 .optionLayout {
   @media (max-width: 287px) {
     > * {
@@ -70,7 +131,7 @@
   }
 }
 
-.dietaryLayout{
+.dietaryLayout {
   display: grid;
   gap: 16px;
   grid-template-rows: repeat(4, minmax(104px, 1fr));
@@ -137,10 +198,10 @@
       --bs-card-bg: #{$primary-active};
       --bs-card-border-color: #{$primary-active};
       --title-color: #{$white};
-          .onboarding-check-text {
-      --text-color: #{$white};
-      --text-color-opacity: 1;
-    }
+      .onboarding-check-text {
+        --text-color: #{$white};
+        --text-color-opacity: 1;
+      }
     }
   }
   .onboarding-gender-img {
@@ -169,7 +230,11 @@
     width: 100%;
     margin-top: -1px;
     height: 25px;
-    background: linear-gradient(180deg, #FEFCFB 0%, rgba(254, 252, 251, 0) 100%);
+    background: linear-gradient(
+      180deg,
+      #fefcfb 0%,
+      rgba(254, 252, 251, 0) 100%
+    );
   }
   &-b::before {
     content: "";
@@ -177,10 +242,13 @@
     width: 100%;
     margin-bottom: -1px;
     height: 25px;
-    background: linear-gradient(180deg, rgba(254, 252, 251, 0) 0%, rgba(254, 252, 251, 1) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(254, 252, 251, 0) 0%,
+      rgba(254, 252, 251, 1) 100%
+    );
   }
 }
-
 
 .option-contain {
   overflow: scroll;
@@ -189,10 +257,35 @@
 
   // Chrome / Safari / Edge
   &::-webkit-scrollbar {
-  display: none;
+    display: none;
   }
   // Firefox
   scrollbar-width: none;
+}
+
+.input-ghost {
+  font-size: 36px;
+  font-weight: $font-weight-bold;
+  padding: 0;
+  border: 0;
+  background-color: $bg-body;
+  line-height: 1.2;
+  caret-color:$primary-default;
+  &:focus, &:focus-visible {
+    box-shadow: none;
+  }
+}
+
+// button
+.btn-primary {
+  border-width: 0;
+  background-image: unset;
+  background-color: $primary-default;
+  --bs-btn-hover-bg: #{$primary-active};
+  --bs-btn-active-bg: var(--bs-btn-hover-bg)
+  --bs-btn-focus-box-shadow: none;
+  --bs-btn-disabled-bg: #{$primary-default};
+  --bs-btn-disabled-opacity: 0.5
 }
 
 .btn-ghost {
@@ -227,5 +320,34 @@
     --btn-active-bg-opacity: 0.5;
     --btn-color: #{to-rgb($black)};
     --btn-color-opacity: 0.4;
+  }
+}
+
+// 假鍵盤
+.fake-keyboard {
+  margin-bottom: -336px;
+  opacity: 0;
+  &.open {
+    transition: all 0.8s ease-in-out;
+    margin-bottom: -33px;
+    opacity: 1;
+  }
+  &.close {
+    transition: all 0.8s ease-in-out;
+    margin-bottom: -336px;
+    opacity: 0;
+  }
+}
+
+// 動畫
+.character-creating {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  &-text {
+    top: 80px;
+    color: $primary-active;
+    -webkit-text-stroke: 0.5px rgba(242, 242, 215, 0.02);
+    text-shadow: 0px 0px 24px rgba(250, 199, 109, 1);
   }
 }
