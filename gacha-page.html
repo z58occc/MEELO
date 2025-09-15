@@ -6,358 +6,361 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script type="module" crossorigin src="/MEELO/assets/main-BEILY6H0.js"></script>
-  <link rel="stylesheet" crossorigin href="/MEELO/assets/main-DpIa1PDJ.css">
+  <script type="module" crossorigin src="/MEELO/assets/main-U-xya5FW.js"></script>
+  <link rel="stylesheet" crossorigin href="/MEELO/assets/main-C20UMK9B.css">
   <link rel="stylesheet" crossorigin href="/MEELO/assets/gacha-page-CeBS8NTu.css">
 </head>
 
-<body class="position-relative   overflow-x-hidden">
-  <div id="filter" class="black-filter">
-  </div>
-  <div id="hint" onclick="closeHint();
+<body>
+  <div class="frame position-relative   p-18 overflow-hidden "
+    style="background-image: url(/MEELO/assets/iphone-11-pro-BfAfhfWl.png);">
+    <div id="filter" class="black-filter">
+    </div>
+    <div id="hint" onclick="closeHint();
   " class="hints flex-column justify-content-center align-items-center">
-    <img id="close-btn" onclick="closeHint()" class="close-btn position-absolute"
-      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABzSURBVHgB7ZTBDcAgDAOjTsL+S2SUjuLSqo9+GsWBAA8s5WefpYAisrWcAGids04hMuXNqMd8G+Et+cCfjLABq4Tx0sEw3ANohlugbnCjpB/8p4SCHzJbqStKfeTUb+oBhEuYYKiEDSBw7JTdK5hzvTVcF7MK1jhqoLsMAAAAAElFTkSuQmCC" alt="close-btn">
-    <img class="mb-4" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAA9CAMAAACEPYlyAAAANlBMVEUAAAD////////////////////////////////////////////////////////////////////xY8b8AAAAEXRSTlMAv++QQCBgEN+fUIBwsDDPoNUgDH0AAADhSURBVDjLlZNRDsMgDENLgdLR0i73v+ymaZk7OZY2/6EnSy8Qph9TikS3oUg1a6pktgm0ms1xbbFndlUyS6G5vVJiCVGr9k5TpcC/rY7If3HC/ivQ+U36B5B/uqJE5sjB5p6sSvCHObKROWpUYv/EKEGCa2wOf5Qi/93CbDCnGswpfToVSvwsvFJ3R4NQdpQJ7XLZYLoQKo6KXuyDUHM0cWa/IM6JicXMI0AZE4vB9v/+csN/ZXt35wy4kyIEQ8UeoorLZQ+34CRYsAcs2KMLVGHBHrAgjyRRzhL1LlGt19MD83sj0cZhNxMAAAAASUVORK5CYII=" alt="up-arrow">
-    <p class="text-white mb-28 fw-medium">上滑查看更多資訊</p>
-    <div class="d-flex gap-36">
-      <div class="d-flex flex-column align-items-center">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAXCAMAAACRQoc4AAAAOVBMVEUAAAD///////////////////////////////////////////////////////////////////////8KOjVvAAAAEnRSTlMAIN+AYL9AEKDvf3CPz68wkFAHF6UdAAAAqElEQVQ4y62T0QrDIAxFvWmirtp2y/9/7AorU3RhCj2vcjA33LgbOXKaNLyoLjNCSKcx5YT1oTrl+HgahmPH0BknrKQ1GQgDMXpIcvIDQ/VIQmu8RP+ycTCHsqEVX4dJByEuX7GMWrEaEHH0K7gCFhqTgqtpgj3xwXte9vIkXdvM7oD3a7/sGmB1tOyKXAeYLsfqy88usXROHdo4+iNajsNmHgkiWxfg39g2HgyGl8X+AAAAAElFTkSuQmCC" alt="left-arrow">
-        <p class="text-white mb-0 fw-medium">左滑下一位</p>
+      <img id="close-btn" onclick="closeHint()" class="close-btn position-absolute"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABzSURBVHgB7ZTBDcAgDAOjTsL+S2SUjuLSqo9+GsWBAA8s5WefpYAisrWcAGids04hMuXNqMd8G+Et+cCfjLABq4Tx0sEw3ANohlugbnCjpB/8p4SCHzJbqStKfeTUb+oBhEuYYKiEDSBw7JTdK5hzvTVcF7MK1jhqoLsMAAAAAElFTkSuQmCC" alt="close-btn">
+      <img class="mb-4" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAA9CAMAAACEPYlyAAAANlBMVEUAAAD////////////////////////////////////////////////////////////////////xY8b8AAAAEXRSTlMAv++QQCBgEN+fUIBwsDDPoNUgDH0AAADhSURBVDjLlZNRDsMgDENLgdLR0i73v+ymaZk7OZY2/6EnSy8Qph9TikS3oUg1a6pktgm0ms1xbbFndlUyS6G5vVJiCVGr9k5TpcC/rY7If3HC/ivQ+U36B5B/uqJE5sjB5p6sSvCHObKROWpUYv/EKEGCa2wOf5Qi/93CbDCnGswpfToVSvwsvFJ3R4NQdpQJ7XLZYLoQKo6KXuyDUHM0cWa/IM6JicXMI0AZE4vB9v/+csN/ZXt35wy4kyIEQ8UeoorLZQ+34CRYsAcs2KMLVGHBHrAgjyRRzhL1LlGt19MD83sj0cZhNxMAAAAASUVORK5CYII=" alt="up-arrow">
+      <p class="text-white mb-28 fw-medium">上滑查看更多資訊</p>
+      <div class="d-flex gap-36">
+        <div class="d-flex flex-column align-items-center">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAXCAMAAACRQoc4AAAAOVBMVEUAAAD///////////////////////////////////////////////////////////////////////8KOjVvAAAAEnRSTlMAIN+AYL9AEKDvf3CPz68wkFAHF6UdAAAAqElEQVQ4y62T0QrDIAxFvWmirtp2y/9/7AorU3RhCj2vcjA33LgbOXKaNLyoLjNCSKcx5YT1oTrl+HgahmPH0BknrKQ1GQgDMXpIcvIDQ/VIQmu8RP+ycTCHsqEVX4dJByEuX7GMWrEaEHH0K7gCFhqTgqtpgj3xwXte9vIkXdvM7oD3a7/sGmB1tOyKXAeYLsfqy88usXROHdo4+iNajsNmHgkiWxfg39g2HgyGl8X+AAAAAElFTkSuQmCC" alt="left-arrow">
+          <p class="text-white mb-0 fw-medium">左滑下一位</p>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAXCAMAAACRQoc4AAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEHRSTlMAIIAQ379gQO+fcK+QUM8wTdRvdQAAAKZJREFUOMutk90OwyAIRosK/re8/9MuWUdYnE5Nem7NAT4Dx6OYCPsOc/b7DrOjXedtGdhxhAjrjoJ1QbAAhYVZMOtTPB13cP0RwSD/I15th4Q8BenbMIGXcCQjkhhzJ9m7SV410Et0tyaEIsaqEozV+Kiz5kL1gpvSfJg9FPqUiQTj3WmOwmmZvhN+NttLmYGjMZTEoY73Gn336YTt26726JPM6OUFYLoa74X8qzcAAAAASUVORK5CYII=" alt="right-arrow">
+          <p class="text-white mb-0 fw-medium">右滑喜歡</p>
+        </div>
       </div>
-      <div class="d-flex flex-column align-items-center">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAXCAMAAACRQoc4AAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEHRSTlMAIIAQ379gQO+fcK+QUM8wTdRvdQAAAKZJREFUOMutk90OwyAIRosK/re8/9MuWUdYnE5Nem7NAT4Dx6OYCPsOc/b7DrOjXedtGdhxhAjrjoJ1QbAAhYVZMOtTPB13cP0RwSD/I15th4Q8BenbMIGXcCQjkhhzJ9m7SV410Et0tyaEIsaqEozV+Kiz5kL1gpvSfJg9FPqUiQTj3WmOwmmZvhN+NttLmYGjMZTEoY73Gn336YTt26726JPM6OUFYLoa74X8qzcAAAAASUVORK5CYII=" alt="right-arrow">
-        <p class="text-white mb-0 fw-medium">右滑喜歡</p>
-      </div>
     </div>
-  </div>
 
-  <div class="status-bar py-3 px-4 bg-callout d-flex  justify-content-between">
-    <span class="fw-medium fs-17">9:41</span>
-    <ul class="d-flex list-unstyled gap-7">
-      <li>
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANBAMAAABbflNtAAAALVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADBoCg+AAAADnRSTlMAoIBAIGDfEO+QcFDPv4KFaUcAAABESURBVAjXY4ABxylwptwjCM3uDmeyvSiAMfneGUCYixxgTO53FyBMlgLWdwkQ5rqnMCbQEFzMAxxgpqMI+0QDbiEgDQCmiCccgbvnhQAAAABJRU5ErkJggg==" alt="icon signal">
-      </li>
-      <li>
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAANBAMAAABWYCMqAAAAMFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABaPxwLAAAAD3RSTlMAIDDvYN9wv0AQn4+Az1CxjW9DAAAAbElEQVQI12NgYGD0XrVNgQEIWOr/////1QEoUv//c6z9/68NDMr/bQQYGF3/f2MQ/T1hypkkBmcjBsYH4kB1FxmBepjs/wNBAsiQ+IoJXZ/BxohwugkoMYBBM1AjBIj+NwJRYJUPGKBABUQAAL6sJcTr4XhZAAAAAElFTkSuQmCC" alt="icon wifi">
-      </li>
-      <li>
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAJBAMAAADEGsFGAAAAJFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACmWAJHAAAAC3RSTlOfYADv35BQcEAgELuII24AAAApSURBVAjXY1D03g0Bm4MYZu+Gge0M3XD2BgZpItjZSOzVcPZGBjWE+QD6oUKMRkzL7AAAAABJRU5ErkJggg==" alt="icon power">
-      </li>
-    </ul>
+    <div class="status-bar pt-3 pb-12 px-4 bg-callout d-flex  justify-content-between ">
+      <span class="fw-medium fs-17">9:41</span>
+      <ul class="d-flex list-unstyled gap-7 mb-0">
+        <li>
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANBAMAAABbflNtAAAALVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADBoCg+AAAADnRSTlMAoIBAIGDfEO+QcFDPv4KFaUcAAABESURBVAjXY4ABxylwptwjCM3uDmeyvSiAMfneGUCYixxgTO53FyBMlgLWdwkQ5rqnMCbQEFzMAxxgpqMI+0QDbiEgDQCmiCccgbvnhQAAAABJRU5ErkJggg==" alt="icon signal">
+        </li>
+        <li>
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAANBAMAAABWYCMqAAAAMFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABaPxwLAAAAD3RSTlMAIDDvYN9wv0AQn4+Az1CxjW9DAAAAbElEQVQI12NgYGD0XrVNgQEIWOr/////1QEoUv//c6z9/68NDMr/bQQYGF3/f2MQ/T1hypkkBmcjBsYH4kB1FxmBepjs/wNBAsiQ+IoJXZ/BxohwugkoMYBBM1AjBIj+NwJRYJUPGKBABUQAAL6sJcTr4XhZAAAAAElFTkSuQmCC" alt="icon wifi">
+        </li>
+        <li>
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAJBAMAAADEGsFGAAAAJFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACmWAJHAAAAC3RSTlOfYADv35BQcEAgELuII24AAAApSURBVAjXY1D03g0Bm4MYZu+Gge0M3XD2BgZpItjZSOzVcPZGBjWE+QD6oUKMRkzL7AAAAABJRU5ErkJggg==" alt="icon power">
+        </li>
+      </ul>
 
-  </div>
-
-
-  <header class="d-flex py-14 px-3 justify-content-between bg-callout ">
-    <div></div>
-    <img src="data:image/svg+xml,%3csvg%20width='83'%20height='15'%20viewBox='0%200%2083%2015'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.16984%200C4.13936%201.50171e-05%205.03911%200.495173%205.54576%201.30736L9.70778%207.9828L13.7336%201.33817C14.236%200.50873%2015.1458%200.000125635%2016.1281%200H17.1069C18.0285%200%2018.7767%200.732952%2018.7794%201.63853L18.8117%2012.6866C18.8154%2013.9629%2017.7631%2015%2016.4642%2015C15.173%2014.9999%2014.1247%2013.9746%2014.1177%2012.7059L14.0922%208.15801L11.3567%2012.6818C10.9936%2013.2819%2010.3351%2013.6493%209.6245%2013.6493C8.92734%2013.6492%208.28016%2013.2949%207.91286%2012.7126L5.18815%208.39291V12.6962C5.1881%2013.9683%204.13915%2014.9999%202.84456%2015C1.54986%2015%200.500045%2013.9684%200.5%2012.6962V1.64335C0.5%200.735929%201.24896%200%202.17245%200H3.16984Z'%20fill='%23DB773D'/%3e%3cpath%20d='M32.8634%200C33.9353%206.21601e-05%2034.8043%200.853906%2034.8043%201.90713C34.8043%202.96034%2033.9353%203.8142%2032.8634%203.81426H27.4669C27.1592%203.81442%2026.9094%204.05967%2026.9094%204.36204V5.57121H32.0561C33.0798%205.57121%2033.9098%206.38675%2033.9098%207.39266C33.9098%208.39858%2033.0798%209.21411%2032.0561%209.21411H26.9094V10.638C26.9095%2010.9403%2027.1593%2011.1856%2027.4669%2011.1857H33.1466C34.2185%2011.1857%2035.0875%2012.0396%2035.0875%2013.0929C35.0873%2014.146%2034.2184%2015%2033.1466%2015H24.6256C23.3943%2015%2022.3957%2014.0188%2022.3957%2012.8089V2.19113C22.3957%200.981239%2023.3943%200%2024.6256%200H32.8634Z'%20fill='%23DB773D'/%3e%3cpath%20d='M48.6278%200C49.6996%206.21601e-05%2050.5687%200.853906%2050.5687%201.90713C50.5686%202.96034%2049.6996%203.8142%2048.6278%203.81426H43.2312C42.9235%203.81442%2042.6738%204.05967%2042.6738%204.36204V5.57121H47.8204C48.8442%205.57121%2049.6741%206.38675%2049.6741%207.39266C49.6741%208.39858%2048.8442%209.21411%2047.8204%209.21411H42.6738V10.638C42.6738%2010.9403%2042.9236%2011.1856%2043.2312%2011.1857H48.9109C49.9828%2011.1857%2050.8518%2012.0396%2050.8518%2013.0929C50.8516%2014.146%2049.9827%2015%2048.9109%2015H39.8325C38.909%2015%2038.16%2014.2641%2038.16%2013.3567V1.64335C38.16%200.735929%2038.909%200%2039.8325%200H48.6278Z'%20fill='%23DB773D'/%3e%3cpath%20d='M56.2248%200C57.4954%200%2058.5252%201.01202%2058.5253%202.26045V10.5311C58.5255%2010.8333%2058.7752%2011.0777%2059.0828%2011.0779H63.9669C65.0688%2011.078%2065.9616%2011.9562%2065.9617%2013.039C65.9617%2014.1218%2065.0688%2014.9999%2063.9669%2015H55.5968C54.6733%2015%2053.9243%2014.2641%2053.9243%2013.3567V2.26045C53.9245%201.01209%2054.9543%200.000118864%2056.2248%200Z'%20fill='%23DB773D'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M74.4738%200C75.6388%202.66036e-08%2076.7092%200.182236%2077.6845%200.545857C78.6596%200.90943%2079.5062%201.42745%2080.224%202.10064C80.9419%202.76048%2081.4978%203.54166%2081.8906%204.44387C82.297%205.33272%2082.5%206.31623%2082.5%207.39362C82.5%208.45755%2082.297%209.44105%2081.8906%2010.3434C81.4978%2011.2456%2080.9419%2012.0335%2080.224%2012.7068C79.5062%2013.3665%2078.6596%2013.8778%2077.6845%2014.2414C76.7092%2014.605%2075.6388%2014.7872%2074.4738%2014.7872C73.3224%2014.7872%2072.252%2014.605%2071.2631%2014.2414C70.2881%2013.8778%2069.4414%2013.3665%2068.7236%2012.7068C68.0057%2012.0335%2067.4428%2011.2456%2067.0365%2010.3434C66.6436%209.44105%2066.4476%208.45755%2066.4476%207.39362C66.4476%206.31623%2066.6436%205.33272%2067.0365%204.44387C67.4428%203.54162%2068.0057%202.7605%2068.7236%202.10064C69.4414%201.42745%2070.288%200.909429%2071.2631%200.545857C72.252%200.182236%2073.3224%200%2074.4738%200ZM74.4738%203.85855C74.0268%203.85855%2073.6067%203.93954%2073.2138%204.10115C72.8346%204.26275%2072.4958%204.4981%2072.1978%204.80778C71.9134%205.104%2071.6902%205.47445%2071.5277%205.91875C71.3651%206.3497%2071.2837%206.84146%2071.2837%207.39362C71.2837%207.94579%2071.3651%208.44429%2071.5277%208.88871C71.6902%209.31955%2071.9134%209.68999%2072.1978%209.99968C72.4958%2010.2959%2072.8346%2010.5245%2073.2138%2010.6861C73.6067%2010.8477%2074.0268%2010.9287%2074.4738%2010.9287C74.9208%2010.9287%2075.3339%2010.8477%2075.7132%2010.6861C76.106%2010.5245%2076.4448%2010.2959%2076.7292%209.99968C77.0272%209.68999%2077.2574%209.31957%2077.4199%208.88871C77.5825%208.44429%2077.6639%207.94579%2077.6639%207.39362C77.6639%206.84146%2077.5825%206.3497%2077.4199%205.91875C77.2574%205.47442%2077.0272%205.10401%2076.7292%204.80778C76.4448%204.49808%2076.106%204.26274%2075.7132%204.10115C75.3339%203.93954%2074.9208%203.85855%2074.4738%203.85855Z'%20fill='%23DB773D'/%3e%3c/svg%3e" alt="meelo logo">
-    <img class="object-fit-cover" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAAHlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC3KG9qAAAACnRSTlMAmROPc2kKhmBflESKGQAAAEpJREFUGNNjIBqoGAbB2UyGgsIKMA6rZNJEBxiHUYghURAIxEEcZjEGRTiHRUKtMQCrAQyqwk5UdEYhyEqgMwzgHKAzBEAcKjoDAI4BDJ8wpO76AAAAAElFTkSuQmCC" alt="icon filter">
-  </header>
-
-  <main class="main bg-callout px-3 py-205 position-relative overflow-hidden">
-    <img class="bg-card   position-absolute z-2" src="data:image/png;base64,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" alt="bg-card-2 ">
-    <img class="bg-card  position-absolute z-1" src="data:image/png;base64,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" alt="bg-card-1 ">
-    <div class="check  position-absolute d-none">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAcBAMAAADlzjDYAAAALVBMVEUAAABYn4BXn4JWn4NQn4BXn4Nan4JXn4NXoINXn4NXn4JWn4FYn4JWn4NWn4Lz3h6wAAAADnRSTlMAIN/PEJ8wv7+vj4BgUCfvGeMAAAB9SURBVCjPlc6xDYAwDERRsgGKRMESVFDRIJagZwJGYBjmYQQapJSegTTRd2Q3XOOT82Slsemn1i7DIIfdRpHkUUkeldOj7+LR8R8N2+XQmIe9+uRpr94C5gNraVBqRem81xgK1hQM1Riq8Q4F50DBUHChBkPB0BpDSTdr+gGxjXjtW0Ic2wAAAABJRU5ErkJggg==" alt="icon-check">
-    </div>
-    <div id="like-btn" class="like-btn  position-absolute z-100 ">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAcBAMAAADlzjDYAAAALVBMVEUAAABYn4BXn4JWn4NQn4BXn4Nan4JXn4NXoINXn4NXn4JWn4FYn4JWn4NWn4Lz3h6wAAAADnRSTlMAIN/PEJ8wv7+vj4BgUCfvGeMAAAB9SURBVCjPlc6xDYAwDERRsgGKRMESVFDRIJagZwJGYBjmYQQapJSegTTRd2Q3XOOT82Slsemn1i7DIIfdRpHkUUkeldOj7+LR8R8N2+XQmIe9+uRpr94C5gNraVBqRem81xgK1hQM1Riq8Q4F50DBUHChBkPB0BpDSTdr+gGxjXjtW0Ic2wAAAABJRU5ErkJggg==" alt="hook">
-    </div>
-    <div id="dislike-btn" class="dislike-btn  position-absolute z-100 ">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAALVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADBoCg+AAAAD3RSTlMAZlomDTNAGks5LCATBgf7/EdtAAAAoElEQVQoz0XPsQ3CQBSDYRdB0FqHApRIDJAZ2CAbsEI2YAWGoECULAArZAJGSU7y2a971tf8wGuAb/sGdjxlGHnHRN7avyEP+JF9AAtmrsSAe3TnlRhwAK6VNFAAkQARg0YMTARCBEIEQgxMDEwqSKaLXOEiARODVuTMFu1MFRmoKMDRBiIBIgYhk4BIwUNA5IhRQKTHXEHIBd3zC5h8/gvWFCOmRffh+AAAAABJRU5ErkJggg==" alt="X">
     </div>
 
 
-    <ul class="list-unstyled card-list" id="card-list">
+    <header class="header d-flex py-14 px-3 justify-content-between bg-callout ">
+      <div></div>
+      <img class="logo" src="data:image/svg+xml,%3csvg%20width='83'%20height='15'%20viewBox='0%200%2083%2015'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.16984%200C4.13936%201.50171e-05%205.03911%200.495173%205.54576%201.30736L9.70778%207.9828L13.7336%201.33817C14.236%200.50873%2015.1458%200.000125635%2016.1281%200H17.1069C18.0285%200%2018.7767%200.732952%2018.7794%201.63853L18.8117%2012.6866C18.8154%2013.9629%2017.7631%2015%2016.4642%2015C15.173%2014.9999%2014.1247%2013.9746%2014.1177%2012.7059L14.0922%208.15801L11.3567%2012.6818C10.9936%2013.2819%2010.3351%2013.6493%209.6245%2013.6493C8.92734%2013.6492%208.28016%2013.2949%207.91286%2012.7126L5.18815%208.39291V12.6962C5.1881%2013.9683%204.13915%2014.9999%202.84456%2015C1.54986%2015%200.500045%2013.9684%200.5%2012.6962V1.64335C0.5%200.735929%201.24896%200%202.17245%200H3.16984Z'%20fill='%23DB773D'/%3e%3cpath%20d='M32.8634%200C33.9353%206.21601e-05%2034.8043%200.853906%2034.8043%201.90713C34.8043%202.96034%2033.9353%203.8142%2032.8634%203.81426H27.4669C27.1592%203.81442%2026.9094%204.05967%2026.9094%204.36204V5.57121H32.0561C33.0798%205.57121%2033.9098%206.38675%2033.9098%207.39266C33.9098%208.39858%2033.0798%209.21411%2032.0561%209.21411H26.9094V10.638C26.9095%2010.9403%2027.1593%2011.1856%2027.4669%2011.1857H33.1466C34.2185%2011.1857%2035.0875%2012.0396%2035.0875%2013.0929C35.0873%2014.146%2034.2184%2015%2033.1466%2015H24.6256C23.3943%2015%2022.3957%2014.0188%2022.3957%2012.8089V2.19113C22.3957%200.981239%2023.3943%200%2024.6256%200H32.8634Z'%20fill='%23DB773D'/%3e%3cpath%20d='M48.6278%200C49.6996%206.21601e-05%2050.5687%200.853906%2050.5687%201.90713C50.5686%202.96034%2049.6996%203.8142%2048.6278%203.81426H43.2312C42.9235%203.81442%2042.6738%204.05967%2042.6738%204.36204V5.57121H47.8204C48.8442%205.57121%2049.6741%206.38675%2049.6741%207.39266C49.6741%208.39858%2048.8442%209.21411%2047.8204%209.21411H42.6738V10.638C42.6738%2010.9403%2042.9236%2011.1856%2043.2312%2011.1857H48.9109C49.9828%2011.1857%2050.8518%2012.0396%2050.8518%2013.0929C50.8516%2014.146%2049.9827%2015%2048.9109%2015H39.8325C38.909%2015%2038.16%2014.2641%2038.16%2013.3567V1.64335C38.16%200.735929%2038.909%200%2039.8325%200H48.6278Z'%20fill='%23DB773D'/%3e%3cpath%20d='M56.2248%200C57.4954%200%2058.5252%201.01202%2058.5253%202.26045V10.5311C58.5255%2010.8333%2058.7752%2011.0777%2059.0828%2011.0779H63.9669C65.0688%2011.078%2065.9616%2011.9562%2065.9617%2013.039C65.9617%2014.1218%2065.0688%2014.9999%2063.9669%2015H55.5968C54.6733%2015%2053.9243%2014.2641%2053.9243%2013.3567V2.26045C53.9245%201.01209%2054.9543%200.000118864%2056.2248%200Z'%20fill='%23DB773D'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M74.4738%200C75.6388%202.66036e-08%2076.7092%200.182236%2077.6845%200.545857C78.6596%200.90943%2079.5062%201.42745%2080.224%202.10064C80.9419%202.76048%2081.4978%203.54166%2081.8906%204.44387C82.297%205.33272%2082.5%206.31623%2082.5%207.39362C82.5%208.45755%2082.297%209.44105%2081.8906%2010.3434C81.4978%2011.2456%2080.9419%2012.0335%2080.224%2012.7068C79.5062%2013.3665%2078.6596%2013.8778%2077.6845%2014.2414C76.7092%2014.605%2075.6388%2014.7872%2074.4738%2014.7872C73.3224%2014.7872%2072.252%2014.605%2071.2631%2014.2414C70.2881%2013.8778%2069.4414%2013.3665%2068.7236%2012.7068C68.0057%2012.0335%2067.4428%2011.2456%2067.0365%2010.3434C66.6436%209.44105%2066.4476%208.45755%2066.4476%207.39362C66.4476%206.31623%2066.6436%205.33272%2067.0365%204.44387C67.4428%203.54162%2068.0057%202.7605%2068.7236%202.10064C69.4414%201.42745%2070.288%200.909429%2071.2631%200.545857C72.252%200.182236%2073.3224%200%2074.4738%200ZM74.4738%203.85855C74.0268%203.85855%2073.6067%203.93954%2073.2138%204.10115C72.8346%204.26275%2072.4958%204.4981%2072.1978%204.80778C71.9134%205.104%2071.6902%205.47445%2071.5277%205.91875C71.3651%206.3497%2071.2837%206.84146%2071.2837%207.39362C71.2837%207.94579%2071.3651%208.44429%2071.5277%208.88871C71.6902%209.31955%2071.9134%209.68999%2072.1978%209.99968C72.4958%2010.2959%2072.8346%2010.5245%2073.2138%2010.6861C73.6067%2010.8477%2074.0268%2010.9287%2074.4738%2010.9287C74.9208%2010.9287%2075.3339%2010.8477%2075.7132%2010.6861C76.106%2010.5245%2076.4448%2010.2959%2076.7292%209.99968C77.0272%209.68999%2077.2574%209.31957%2077.4199%208.88871C77.5825%208.44429%2077.6639%207.94579%2077.6639%207.39362C77.6639%206.84146%2077.5825%206.3497%2077.4199%205.91875C77.2574%205.47442%2077.0272%205.10401%2076.7292%204.80778C76.4448%204.49808%2076.106%204.26274%2075.7132%204.10115C75.3339%203.93954%2074.9208%203.85855%2074.4738%203.85855Z'%20fill='%23DB773D'/%3e%3c/svg%3e" alt="meelo logo">
+      <img class="object-fit-cover" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAAHlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC3KG9qAAAACnRSTlMAmROPc2kKhmBflESKGQAAAEpJREFUGNNjIBqoGAbB2UyGgsIKMA6rZNJEBxiHUYghURAIxEEcZjEGRTiHRUKtMQCrAQyqwk5UdEYhyEqgMwzgHKAzBEAcKjoDAI4BDJ8wpO76AAAAAElFTkSuQmCC" alt="icon filter">
+    </header>
 
-      <li class="me-card position-absolute   flex-column justify-content-end p-3 z-8" id="me-card" id="me-card"
-        style="background-image: url(/MEELO/assets/mrLee-BMNNmcus.png);">
-        <div class="p-20 position-absolute top-0  end-0 fit"
-          style="background-image: url(/MEELO/assets/fit-bg-DSEHOgxE.png);">
-          <div class="text-center fit-inside  border border-white rounded-circle py-14">
-            <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
-            <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">90%</h6>
-          </div>
+    <div class="main bg-white">
+      <main class="main bg-callout px-3 py-205 position-relative overflow-hidden">
+        <img class="bg-card   position-absolute z-2" src="data:image/png;base64,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" alt="bg-card-2 ">
+        <img class="bg-card  position-absolute z-1" src="data:image/png;base64,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" alt="bg-card-1 ">
+        <div class="check  position-absolute d-none">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAcBAMAAADlzjDYAAAALVBMVEUAAABYn4BXn4JWn4NQn4BXn4Nan4JXn4NXoINXn4NXn4JWn4FYn4JWn4NWn4Lz3h6wAAAADnRSTlMAIN/PEJ8wv7+vj4BgUCfvGeMAAAB9SURBVCjPlc6xDYAwDERRsgGKRMESVFDRIJagZwJGYBjmYQQapJSegTTRd2Q3XOOT82Slsemn1i7DIIfdRpHkUUkeldOj7+LR8R8N2+XQmIe9+uRpr94C5gNraVBqRem81xgK1hQM1Riq8Q4F50DBUHChBkPB0BpDSTdr+gGxjXjtW0Ic2wAAAABJRU5ErkJggg==" alt="icon-check">
+        </div>
+        <div id="like-btn" class="like-btn  position-absolute z-100 ">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAcBAMAAADlzjDYAAAALVBMVEUAAABYn4BXn4JWn4NQn4BXn4Nan4JXn4NXoINXn4NXn4JWn4FYn4JWn4NWn4Lz3h6wAAAADnRSTlMAIN/PEJ8wv7+vj4BgUCfvGeMAAAB9SURBVCjPlc6xDYAwDERRsgGKRMESVFDRIJagZwJGYBjmYQQapJSegTTRd2Q3XOOT82Slsemn1i7DIIfdRpHkUUkeldOj7+LR8R8N2+XQmIe9+uRpr94C5gNraVBqRem81xgK1hQM1Riq8Q4F50DBUHChBkPB0BpDSTdr+gGxjXjtW0Ic2wAAAABJRU5ErkJggg==" alt="hook">
+        </div>
+        <div id="dislike-btn" class="dislike-btn  position-absolute z-100 ">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAALVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADBoCg+AAAAD3RSTlMAZlomDTNAGks5LCATBgf7/EdtAAAAoElEQVQoz0XPsQ3CQBSDYRdB0FqHApRIDJAZ2CAbsEI2YAWGoECULAArZAJGSU7y2a971tf8wGuAb/sGdjxlGHnHRN7avyEP+JF9AAtmrsSAe3TnlRhwAK6VNFAAkQARg0YMTARCBEIEQgxMDEwqSKaLXOEiARODVuTMFu1MFRmoKMDRBiIBIgYhk4BIwUNA5IhRQKTHXEHIBd3zC5h8/gvWFCOmRffh+AAAAABJRU5ErkJggg==" alt="X">
         </div>
 
-        <div class="d-flex align-items-center mb-12">
-          <h3 class="mb-0 fw-bold text-white me-12">阿力先生</h3>
-          <div class="badge bg-active-inverted text-accent px-2 py-1 d-flex align-items-center">
-            <img class="green-cat" src="/MEELO/assets/green-cat--nN3Yr42.png" alt="green cat">
-            文青貓
-          </div>
-        </div>
-        <ul class="d-flex gap-2 list-unstyled mb-0">
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            創作
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            學習
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            影視
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            攝影
-          </li>
-        </ul>
-      </li>
-      <li class="me-card position-absolute  flex-column justify-content-end p-3 z-7"
-        style="background-image: url(/MEELO/assets/player-9-O2abSgI9.png)">
 
-        <div class="p-20 position-absolute top-0  end-0 fit"
-          style="background-image: url(/MEELO/assets/fit-bg-DSEHOgxE.png);">
-          <div class="text-center fit-inside  border border-white rounded-circle py-14">
-            <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
-            <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">80%</h6>
-          </div>
-        </div>
+        <ul class="list-unstyled card-list" id="card-list">
 
-        <div class="d-flex align-items-center mb-12">
-          <h3 class="mb-0 fw-bold text-white me-12">Nox</h3>
-          <div class="badge bg-active-inverted text-accent px-2 py-1 d-flex align-items-center">
-            <img class="green-cat" src="/MEELO/assets/green-cat--nN3Yr42.png" alt="green cat">
-            文青貓
-          </div>
-        </div>
-        <ul class="d-flex gap-2 list-unstyled mb-0">
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            影視
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            音樂
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            影視
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            攝影
-          </li>
-        </ul>
-      </li>
-      <li class="me-card position-absolute  flex-column justify-content-end p-3 z-6"
-        style="background-image: url(/MEELO/assets/nox-CjTG_uCX.png)">
-
-        <div class="p-20 position-absolute top-0  end-0 fit"
-          style="background-image: url(/MEELO/assets/fit-bg-DSEHOgxE.png);">
-          <div class="text-center fit-inside  border border-white rounded-circle py-14">
-            <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
-            <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">80%</h6>
-          </div>
-        </div>
-
-        <div class="d-flex align-items-center mb-12">
-          <h3 class="mb-0 fw-bold text-white me-12">Daniel</h3>
-          <div class="badge bg-active-inverted text-accent px-2 py-1 d-flex align-items-center">
-            <img class="green-cat" src="/MEELO/assets/green-cat--nN3Yr42.png" alt="green cat">
-            文青貓
-          </div>
-        </div>
-        <ul class="d-flex gap-2 list-unstyled mb-0">
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            影視
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            音樂
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            影視
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            攝影
-          </li>
-        </ul>
-      </li>
-      <li class="me-card position-absolute  flex-column justify-content-end p-3 z-5"
-        style="background-image: url(/MEELO/assets/player-7-Bg6Rd1oB.png)">
-
-        <div class="p-20 position-absolute top-0  end-0 fit"
-          style="background-image: url(/MEELO/assets/fit-bg-DSEHOgxE.png);">
-          <div class="text-center fit-inside  border border-white rounded-circle py-14">
-            <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
-            <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">80%</h6>
-          </div>
-        </div>
-
-        <div class="d-flex align-items-center mb-12">
-          <h3 class="mb-0 fw-bold text-white me-12">塔可</h3>
-          <div class="badge bg-active-inverted text-accent px-2 py-1 d-flex align-items-center">
-            <img class="green-cat" src="/MEELO/assets/green-cat--nN3Yr42.png" alt="green cat">
-            文青貓
-          </div>
-        </div>
-        <ul class="d-flex gap-2 list-unstyled mb-0">
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            影視
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            音樂
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            影視
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            攝影
-          </li>
-        </ul>
-      </li>
-      <li class="me-card position-absolute  flex-column justify-content-end p-3 z-4"
-        style="background-image: url(/MEELO/assets/player-3-DeWVtavR.png)">
-
-        <div class="p-20 position-absolute top-0  end-0 fit"
-          style="background-image: url(/MEELO/assets/fit-bg-DSEHOgxE.png);">
-          <div class="text-center fit-inside  border border-white rounded-circle py-14">
-            <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
-            <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">80%</h6>
-          </div>
-        </div>
-
-        <div class="d-flex align-items-center mb-12">
-          <h3 class="mb-0 fw-bold text-white me-12">Luno</h3>
-          <div class="badge bg-active-inverted text-accent px-2 py-1 d-flex align-items-center">
-            <img class="green-cat" src="/MEELO/assets/green-cat--nN3Yr42.png" alt="green cat">
-            文青貓
-          </div>
-        </div>
-        <ul class="d-flex gap-2 list-unstyled mb-0">
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            影視
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            音樂
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            影視
-          </li>
-          <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-            攝影
-          </li>
-        </ul>
-      </li>
-      <li class="me-card position-absolute   p-3 z-3"
-        style="background-image: url(/MEELO/assets/gacha-end-CWIJqouA.png)">
-
-        <div class="pt-84 w-100 d-flex flex-column pb-10t justify-content-between">
-          <h3 class="text-center text-white">今日推薦已結束</h3>
-
-          <div class="px-12">
-            <p class="fs-18 lh-sm fw-bold text-white text-center">訂閱 Meelo 糧食包</p>
-            <p class="fs-18 lh-sm fw-bold text-white text-center">解鎖無限抽卡的專屬時光！</p>
-            <button type="button" class="btn btn-primary-default text-white py-12 w-100 rounded-1000">
-              查看訂閱方案
-            </button>
-          </div>
-        </div>
-
-      </li>
-
-
-    </ul>
-
-  </main>
-
-
-  <div id="info">
-
-    <div id="info">
-      <section class="info py-4 px-3 ">
-        <h5 class="fs-18 fw-bold text-text-primary mb-12">你們的契合度</h5>
-        <ul class="d-flex list-unstyled justify-content-between mb-4 row">
-          <li class="col-4 text-center">
-            <img src="/MEELO/assets/Avater-1-bbxQKrag.png" alt="mrLee photo">
-            <p class="text-center mb-0 text-text-secondary">阿力先生</p>
-          </li>
-          <li class="col-4 text-center d-flex justify-content-center ">
-            <div class="p-20  fit" style="background-image: url(/MEELO/assets/fit-bg-DSEHOgxE.png);">
+          <li class="me-card position-absolute   flex-column justify-content-end p-3 z-8" id="me-card" id="me-card"
+            style="background-image: url(/MEELO/assets/mrLee-BMNNmcus.png);">
+            <div class="p-20 position-absolute top-0  end-0 fit"
+              style="background-image: url(/MEELO/assets/fit-bg-DSEHOgxE.png);">
               <div class="text-center fit-inside  border border-white rounded-circle py-14">
                 <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
                 <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">90%</h6>
               </div>
             </div>
-          </li>
-          <li class="col-4 text-center  ">
-            <img src="/MEELO/assets/Avater-2-DEVc9Phm.png" alt="Elly photo">
-            <p class="text-center mb-0 text-text-secondary">Elly</p>
-          </li>
-        </ul>
-        <h5 class="fs-18 fw-bold text-text-primary mb-12">他常出沒的地方</h5>
-        <div class="d-flex">
-          <div class="p-3  me-3 interest-card position-relative overflow-hidden">
-            <h5 class="fs-18 fw-bold text-text-primary mb-2">創作</h5>
-            <p class="fs-14 mb-0 text-text-secondary">點亮未知的旅程</p>
-            <img class="position-absolute end-0  interest-card-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGkAAABiCAMAAABkmw3LAAAC91BMVEUAAAD669v369r379/57Nz57Nr57Nv/79/67Nr769v66tv67Nz67Nz57Nz67Nr569v669v77dv67Nv569z66tz/59/359f569vx6dfz69j17t7z6tnz59Xz7Nrz6df169rx69j17d30z3v169nuxG7yzXnTnVXyy3bwx2337tv47trxynT469rJ0tbt3cb27+D17drtwmr36dnVn1X159jy5NPUnFLO1dX10XzuxGvswGf48N/t59vx4tHlzbLzznrwx3DHmGXYolbp1r/n0bfvxGjv38riyq/f39rj4dfp1LznqJzmv4j10IDPqIDwxmrm5Nn47dfb3Nbw4c3dw6XosKTVs43yyXH27eD579vw6dnT2NjIz9Lq3M3dvpvZ3drJ09jn2Mny0afWuJnXt5LnwYv11ITElGLcplbW2dju4NDq2ML43Ljhx6rfwaDjoZTvxnK/kWrnt1/48Nzy69zr0rP79+338uX16df25tPrt6rrs6bTr4nivIXqu2a2iGTRmVTSl03169zO1tnq5tji0sH217DnzaravqHmw5zlpZjdupTqxJDfnY/amInXkYTKgXTRpnL///v58eDw2brfzLnOronQq4bKnnnMoW7AeWvXnE1tVE39+/Tp5db05c3ruavkyaXhuIHRjYDUqnXNn2nBc2e1g2Lsvl30wVzNkktWPzjt5NfX1c7z3cTm1MPGx8Pt1bjkxabmrKDtq5721onZsHrGf3DGmm/Eem34zWbMmmTksFrfq1nYolTAhE9gRz7g3dL97c3g1sj64b/5yrv457TYxK+xqKHvxYjdtICVhnzNh3u6bWB5YVnNlVdoUEizeUZQNy45JCX03dDTz8v15MbVyrq7urfv0q7Iu6vhtJj/5pSil47Mp4SnkYPGoX7FkHK0kHCXeWHCjlzKjU3p3tH51sj7zL/mz738wLLqxqj436T+5Jnvy5bfqJHDqJDjlIXruYT/337gtHbfr2e9h1yzfFb+99u1tKuuoZHbjXr83HkS+uboAAAAF3RSTlMAv2Ag39/vEGBAoJ+Pb5+Az39QrzAgID/qr9cAAAsoSURBVGjevZhnXFNXGMZLHajd8+RyMwlgEgMkIQRCMIAQEJAtU1AQRQQEAVlOhquOVqoIjmrde9Y9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"
-              alt="creation img">
-          </div>
-          <div class="p-3  interest-card position-relative">
-            <h5 class="fs-18 fw-bold text-text-primary mb-2">影視</h5>
-            <p class="fs-14 mb-0 text-text-secondary">追劇好片推薦</p>
-            <img class="position-absolute end-0  interest-card-img" src="data:image/png;base64,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"
-              alt="creation img">
-          </div>
-        </div>
-      </section>
 
-      <div class="interest-list  ps-3 swiper mySwiper mb-4 mb-4">
-        <h5 class="fs-18 fw-bold text-text-primary mb-12">興趣集錦</h5>
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide interest-list-item">
-            <img class="w-100" src="/MEELO/assets/int-3-BBYkepB7.png" alt="interest photo">
-          </div>
-          <div class="swiper-slide interest-list-item">
-            <img class="w-100" src="/MEELO/assets/int-1-utljE6o3.png" alt="interest photo">
-          </div>
-          <div class="swiper-slide interest-list-item">
-            <img class="w-100 swiper-slide-img" src="/MEELO/assets/int-2-CyjbSMMF.jpg" alt="interest photo">
+            <div class="d-flex align-items-center mb-12">
+              <h3 class="mb-0 fw-bold text-white me-12">阿力先生</h3>
+              <div class="badge bg-active-inverted text-accent px-2 py-1 d-flex align-items-center">
+                <img class="green-cat" src="/MEELO/assets/green-cat--nN3Yr42.png" alt="green cat">
+                文青貓
+              </div>
+            </div>
+            <ul class="d-flex gap-2 list-unstyled mb-0">
+              <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+                創作
+              </li>
+              <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+                學習
+              </li>
+              <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+                影視
+              </li>
+              <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+                攝影
+              </li>
+            </ul>
+          </li>
+          <li class="me-card position-absolute  flex-column justify-content-end p-3 z-7"
+            style="background-image: url(/MEELO/assets/player-9-O2abSgI9.png)">
+
+            <div class="p-20 position-absolute top-0  end-0 fit"
+              style="background-image: url(/MEELO/assets/fit-bg-DSEHOgxE.png);">
+              <div class="text-center fit-inside  border border-white rounded-circle py-14">
+                <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
+                <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">80%</h6>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center mb-12">
+              <h3 class="mb-0 fw-bold text-white me-12">Nox</h3>
+              <div class="badge bg-active-inverted text-accent px-2 py-1 d-flex align-items-center">
+                <img class="green-cat" src="/MEELO/assets/green-cat--nN3Yr42.png" alt="green cat">
+                文青貓
+              </div>
+            </div>
+            <ul class="d-flex gap-2 list-unstyled mb-0">
+              <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+                影視
+              </li>
+              <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+                音樂
+              </li>
+              <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+                影視
+              </li>
+              <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+                攝影
+              </li>
+            </ul>
+          </li>
+          <li class="me-card position-absolute  flex-column justify-content-end p-3 z-6"
+            style="background-image: url(/MEELO/assets/nox-CjTG_uCX.png)">
+
+            <div class="p-20 position-absolute top-0  end-0 fit"
+              style="background-image: url(/MEELO/assets/fit-bg-DSEHOgxE.png);">
+              <div class="text-center fit-inside  border border-white rounded-circle py-14">
+                <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
+                <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">80%</h6>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center mb-12">
+              <h3 class="mb-0 fw-bold text-white me-12">Daniel</h3>
+              <div class="badge bg-active-inverted text-accent px-2 py-1 d-flex align-items-center">
+                <img class="green-cat" src="/MEELO/assets/green-cat--nN3Yr42.png" alt="green cat">
+                文青貓
+              </div>
+            </div>
+            <ul class="d-flex gap-2 list-unstyled mb-0">
+              <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+                影視
+              </li>
+              <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+                音樂
+              </li>
+              <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+                影視
+              </li>
+              <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+                攝影
+              </li>
+            </ul>
+          </li>
+          <li class="me-card position-absolute  flex-column justify-content-end p-3 z-5"
+            style="background-image: url(/MEELO/assets/player-7-Bg6Rd1oB.png)">
+
+            <div class="p-20 position-absolute top-0  end-0 fit"
+              style="background-image: url(/MEELO/assets/fit-bg-DSEHOgxE.png);">
+              <div class="text-center fit-inside  border border-white rounded-circle py-14">
+                <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
+                <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">80%</h6>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center mb-12">
+              <h3 class="mb-0 fw-bold text-white me-12">塔可</h3>
+              <div class="badge bg-active-inverted text-accent px-2 py-1 d-flex align-items-center">
+                <img class="green-cat" src="/MEELO/assets/green-cat--nN3Yr42.png" alt="green cat">
+                文青貓
+              </div>
+            </div>
+            <ul class="d-flex gap-2 list-unstyled mb-0">
+              <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+                影視
+              </li>
+              <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+                音樂
+              </li>
+              <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+                影視
+              </li>
+              <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+                攝影
+              </li>
+            </ul>
+          </li>
+          <li class="me-card position-absolute  flex-column justify-content-end p-3 z-4"
+            style="background-image: url(/MEELO/assets/player-3-DeWVtavR.png)">
+
+            <div class="p-20 position-absolute top-0  end-0 fit"
+              style="background-image: url(/MEELO/assets/fit-bg-DSEHOgxE.png);">
+              <div class="text-center fit-inside  border border-white rounded-circle py-14">
+                <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
+                <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">80%</h6>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center mb-12">
+              <h3 class="mb-0 fw-bold text-white me-12">Luno</h3>
+              <div class="badge bg-active-inverted text-accent px-2 py-1 d-flex align-items-center">
+                <img class="green-cat" src="/MEELO/assets/green-cat--nN3Yr42.png" alt="green cat">
+                文青貓
+              </div>
+            </div>
+            <ul class="d-flex gap-2 list-unstyled mb-0">
+              <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+                影視
+              </li>
+              <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+                音樂
+              </li>
+              <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+                影視
+              </li>
+              <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+                攝影
+              </li>
+            </ul>
+          </li>
+          <li class="d-flex no-card position-absolute   p-3 z-3"
+            style="background-image: url(/MEELO/assets/gacha-end-CWIJqouA.png)">
+
+            <div class="pt-84 w-100 d-flex flex-column pb-10t justify-content-between">
+              <h3 class="text-center text-white">今日推薦已結束</h3>
+
+              <div class="px-12">
+                <p class="fs-18 lh-sm fw-bold text-white text-center">訂閱 Meelo 糧食包</p>
+                <p class="fs-18 lh-sm fw-bold text-white text-center">解鎖無限抽卡的專屬時光！</p>
+                <button type="button" class="btn btn-primary-default text-white py-12 w-100 rounded-1000">
+                  查看訂閱方案
+                </button>
+              </div>
+            </div>
+
+          </li>
+
+
+        </ul>
+
+      </main>
+
+
+      <div id="info" class="bg-white">
+
+        <div id="info">
+          <section class="info py-4 px-3 bg-white">
+            <h5 class="fs-18 fw-bold text-text-primary mb-12">你們的契合度</h5>
+            <ul class="d-flex list-unstyled justify-content-between mb-4 row">
+              <li class="col-4 text-center">
+                <img src="/MEELO/assets/Avater-1-bbxQKrag.png" alt="mrLee photo">
+                <p class="text-center mb-0 text-text-secondary">阿力先生</p>
+              </li>
+              <li class="col-4 text-center d-flex justify-content-center ">
+                <div class="p-20  fit" style="background-image: url(/MEELO/assets/fit-bg-DSEHOgxE.png);">
+                  <div class="text-center fit-inside  border border-white rounded-circle py-14">
+                    <h6 class="fs-12 fw-bold mb-0 text-white lh-base">契合度</h6>
+                    <h6 class="fs-18 fw-bold mb-0 text-white lh-sm">90%</h6>
+                  </div>
+                </div>
+              </li>
+              <li class="col-4 text-center  ">
+                <img src="/MEELO/assets/Avater-2-DEVc9Phm.png" alt="Elly photo">
+                <p class="text-center mb-0 text-text-secondary">Elly</p>
+              </li>
+            </ul>
+            <h5 class="fs-18 fw-bold text-text-primary mb-12">他常出沒的地方</h5>
+            <div class="d-flex">
+              <div class="p-3  me-3 interest-card position-relative overflow-hidden">
+                <h5 class="fs-18 fw-bold text-text-primary mb-2">創作</h5>
+                <p class="fs-14 mb-0 text-text-secondary">點亮未知的旅程</p>
+                <img class="position-absolute end-0  interest-card-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGkAAABiCAMAAABkmw3LAAAC91BMVEUAAAD669v369r379/57Nz57Nr57Nv/79/67Nr769v66tv67Nz67Nz57Nz67Nr569v669v77dv67Nv569z66tz/59/359f569vx6dfz69j17t7z6tnz59Xz7Nrz6df169rx69j17d30z3v169nuxG7yzXnTnVXyy3bwx2337tv47trxynT469rJ0tbt3cb27+D17drtwmr36dnVn1X159jy5NPUnFLO1dX10XzuxGvswGf48N/t59vx4tHlzbLzznrwx3DHmGXYolbp1r/n0bfvxGjv38riyq/f39rj4dfp1LznqJzmv4j10IDPqIDwxmrm5Nn47dfb3Nbw4c3dw6XosKTVs43yyXH27eD579vw6dnT2NjIz9Lq3M3dvpvZ3drJ09jn2Mny0afWuJnXt5LnwYv11ITElGLcplbW2dju4NDq2ML43Ljhx6rfwaDjoZTvxnK/kWrnt1/48Nzy69zr0rP79+338uX16df25tPrt6rrs6bTr4nivIXqu2a2iGTRmVTSl03169zO1tnq5tji0sH217DnzaravqHmw5zlpZjdupTqxJDfnY/amInXkYTKgXTRpnL///v58eDw2brfzLnOronQq4bKnnnMoW7AeWvXnE1tVE39+/Tp5db05c3ruavkyaXhuIHRjYDUqnXNn2nBc2e1g2Lsvl30wVzNkktWPzjt5NfX1c7z3cTm1MPGx8Pt1bjkxabmrKDtq5721onZsHrGf3DGmm/Eem34zWbMmmTksFrfq1nYolTAhE9gRz7g3dL97c3g1sj64b/5yrv457TYxK+xqKHvxYjdtICVhnzNh3u6bWB5YVnNlVdoUEizeUZQNy45JCX03dDTz8v15MbVyrq7urfv0q7Iu6vhtJj/5pSil47Mp4SnkYPGoX7FkHK0kHCXeWHCjlzKjU3p3tH51sj7zL/mz738wLLqxqj436T+5Jnvy5bfqJHDqJDjlIXruYT/337gtHbfr2e9h1yzfFb+99u1tKuuoZHbjXr83HkS+uboAAAAF3RSTlMAv2Ag39/vEGBAoJ+Pb5+Az39QrzAgID/qr9cAAAsoSURBVGjevZhnXFNXGMZLHajd8+RyMwlgEgMkIQRCMIAQEJAtU1AQRQQEAVlOhquOVqoIjmrde9Y9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"
+                  alt="creation img">
+              </div>
+              <div class="p-3  interest-card position-relative">
+                <h5 class="fs-18 fw-bold text-text-primary mb-2">影視</h5>
+                <p class="fs-14 mb-0 text-text-secondary">追劇好片推薦</p>
+                <img class="position-absolute end-0  interest-card-img" src="data:image/png;base64,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"
+                  alt="creation img">
+              </div>
+            </div>
+          </section>
+
+          <div class="interest-list  ps-3 swiper mySwiper mb-4 mb-4 bg-white">
+            <h5 class="fs-18 fw-bold text-text-primary mb-12">興趣集錦</h5>
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide interest-list-item">
+                <img class="w-100" src="/MEELO/assets/int-3-BBYkepB7.png" alt="interest photo">
+              </div>
+              <div class="swiper-slide interest-list-item">
+                <img class="w-100" src="/MEELO/assets/int-1-utljE6o3.png" alt="interest photo">
+              </div>
+              <div class="swiper-slide interest-list-item">
+                <img class="w-100 swiper-slide-img" src="/MEELO/assets/int-2-CyjbSMMF.jpg" alt="interest photo">
+              </div>
+            </div>
           </div>
         </div>
+
+        <section class="px-3 bg-white">
+          <h5 class="fs-18 fw-bold text-text-primary mb-12">關於我</h5>
+          <ul class="d-flex gap-2 list-unstyled mb-12">
+            <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+              26歲
+            </li>
+            <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+              男性
+            </li>
+            <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
+              處女座
+            </li>
+          </ul>
+          <p class="text-text-secondary mb-4">
+            嗨，我是阿力先生。
+            <br>
+            <br>
+            平常在出版社當編輯社畜，下班後會一頭栽進手帳世界，寫字、貼貼紙、跟我的貓（牠叫豬豬）一起靜靜過完一天。
+            <br>
+            <br>
+            最喜歡紙膠帶撕開的聲音，還有把情緒用顏色分類的瞬間。
+            <br>
+            <br>
+            我相信每一張便條紙都值得被好好安放，就像每段關係，都該被認真對待。
+            <br>
+            <br>
+            如果你也是細節控、熱愛慢慢了解彼此的過程，歡迎一起來交換一頁日常，期待認識你！
+          </p>
+
+          <h5 class="fs-18 fw-bold text-text-primary mb-12">職業</h5>
+          <p class="text-text-secondary mb-4">出版社編輯</p>
+
+          <h5 class="fs-18 fw-bold text-text-primary mb-12">教育背景</h5>
+          <p class="text-text-secondary mb-4">NTU</p>
+
+          <h5 class="fs-18 fw-bold text-text-primary mb-12">居住城市</h5>
+          <p class="text-text-secondary mb-4">台北</p>
+
+        </section>
       </div>
     </div>
-
-    <section class="px-3">
-      <h5 class="fs-18 fw-bold text-text-primary mb-12">關於我</h5>
-      <ul class="d-flex gap-2 list-unstyled mb-12">
-        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-          26歲
-        </li>
-        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-          男性
-        </li>
-        <li class="bg-primary-inverted-active px-12 py-2 text-primary-default fs-14 rounded-pill">
-          處女座
-        </li>
-      </ul>
-      <p class="text-text-secondary mb-4">
-        嗨，我是阿力先生。
-        <br>
-        <br>
-        平常在出版社當編輯社畜，下班後會一頭栽進手帳世界，寫字、貼貼紙、跟我的貓（牠叫豬豬）一起靜靜過完一天。
-        <br>
-        <br>
-        最喜歡紙膠帶撕開的聲音，還有把情緒用顏色分類的瞬間。
-        <br>
-        <br>
-        我相信每一張便條紙都值得被好好安放，就像每段關係，都該被認真對待。
-        <br>
-        <br>
-        如果你也是細節控、熱愛慢慢了解彼此的過程，歡迎一起來交換一頁日常，期待認識你！
-      </p>
-
-      <h5 class="fs-18 fw-bold text-text-primary mb-12">職業</h5>
-      <p class="text-text-secondary mb-4">出版社編輯</p>
-
-      <h5 class="fs-18 fw-bold text-text-primary mb-12">教育背景</h5>
-      <p class="text-text-secondary mb-4">NTU</p>
-
-      <h5 class="fs-18 fw-bold text-text-primary mb-12">居住城市</h5>
-      <p class="text-text-secondary mb-4">台北</p>
-
-    </section>
-  </div>
-
-  <nav class="nav">
+    <nav class="nav bg-white">
   <ul class="list-unstyled d-flex pt-2 px-2 pb-1 mb-0 justify-content-between w-100 align-items-center">
     <li class="nav-item py-2 ">
       <a href="./index.html">
@@ -368,14 +371,16 @@
       <img class="nav-img-2-off nav-item-img mx-auto d-block" alt="icon explore">
     </li>
     <li class=" nav-item py-2 bg-callout rounded-pill  position-relative">
-      <img class="nav-img-3-on mx-auto d-block nav-item-img" alt="icon gacha">
-      <img class="position-absolute red-badge" src="data:image/svg+xml,%3csvg%20width='5'%20height='4'%20viewBox='0%200%205%204'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='2.5'%20cy='2'%20r='2'%20fill='%23EC7D7D'/%3e%3c/svg%3e" alt="red-badge">
+      <a href="./gacha-page.html">
+        <img class="nav-img-3-on mx-auto d-block nav-item-img" alt="icon gacha">
+        <img class="position-absolute red-badge" src="data:image/svg+xml,%3csvg%20width='5'%20height='4'%20viewBox='0%200%205%204'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='2.5'%20cy='2'%20r='2'%20fill='%23EC7D7D'/%3e%3c/svg%3e" alt="red-badge">
+      </a>
     </li>
     <li class="nav-item py-2  position-relative">
       <img class="nav-img-4-off nav-item-img mx-auto d-block" alt="icon message">
       <img class="position-absolute red-badge" src="data:image/svg+xml,%3csvg%20width='5'%20height='4'%20viewBox='0%200%205%204'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='2.5'%20cy='2'%20r='2'%20fill='%23EC7D7D'/%3e%3c/svg%3e" alt="red-badge">
     </li>
-    <li class="nav-item py-2  ">
+    <li class="nav-item py-1  ">
       <img class="nav-img-5-off nav-item-img mx-auto d-block" alt="icon user">
     </li>
   </ul>
@@ -387,120 +392,129 @@
 </footer>
 
 
-    <!-- Swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      const swiper = new Swiper(".mySwiper", {
-        slidesPerView: 2.04375,
-        spaceBetween: 16,
-        // (手機板排版設定)
-      }); 
-    </script>
-    <script>
-      const closeBtn = document.getElementById('close-btn');
-      const filter = document.getElementById('filter');
-      const meCard = document.querySelectorAll('.me-card');
-      const info = document.getElementById('info');
-      const hint = document.getElementById('hint');
-      const likeBtn = document.getElementById('like-btn');
-      const dislikeBtn = document.getElementById('dislike-btn');
-      const cardList = document.getElementById('card-list');
-      const nav = document.querySelector('.nav');
-      const navItems = document.querySelectorAll('.nav-item');
-      const navImgs = document.querySelectorAll('.nav-item-img');
+  </div>
+  <!-- Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 2.04375,
+      spaceBetween: 16,
+      // (手機板排版設定)
+    }); 
+  </script>
+  <script>
+    const closeBtn = document.getElementById('close-btn');
+    const filter = document.getElementById('filter');
+    const meCard = document.querySelectorAll('.me-card');
+    const info = document.getElementById('info');
+    const hint = document.getElementById('hint');
+    const likeBtn = document.getElementById('like-btn');
+    const dislikeBtn = document.getElementById('dislike-btn');
+    const cardList = document.getElementById('card-list');
+    const nav = document.querySelector('.nav');
+    const navItems = document.querySelectorAll('.nav-item');
+    const navImgs = document.querySelectorAll('.nav-item-img');
 
-      nav.addEventListener('click', function (e) {
-        navImgs.forEach(el => el.className = el.className.replace("-on", "-off"));
-        navItems.forEach(el => el.classList.remove("bg-callout", "rounded-pill"))
-
-        const navItem = e.target.closest('.nav-item');
-        if (!navItem) return;
-        const navImg = navItem.querySelector(".nav-item-img")
-
-
-        navImg.className = navImg.className.replace("-off", "-on")
-        navItem.classList.add('bg-callout', 'rounded-pill');
+    document.querySelectorAll('a').forEach(el => {//防止瀏覽器在同一頁面觸發跳轉
+      el.addEventListener('click', function (e) {
+        if (el.href === window.location.href) {
+          e.preventDefault();
+        }
       })
+    })
+
+    nav.addEventListener('click', function (e) {//導覽列icon切換
+      navImgs.forEach(el => el.className = el.className.replace("-on", "-off"));
+      navItems.forEach(el => el.classList.remove("bg-callout", "rounded-pill"))
+
+      const navItem = e.target.closest('.nav-item');
+      if (!navItem) return;
+      const navImg = navItem.querySelector(".nav-item-img")
 
 
+      navImg.className = navImg.className.replace("-off", "-on")
+      navItem.classList.add('bg-callout', 'rounded-pill');
+    })
 
-      meCard.forEach(el => {
-        el.style.display = 'flex';
-      })
-      info.style.display = 'none';
-      filter.style.display = 'flex';
-      hint.style.display = 'flex';
-      likeBtn.style.opacity = '0%';
-      dislikeBtn.style.opacity = '0%';
 
-      function closeHint() { //關掉提示
-        filter.style.display = 'none';
-        hint.style.display = 'none';
+    function closeHint() { //遮罩關閉
+      filter.style.display = 'none';
+      hint.style.display = 'none';
+    }
+
+    meCard.forEach(el => {
+      el.style.display = 'flex';
+    })
+    info.style.display = 'none';
+    filter.style.display = 'flex';
+    hint.style.display = 'flex';
+    likeBtn.style.opacity = '0%';
+    dislikeBtn.style.opacity = '0%';
+
+
+    let startX, startY, deltaX, deltaY, currentX;
+
+    cardList.addEventListener('touchstart', function (e) {
+      const meCard = e.target.closest('.me-card');
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+    }, { passive: true });
+
+    cardList.addEventListener('touchmove', function (e) {
+      const meCard = e.target.closest('.me-card');
+      if (!meCard) return;
+      currentX = e.touches[0].clientX;
+      deltaX = currentX - startX;
+      deltaX = Math.max(-193.84, Math.min(148, deltaX));
+      const maxX = 148;
+      const minX = -193.84;
+      let opacityLike = deltaX / maxX;
+      let opacityDlike = deltaX / minX;
+      opacityLike = Math.max(0, Math.min(1, opacityLike));
+      opacityDlike = Math.max(0, Math.min(1, opacityDlike));
+
+      likeBtn.style.opacity = opacityLike;
+      dislikeBtn.style.opacity = opacityDlike;
+
+      deltaY = Math.min(8, Math.abs(deltaX) * 0.05405);
+      // 跟著手指移動，讓卡片偏移 & 微旋轉
+
+      meCard.style.transform = `translateX(${deltaX}px) translateY(${deltaY}px) rotate(${deltaX * 0.05405}deg)`;
+      // 0.05
+      ifMoving = false;
+    }, { passive: true })
+
+    cardList.addEventListener('touchend', function (e) {
+      const meCard = e.target.closest('.me-card');
+      if (!meCard) return;
+      //上滑開啟 下滑收合
+      let endX = e.changedTouches[0].clientX;
+      let endY = e.changedTouches[0].clientY;
+
+      let diffX = endX - startX;
+      let diffY = endY - startY;
+
+      if (deltaX < 148 && deltaX > -193.84) {// 還原
+        deltaX = 0;
+        meCard.style.transform = `translateX(${deltaX}px) rotate(${deltaX * 0.05}deg)`;
+        likeBtn.style.opacity = '0%';
+        dislikeBtn.style.opacity = '0%';
       }
 
-      let startX, startY, deltaX, deltaY, currentX;
+      if (deltaX === 148) location.href = "./match.html";
+      if (deltaX === -193.84) {
+        meCard.style.display = 'none';
+        dislikeBtn.style.opacity = '0%';
+      }
 
-      cardList.addEventListener('touchstart', function (e) {
-        const meCard = e.target.closest('.me-card');
-        startX = e.touches[0].clientX;
-        startY = e.touches[0].clientY;
-      }, { passive: true });
-
-      cardList.addEventListener('touchmove', function (e) {
-        const meCard = e.target.closest('.me-card');
-        currentX = e.touches[0].clientX;
-        deltaX = currentX - startX;
-        // 148 -193.84
-        deltaX = Math.max(-193.84, Math.min(148, deltaX));
-        const maxX = 148;
-        const minX = -193.84;
-        let opacityLike = deltaX / maxX;
-        let opacityDlike = deltaX / minX;
-        opacityLike = Math.max(0, Math.min(1, opacityLike));
-        opacityDlike = Math.max(0, Math.min(1, opacityDlike));
-
-        likeBtn.style.opacity = opacityLike;
-        dislikeBtn.style.opacity = opacityDlike;
-
-        deltaY = Math.min(8, Math.abs(deltaX) * 0.05405);
-        // 跟著手指移動，讓卡片偏移 & 微旋轉
-
-        meCard.style.transform = `translateX(${deltaX}px) translateY(${deltaY}px) rotate(${deltaX * 0.05405}deg)`;
-        // 0.05
-        ifMoving = false;
-      }, { passive: true })
-
-      cardList.addEventListener('touchend', function (e) {
-        const meCard = e.target.closest('.me-card');
-
-        //上滑開啟 下滑收合
-        let endX = e.changedTouches[0].clientX;
-        let endY = e.changedTouches[0].clientY;
-
-        let diffX = endX - startX;
-        let diffY = endY - startY;
-
-        if (deltaX < 148 && deltaX > -193.84) {// 還原
-          deltaX = 0;
-          meCard.style.transform = `translateX(${deltaX}px) rotate(${deltaX * 0.05}deg)`;
-          likeBtn.style.opacity = '0%';
-          dislikeBtn.style.opacity = '0%';
+      if (Math.abs(diffX) <= 10) {
+        if (diffY > 0) {
+          info.style.display = "none";  //下滑收合
+        } else {
+          info.style.display = "block"; //上滑開啟
         }
-
-        if (deltaX === 148) location.href = "./match.html";
-        if (deltaX === -193.84) {
-          meCard.style.display = 'none';
-          dislikeBtn.style.opacity = '0%';
-        }
-
-        if (Math.abs(diffX) <= 10) {
-          if (diffY > 0) {
-            info.style.display = "none";  //下滑收合
-          } else {
-            info.style.display = "block"; //上滑開啟
-          }
-        }
-      }, { passive: true });
+      }
+    }, { passive: true });
 
 
 
@@ -508,9 +522,7 @@
 
 
 
-    </script>
-
-
+  </script>
 
 </body>
 
