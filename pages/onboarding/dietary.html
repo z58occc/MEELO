@@ -6,7 +6,9 @@
     <title>Meelo | onBoarding</title>
   </head>
   <body>
-    <main class="vh-100 pt-6t d-flex flex-column">
+        <main class="mobile-frame">
+      <div class="mobile-container">
+    <div class="vh-100 pt-6t d-flex flex-column">
       <section class="container position-sticky z-2 page-scoll-mask-t">
         <%- include('./layout/onboarding/progress.ejs', {progress: "57.14"}) %>
         <h1 class="pt-6t mb-0 fs-4 fw-bold text-text-primary">喜歡的美食是...</h1>
@@ -124,8 +126,9 @@
       </section>
       <%- include('./layout/onboarding/pagenation.ejs', {prevPage:
       'interest.html', nextPage: 'character-creating.html'}) %>
+    </div>
+      </div>
     </main>
-
     <script type="module" src="../../main.js"></script>
     <script type="module">
       const sessionStorageValue = sessionStorage.getItem("dietary");

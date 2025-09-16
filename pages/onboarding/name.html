@@ -6,10 +6,135 @@
     <title>Meelo | onBoarding</title>
   </head>
   <body>
-    <h1 class="mb-3t">onBoarding</h1>
-    <p>你的暱稱是...</p>
-    <a href="gender.html">下一頁</a>
+    <main class="mobile-frame">
+      <div class="mobile-container">
+        <div class="flex-grow-1 pt-6t d-flex flex-column position-relative">
+          <section class="container position-sticky z-2 page-scoll-mask-t">
+            <%- include('./layout/onboarding/progress.ejs', {progress: "3.499"})
+            %>
+          </section>
+          <section class="container flex-grow-1 text-center d-flex flex-column">
+            <label
+              for="name"
+              class="mb-4t text-text-primary fs-4 lh-sm fw-bold text-center"
+            >
+              你的暱稱是...
+            </label>
+            <div class="flex-grow-1 mb-auto lh-sm" style="margin-top: 62px">
+              <input
+                class="form-control input-ghost caret text-text-primary text-center w-100 mb-2"
+                value=""
+                type="text"
+                name="name"
+                id="name"
+              />
+              <p class="text-black text-opacity-40 fs-18"><span id="input-length">0</span>/8</p>
+            </div>
+          </section>
+          <section class="container page-scoll-mask-b">
+            <div
+              class="d-flex justify-content-between align-items-center py-4t"
+            >
+              <a
+                class="btn-ghost btn-ghost-accent d-flex px-0"
+                type="button"
+                id="random-btn"
+              >
+                <span
+                  class="icon-mask icon-dice bg-primary-default me-3t"
+                ></span
+                >幫我取名字
+              </a>
+              <a
+                class="btn btn-primary text-white fw-bold rounded-pill py-3t px-6t d-flex align-items-center"
+                id="complete-btn"
+              >
+                <span class="icon icon-check me-3t"></span>完成</a
+              >
+            </div>
+          </section>
+          <img
+            class="fake-keyboard"
+            src="/assets/images/onboarding/iphone-keyboard.png"
+            alt="模擬鍵盤"
+          />
+        </div>
+      </div>
+    </main>
 
     <script type="module" src="../../main.js"></script>
+    <script type="module">
+      const nameInput = document.querySelector("#name");
+      const fakeKeyboard = document.querySelector(".fake-keyboard");
+      const completeBtn = document.querySelector("#complete-btn");
+      const randomBtn = document.querySelector("#random-btn");
+      const inputLengthText = document.querySelector("#input-length");
+
+      
+      document.addEventListener("DOMContentLoaded", () => {
+        if (nameInput) {
+          nameInput.focus();
+          nameInput.setSelectionRange(8, 8);
+        }
+      });
+
+      nameInput.addEventListener("focus", (event) => {
+        fakeKeyboard.className = "fake-keyboard open";
+      });
+
+      // 完成按鈕
+      completeBtn.addEventListener("click", (event) => {
+        event.preventDefault();
+        if (!nameInput.value) {
+          nameInput.focus();
+          return;
+        }
+        fakeKeyboard.className = "fake-keyboard close";
+        setTimeout(() => {
+          window.location.replace("../onboarding/gender.html");
+        }, 1000);
+      });
+
+      const defaultName = ["E", "l", "l", "y"];
+
+      fakeKeyboard.addEventListener("click", () => {
+        const { value: name } = nameInput;
+        if (name.length < 4) {
+          nameInput.value = `${name}${defaultName[name.length]}`;
+          inputLengthText.textContent = nameInput.value.length
+        }
+        nameInput.focus();
+      });
+
+      randomBtn.addEventListener("click", (event) => {
+        event.preventDefault();
+        nameInput.value = generateNickName();
+        inputLengthText.textContent = nameInput.value.length
+      });
+
+      function generateNickName() {
+        const roots = [
+          "Mee",
+          "Kit",
+          "Paw",
+          "Neo",
+          "Nya",
+          "Siam",
+          "Snow",
+          "Calico",
+          "Tab",
+          "Tux",
+        ];
+        const suffix = ["ly", "ko", "er", "ix", "a", "dy", "to"];
+
+        let name = "";
+        while (name.length === 0 || name.length > 8) {
+          const root = roots[Math.floor(Math.random() * roots.length)];
+          const suf = suffix[Math.floor(Math.random() * suffix.length)];
+          name = root + suf;
+        }
+        return name;
+      }
+    </script>
   </body>
 </html>

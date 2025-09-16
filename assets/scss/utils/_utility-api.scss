@@ -4,23 +4,24 @@ $utilities: (
     css-var: true,
     class: link-opacity,
     values: (
-      10: .1,
-      25: .25,
-      50: .5,
-      40: .4, // custom
-      75: .75,
-      100: 1
-    )
+      10: 0.1,
+      25: 0.25,
+      50: 0.5,
+      40: 0.4,
+      75: 0.75,
+      100: 1,
+    ),
   ),
   "text-opacity": (
-  css-var: true,
-  class: text-opacity,
-  values: (
-    25: .25,
-    50: .5,
-    60: .6,
-    75: .75,
-    100: 1
-  )
-),
-)
+    css-var: true,
+    class: text-opacity,
+    values: (
+      25: 0.25,
+      40: 0.4,
+      50: 0.5,
+      60: 0.6,
+      75: 0.75,
+      100: 1,
+    ),
+  ),
+);

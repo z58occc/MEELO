@@ -6,10 +6,20 @@
     <title>Meelo | onBoarding</title>
   </head>
   <body>
-    <h1 class="mb-3t">onBoarding</h1>
-    <p>你點亮的答案如訊息光點， 正在拼湊出屬於你的角色輪廓...</p>
-    <a href="character.html">下一頁</a>
+        <main class="mobile-frame">
+      <div class="mobile-container content-full">
+        <div class="flex-grow-1 d-flex flex-column position-relative">
+          <p class="position-absolute z-1 character-creating-text text-center w-100 fw-bold fs-5 lh-sm">你點亮的答案如訊息光點，<br/> 正在拼湊出屬於你的角色輪廓...</p>
+          <video class="character-creating" src="/assets/images/onboarding/character-creating.mp4" autoplay loop muted playsinline></video>
+        </div>
+      </div>
+      </main >
 
     <script type="module" src="../../main.js"></script>
+    <script  type="module">
+      setTimeout(() => {
+        window.location.replace("../onboarding/character.html");
+      }, 5000);
+    </script>
   </body>
 </html>
