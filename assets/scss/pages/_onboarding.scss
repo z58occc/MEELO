@@ -1,11 +1,23 @@
 // 手機框
 .mobile-frame {
   background-color: rgba(0, 0, 0, 0.4);
-  height: 100vh;
+  min-height: 100vh;
+  padding-block: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
+  &::before {
+    content: '';
+    background: url("/assets/images/iphone11-pro-frame.png") center / cover no-repeat;
+    width: 411px;
+    height: 848px;
+    position: relative;
+    transform: translateX(50%);
+  }
   .mobile-container {
+    position: sticky;
+    transform: translateX(-50%);
+    border-radius: 39px;
     background: $bg-body;
     width: 375px;
     height: 812px;
@@ -351,3 +363,52 @@
     text-shadow: 0px 0px 24px rgba(250, 199, 109, 1);
   }
 }
+
+/* 角色頁開始 */
+.character-image {
+  position: relative;
+  img {
+    width: 208px;
+    height: 208px;
+  }
+  &::before, &::after {
+    content: '';
+    display: block;
+    position: absolute; 
+  }
+  &::before {
+    width: 28px;
+    height: 28px;
+    background: url('/assets/images/onboarding/star-deco-right.svg') center / cover no-repeat;
+    top: 40px;
+    right: -22.5px;
+  }
+  &::after {
+    width: 24px;
+    height: 24px;
+    background: url('/assets/images/onboarding/star-deco-left.svg') center / cover no-repeat;
+    bottom: 16px;
+    left: 4.5px;
+  }
+}
+
+.bg-deco-r-b {
+  position: relative;
+  overflow: hidden;
+  * {
+    position: sticky;
+    z-index: 2;
+  }
+  &::after {
+    content: '';
+    background-color: #F9EBDB;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    bottom: -80px;
+    right: -73px;
+  }
+}
+/* 角色頁結束 */ 
