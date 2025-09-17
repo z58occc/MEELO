@@ -6,127 +6,130 @@
     <title>Meelo | onBoarding</title>
   </head>
   <body>
-        <main class="mobile-frame">
+    <main class="mobile-frame">
       <div class="mobile-container">
-    <div class="vh-100 pt-6t d-flex flex-column">
-      <section class="container position-sticky z-2 page-scoll-mask-t">
-        <%- include('./layout/onboarding/progress.ejs', {progress: "57.14"}) %>
-        <h1 class="pt-6t mb-0 fs-4 fw-bold text-text-primary">喜歡的美食是...</h1>
-      </section>
-      <section class="container option-contain flex-grow-1 mb-16t">
-        <form id="dietaryForm" class="dietaryLayout g-4t h-100">
-            <div class="onboarding-check onboarding-check-full rounded-4">
-              <input
-                class="onboarding-check-input d-none"
-                type="radio"
-                name="dietary"
-                id="local"
-                value="local"
-              />
-              <label class="onboarding-check-label card h-100" for="local">
-                <div class="card-body d-flex align-items-center">
-                  <img
-                    class="onboarding-dietary-img position-absolute z-1 position-absolute top-50 translate-middle"
-                    src="/assets/images/onboarding/dietary-1.png"
-                    alt="美食選項-在地靈魂派"
-                  />
-                  <div class="ps-6t ms-16t">
-                    <h2 class="onboarding-check-title fs-18 fw-bold">
-                      在地靈魂派
-                    </h2>
-                    <p class="onboarding-check-text mb-0 fs-14">
-                      鹽酥雞、牛肉麵、蚵仔煎不能少，夜市是我第二個家
-                    </p>
+        <div class="pt-6t d-flex flex-column">
+          <section class="container position-sticky z-2 page-scoll-mask-t">
+            <%- include('./layout/onboarding/progress.ejs', {progress: "57.14"})
+            %>
+            <h1 class="py-6t mb-0 fs-4 fw-bold text-text-primary">
+              喜歡的美食是...
+            </h1>
+          </section>
+          <section class="container option-contain flex-grow-1 mb-16t pt-0">
+            <form id="dietaryForm" class="dietaryLayout g-4t h-100">
+              <div class="onboarding-check onboarding-check-full rounded-4">
+                <input
+                  class="onboarding-check-input d-none"
+                  type="radio"
+                  name="dietary"
+                  id="local"
+                  value="local"
+                />
+                <label class="onboarding-check-label card h-100" for="local">
+                  <div class="card-body d-flex align-items-center">
+                    <img
+                      class="onboarding-dietary-img position-absolute z-1 position-absolute top-50 translate-middle"
+                      src="/assets/images/onboarding/dietary-1.png"
+                      alt="美食選項-在地靈魂派"
+                    />
+                    <div class="ps-6t ms-16t">
+                      <h2 class="onboarding-check-title fs-18 fw-bold">
+                        在地靈魂派
+                      </h2>
+                      <p class="onboarding-check-text mb-0 fs-14">
+                        鹽酥雞、牛肉麵、蚵仔煎不能少，夜市是我第二個家
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </label>
-            </div>
-            <div class="onboarding-check onboarding-check-full rounded-4">
-              <input
-                class="onboarding-check-input d-none"
-                type="radio"
-                name="dietary"
-                id="exotic"
-                value="exotic"
-              />
-              <label class="onboarding-check-label card h-100" for="exotic">
-                <div class="card-body d-flex align-items-center">
-                  <img
-                    class="onboarding-dietary-img position-absolute z-1 position-absolute top-50 translate-middle"
-                    src="/assets/images/onboarding/dietary-2.png"
-                    alt="美食選項-異國冒險家"
-                  />
-                  <div class="ps-6t ms-16t">
-                    <h2 class="onboarding-check-title fs-18 fw-bold">
-                      異國冒險家
-                    </h2>
-                    <p class="onboarding-check-text mb-0 fs-14">
-                      韓式炸雞、泰式綠咖哩通通愛，胃口沒有國界
-                    </p>
+                </label>
+              </div>
+              <div class="onboarding-check onboarding-check-full rounded-4">
+                <input
+                  class="onboarding-check-input d-none"
+                  type="radio"
+                  name="dietary"
+                  id="exotic"
+                  value="exotic"
+                />
+                <label class="onboarding-check-label card h-100" for="exotic">
+                  <div class="card-body d-flex align-items-center">
+                    <img
+                      class="onboarding-dietary-img position-absolute z-1 position-absolute top-50 translate-middle"
+                      src="/assets/images/onboarding/dietary-2.png"
+                      alt="美食選項-異國冒險家"
+                    />
+                    <div class="ps-6t ms-16t">
+                      <h2 class="onboarding-check-title fs-18 fw-bold">
+                        異國冒險家
+                      </h2>
+                      <p class="onboarding-check-text mb-0 fs-14">
+                        韓式炸雞、泰式綠咖哩通通愛，胃口沒有國界
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </label>
-            </div>
-            <div class="onboarding-check onboarding-check-full rounded-4">
-              <input
-                class="onboarding-check-input d-none"
-                type="radio"
-                name="dietary"
-                id="ritual"
-                value="ritual"
-              />
-              <label class="onboarding-check-label card h-100" for="ritual">
-                <div class="card-body d-flex align-items-center">
-                  <img
-                    class="onboarding-dietary-img position-absolute z-1 position-absolute top-50 translate-middle"
-                    src="/assets/images/onboarding/dietary-3.png"
-                    alt="美食選項-儀式感食客"
-                  />
-                  <div class="ps-6t ms-16t">
-                    <h2 class="onboarding-check-title fs-18 fw-bold">
-                      儀式感食客
-                    </h2>
-                    <p class="onboarding-check-text mb-0 fs-14">
-                      喜歡擺盤漂亮，有氛圍的早午餐或甜點店
-                    </p>
+                </label>
+              </div>
+              <div class="onboarding-check onboarding-check-full rounded-4">
+                <input
+                  class="onboarding-check-input d-none"
+                  type="radio"
+                  name="dietary"
+                  id="ritual"
+                  value="ritual"
+                />
+                <label class="onboarding-check-label card h-100" for="ritual">
+                  <div class="card-body d-flex align-items-center">
+                    <img
+                      class="onboarding-dietary-img position-absolute z-1 position-absolute top-50 translate-middle"
+                      src="/assets/images/onboarding/dietary-3.png"
+                      alt="美食選項-儀式感食客"
+                    />
+                    <div class="ps-6t ms-16t">
+                      <h2 class="onboarding-check-title fs-18 fw-bold">
+                        儀式感食客
+                      </h2>
+                      <p class="onboarding-check-text mb-0 fs-14">
+                        喜歡擺盤漂亮，有氛圍的早午餐或甜點店
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </label>
-            </div>
-            <div class="onboarding-check onboarding-check-full rounded-4">
-              <input
-                class="onboarding-check-input d-none"
-                type="radio"
-                name="dietary"
-                id="experimentalist"
-                value="experimentalist"
-              />
-              <label
-                class="onboarding-check-label card h-100"
-                for="experimentalist"
-              >
-                <div class="card-body d-flex align-items-center">
-                  <img
-                    class="onboarding-dietary-img position-absolute z-1 position-absolute top-50 translate-middle"
-                    src="/assets/images/onboarding/dietary-4.png"
-                    alt="美食選項-料理實驗家"
-                  />
-                  <div class="ps-6t ms-16t">
-                    <h2 class="onboarding-check-title fs-18 fw-bold">
-                      料理實驗家
-                    </h2>
-                    <p class="onboarding-check-text mb-0 fs-14">
-                      自己動手做最過癮，不只是吃，還要享受料理的樂趣
-                    </p>
+                </label>
+              </div>
+              <div class="onboarding-check onboarding-check-full rounded-4">
+                <input
+                  class="onboarding-check-input d-none"
+                  type="radio"
+                  name="dietary"
+                  id="experimentalist"
+                  value="experimentalist"
+                />
+                <label
+                  class="onboarding-check-label card h-100"
+                  for="experimentalist"
+                >
+                  <div class="card-body d-flex align-items-center">
+                    <img
+                      class="onboarding-dietary-img position-absolute z-1 position-absolute top-50 translate-middle"
+                      src="/assets/images/onboarding/dietary-4.png"
+                      alt="美食選項-料理實驗家"
+                    />
+                    <div class="ps-6t ms-16t">
+                      <h2 class="onboarding-check-title fs-18 fw-bold">
+                        料理實驗家
+                      </h2>
+                      <p class="onboarding-check-text mb-0 fs-14">
+                        自己動手做最過癮，不只是吃，還要享受料理的樂趣
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </label>
-            </div>
-        </form>
-      </section>
-      <%- include('./layout/onboarding/pagenation.ejs', {prevPage:
-      'interest.html', nextPage: 'character-creating.html'}) %>
-    </div>
+                </label>
+              </div>
+            </form>
+          </section>
+          <%- include('./layout/onboarding/pagenation.ejs', {prevPage:
+          'interest.html', nextPage: 'character-creating.html'}) %>
+        </div>
       </div>
     </main>
     <script type="module" src="../../main.js"></script>
