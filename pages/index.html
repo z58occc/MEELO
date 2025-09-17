@@ -12,6 +12,7 @@
       .breadcrumb-item + .breadcrumb-item::before {
         padding-right: 0 !important;  
       }
+      
     </style>
   </head>
   <body>
@@ -47,7 +48,7 @@
 </svg>
 
       </div>
-      <div class="fw-bold fs-18 text-white ln-sm">嗨，Elly</div>
+      <div class="fw-bold fs-18 text-white lh-sm">嗨，Elly</div>
     </div>
     <div>
       <a href="#"><img src="/assets/images/index-img/Notification.png" alt="Icon / Notification"></a>
@@ -80,8 +81,8 @@
       </a>
     </div>
     </div>
-    <div class="bottom-sheet-wrapper">
-    <div class=" bg-background-page pt-4 px-3 " style="border-top-left-radius: 24px; border-top-right-radius: 24px;" >
+    <div class="">
+    <div class=" bg-background-page pt-4 px-3 " style="border-top-left-radius: 24px; border-top-right-radius: 24px; " >
     
     <div class="fab-container" >
     <button id="fabBtn" class="fab-main">
@@ -768,7 +769,7 @@
       </div>
     </div>
     </div>
-
+    
    </div>
     
 
@@ -782,7 +783,8 @@
       <!-- Body -->
       <div class="offcanvas-body d-flex flex-column py-4 px-3 ">
       <!-- 興趣版清單 -->
-      <div class="flex-grow-1 overflow-auto">
+      <!-- overflow-auto  -->
+      <div class="flex-grow-1 "> 
        <div class="offcanvas-title fs-14 lh-base text-text-secondary mb-2" >你追蹤的興趣版</div>
       <ul class="list-unstyled d-flex flex-column gap-2">
         <li class="py-12  d-flex align-items-center gap-3">
@@ -902,68 +904,11 @@
      </button>
      </div>
       </div> 
+      
     <!-- 底部導覽列 -->
-     <nav class="nav bg-white">
-  <ul class="list-unstyled d-flex pt-2 px-2 pb-1 mb-0 justify-content-between w-100 align-items-center">
-    <li class="nav-item py-2 rounded-pill" data-tab="home">
-      <img class="mx-auto d-block" src="../assets/images/index-img/Home-fill.svg" alt="icon home">
-    </li>
-    <li class="nav-item py-2 rounded-pill" data-tab="explore">
-      <img class="mx-auto d-block" src="../assets/images/index-img/Explore.svg" alt="icon explore">
-    </li>
-    <li class="nav-item py-2 rounded-pill position-relative" data-tab="gacha">
-      <img class="mx-auto d-block" src="../assets/images/index-img/card.svg" alt="icon gacha">
-      <img class="position-absolute red-badge" src="../assets/images/gacha-page/red-badge.png" alt="red-badge">
-    </li>
-    <li class="nav-item py-2 rounded-pill position-relative" data-tab="message">
-      <img class="mx-auto d-block" src="../assets/images/index-img/Chat.svg" alt="icon message">
-      <img class="position-absolute red-badge" src="../assets/images/gacha-page/red-badge.png" alt="red-badge">
-    </li>
-    <li class="nav-item py-2 rounded-pill" data-tab="user">
-      <img class="mx-auto d-block" src="../assets/images/index-img/User.svg" alt="icon user">
-    </li>
-  </ul>
-    </nav>
-    <footer class="footer pt-20 pb-2 bg-white">
-      <div class="foot bg-dark mx-auto"></div>
-    </footer>
+     <%- include('./layout/footer.ejs',{active:"gacha"}) %>
     
-
-    <script>
-    (() => {
-  const sheet = document.querySelector(".bottom-sheet-wrapper");
-
-  sheet.addEventListener("click", (e) => {
-    // 如果點到 FAB 或 A 按鈕，不切換
-    if (e.target.closest(".fab-container") || e.target.closest("a")) return;
-
-    // 切換半展開 / 全展開
-    if (sheet.classList.contains("half")) {
-      sheet.classList.remove("half");
-      sheet.classList.add("full");
-    } else {
-      sheet.classList.remove("full");
-      sheet.classList.add("half");
-    }
-  });
-})();
-
-    </script>
-    <script>
-  // 預設 active
-  let activeTab = "home";
-
-  document.querySelectorAll(".nav-item").forEach(item => {
-    item.addEventListener("click", () => {
-      document.querySelectorAll(".nav-item").forEach(el => el.classList.remove("bg-callout"));
-      item.classList.add("bg-callout");
-      activeTab = item.dataset.tab;
-    });
-  });
-
-  // 初始化時加上 active
-  document.querySelector(`[data-tab="${activeTab}"]`).classList.add("bg-callout");
-    </script>
+    
     <!-- JavaScript Bundle with Popper -->
      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
      <!-- swiper -->
