@@ -39,15 +39,18 @@
   background-size: cover;
   z-index: 1;
   filter: brightness(0.65) blur(4px);
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+  border-radius: 40px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 6px;
 }
 .match-down {
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
-  border-bottom-left-radius:40px ;
-  border-bottom-right-radius:40px ;
-  
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  margin-left: 8px;
+  margin-right: 8px;
   border: white solid 1px;
   position: absolute;
   bottom: -220px;
