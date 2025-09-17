@@ -9,8 +9,8 @@
 }
 .black-filter {
   position: absolute;
-  border-radius: 10px;
-  inset: 18px;
+  border-radius: 25px;
+  inset: 16px;
   background: rgba(0, 0, 0, 0.5);
   z-index: 100;
 }
@@ -179,7 +179,6 @@
   width: 427px;
   max-height: 858px;
   background-repeat: no-repeat;
-  // background-size: cover;
 }
 .filter-icon{
   width: 24px;
