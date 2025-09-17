@@ -1,8 +1,9 @@
 <nav class="nav bg-white">
   <ul class="list-unstyled d-flex pt-2 px-2 pb-1 mb-0 justify-content-between w-100 align-items-center">
-    <li class="nav-item py-2 <%= active === 'home' ? 'bg-callout' : '' %> ">
+    <li class="nav-item py-2 <%= active === 'home' ? 'bg-callout rounded-pill' : '' %> ">
       <a href="./index.html">
-        <img class="nav-img-1-off nav-item-img mx-auto d-block" alt="icon home" >
+        <img class="<%= active === 'home' ? 'nav-img-1-on' : 'nav-img-1-off' %>
+         nav-item-img mx-auto d-block" alt="icon home">
       </a>
     </li>
     <li class="nav-item py-2 <%= active === 'explore' ? 'bg-callout' : '' %>">
@@ -10,7 +11,8 @@
     </li>
     <li class=" nav-item py-2 <%= active === 'gacha' ? 'bg-callout' : '' %> rounded-pill  position-relative">
       <a href="./gacha-page.html">
-        <img class="nav-img-3-on mx-auto d-block nav-item-img" alt="icon gacha">
+        <img class="<%= active === 'gacha' ? 'nav-img-3-on' : 'nav-img-3-off' %>
+         mx-auto d-block nav-item-img" alt="icon gacha">
         <img class="position-absolute red-badge" src="/assets/images/nav-icon/red-badge.svg" alt="red-badge">
       </a>
     </li>

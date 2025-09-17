@@ -177,6 +177,11 @@
 }
 .frame{
   width: 427px;
-  height: 858px;
+  max-height: 858px;
   background-repeat: no-repeat;
+  // background-size: cover;
+}
+.filter-icon{
+  width: 24px;
+  height: 24px;
 }
