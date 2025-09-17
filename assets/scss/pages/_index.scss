@@ -1,10 +1,13 @@
-.bg{
-   
+
+.bg{ 
+   position: relative;
+  width: 100%;
+  height: 260px; /* 初始高度 */
+  height: 100dvh; /* 使用視窗高度 */
   background: 
     url("/assets/images/index-img/Hero-Image-full.png") 
     no-repeat center center/cover;
    overflow: hidden;
-   min-height: 100dvh;
    position: relative;
    z-index: 1;
   
@@ -32,20 +35,14 @@ $hero-action-card: linear-gradient(135deg, #fbe6da 0%, #ffffff 70%);
 .bg-hero-action-card {
   background: $hero-action-card;
 }
-// .mySwipers {
-//   height: 60vh; /* 讓整個 Swiper 高度隨螢幕比例調整 */
-// }
-
-
 .mySwipers {
-  flex: 1;              /* 佔滿剩餘空間 */
-  min-height: 0;        /* 修正 flex 滾動問題 */
+  height: 100dvh; /* 讓整個 Swiper 高度隨螢幕比例調整 */
 }
 
 /* FAB 固定右下角 */
 .fab-container {
-  position: absolute;
-  bottom: 24px;
+  position: fixed;
+  bottom: 108px;
   right: 24px;
   z-index: 1036;
 }
@@ -83,8 +80,8 @@ $hero-action-card: linear-gradient(135deg, #fbe6da 0%, #ffffff 70%);
 
 /* 選單 (在 FAB 上方) */
 .fab-menu {
-  position: absolute;
-  bottom: 108px; /* 距離 FAB */
+  position: fixed;
+  bottom: 100px; /* 距離 FAB */
   right: 16px;
   display: flex;
   flex-direction: column;
@@ -118,53 +115,6 @@ $hero-action-card: linear-gradient(135deg, #fbe6da 0%, #ffffff 70%);
   opacity: 1; transform: translateY(0); transition-delay: 0.1s;
 }
 
-.bottom-sheet-wrapper {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 45dvh; /* 初始高度 */
-  transition: height 0.3s ease;
-  z-index: 1000;
-  overflow: hidden;
-  
-}
 
-.bottom-sheet-wrapper.half {
-  height: 45dvh; /* 半展開 */
-}
 
-.bottom-sheet-wrapper.full {
-  height: 80dvh; /* 全展開 */
-}
 
-/* Bottom Sheet 內容容器 */
-.bottom-sheet-wrapper .bg-background-page {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
- 
-}
-
-/* FAB 固定在 Bottom Sheet 內部右下角 */
-.bottom-sheet-wrapper .fab-container {
-  position: absolute;
-  bottom: 24px;
-  right: 24px;
-  z-index: 1050;
-}
-
-/* Swiper */
-.mySwipers {
-  flex: 1;
-  min-height: 0;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-.mySwipers .swiper-slide {
-  width: 100% !important;
-  max-width: 100% !important;
-  box-sizing: border-box;
-}
