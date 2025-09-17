@@ -4,23 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meelo | onBoarding</title>
-    <script type="module" crossorigin src="/MEELO/assets/main-Ct0kAut6.js"></script>
-    <link rel="stylesheet" crossorigin href="/MEELO/assets/main-do5JKVUz.css">
+    <script type="module" crossorigin src="/MEELO/assets/onboarding/character-D_TDH-kR.js"></script>
+    <link rel="modulepreload" crossorigin href="/MEELO/assets/main-CZwpoKa6.js">
+    <link rel="stylesheet" crossorigin href="/MEELO/assets/main-D6TSAY7N.css">
   </head>
   <body>
     <main class="mobile-frame">
-      <div class="mobile-container">
+      <div class="mobile-container overflow-auto">
         <div class="container flex-grow-1 pt-6t text-center d-flex flex-column align-items-center">
           <h1 class="mb-2 text-primary-default fs-3 fw-bold">探險貓</h1>
           <p class="mb-6t text-text-primary fw-bold fs-5 lh-sm">「世界那麼大，我想一起去看看」</p>
           <div class="character-image">
             <img src="/MEELO/assets/character-DOEFYTYv.png" alt="探險貓">
           </div>
-          <div class="bg-deco-r-b border border-primary-default mt-6t mb-4t p-4t rounded-5 text-start bg-white shadow">
-            <h2 class="text-text-primary fw-bold fs-6 lh-base">在我們眼中，你是... </h2>
-            <p class="text-black text-opacity-60 mb-0">熱愛未知，享受風景與故事，總在下一段旅程中找尋自我。</p>
+          <div class="border border-primary-default mt-6t mb-4t rounded-5 text-start bg-white shadow">
+            <div class="bg-deco-r-b p-4t rounded-5">
+              <h2 class="text-text-primary fw-bold fs-6 lh-base">在我們眼中，你是... </h2>
+              <p class="text-black text-opacity-60 mb-0 position-sticky z-2">熱愛未知，享受風景與故事，總在下一段旅程中找尋自我。</p>
+            </div>
           </div>
-          <div class="row gx-4t mb-auto w-100">
+          <div class="row gx-4t mb-auto pb-6t w-100">
             <div class="col-6 ps-0">
               <div class="p-4t border rounded-5 bg-white">
                 <h3  class="text-text-primary fw-bold fs-6 lh-base mb-3t">與你靈魂契合</h3>
@@ -36,14 +39,15 @@
               </div>
             </div>
           </div>
-          <a
+          <button
             class="position-sticky z-1 btn btn-primary text-white fw-bold w-100 rounded-pill py-3t d-flex justify-content-center"
-            href="../index.html"
+            type="button"
+            id="start-btn"
             >開始探索
             <span class="icon-mask icon-arrow-right bg-white ms-3t"></span>
-          </a>
-
+          </button>
         </div>
+        <div class="animation-deco"></div>
       </div>
     </main>
   </body>
