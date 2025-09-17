@@ -3,20 +3,27 @@
   background-color: rgba(0, 0, 0, 0.4);
   min-height: 100vh;
   padding-block: 32px;
+  position: relative;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
+  align-content: center;
+
   &::before {
     content: '';
     background: url("/assets/images/iphone11-pro-frame.png") center / cover no-repeat;
-    width: 411px;
-    height: 848px;
-    position: relative;
-    transform: translateX(50%);
+    display: block;
+    width: 427px;
+    height: 858px;
+
+    @media (max-width: 450px) {
+      content: unset;
+    }
   }
+
   .mobile-container {
-    position: sticky;
-    transform: translateX(-50%);
+    position: absolute;
+    align-self: anchor-center;
     border-radius: 39px;
     background: $bg-body;
     width: 375px;
@@ -25,30 +32,44 @@
     display: flex;
     flex-direction: column;
 
+    @media (max-width: 450px) {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+
+      >.container {
+        height: 100vh;
+      }
+    }
+
     &::before,
     &::after {
       content: "";
       display: block;
       width: 100%;
+
+      @media (max-width: 450px) {
+        content: unset;
+      }
     }
+
     &::before {
       height: 50px;
-      background: url("/assets/images/onboarding/status-bar.png") center / cover
-        no-repeat;
+      background: url("/assets/images/onboarding/status-bar.png") center / cover no-repeat;
     }
+
     &::after {
       height: 33px;
-      background: url("/assets/images/onboarding/bottom-nav-bar.png") center /
-        cover no-repeat;
+      background: url("/assets/images/onboarding/bottom-nav-bar.png") center / cover no-repeat;
     }
 
     &.content-full {
-      position: relative;
       &::before {
-        position: fixed;
+        position: absolute;
         z-index: 1;
         width: 375px;
       }
+
       &::after {
         display: none;
       }
@@ -85,15 +106,19 @@
   &-arrow-left {
     --icon-url: url("/assets/images/icon/arrow-left.svg");
   }
+
   &-arrow-right {
     --icon-url: url("/assets/images/icon/arrow-right.svg");
   }
+
   &-paw {
     --icon-url: url("/assets/images/icon/paw.svg");
   }
+
   &-check {
     --icon-url: url("/assets/images/icon/check.svg");
   }
+
   &-dice {
     --icon-url: url("/assets/images/icon/dice.svg");
   }
@@ -102,6 +127,7 @@
 .option-card {
   position: relative;
   overflow: hidden;
+
   &::after {
     content: "";
     position: absolute;
@@ -113,9 +139,11 @@
     background-color: $bg-avatar;
     border-radius: 50%;
   }
+
   h3 {
     margin-bottom: 94.3px;
   }
+
   img {
     position: absolute;
     z-index: 1;
@@ -133,11 +161,12 @@
   bottom: 20px;
   left: 119.5px;
 }
+
 // 開始頁 end
 
 .optionLayout {
   @media (max-width: 287px) {
-    > * {
+    >* {
       width: 100%;
     }
   }
@@ -146,7 +175,7 @@
 .dietaryLayout {
   display: grid;
   gap: 16px;
-  grid-template-rows: repeat(4, minmax(104px, 1fr));
+  grid-template-rows: repeat(4, minmax(104px, 120px));
   height: 100%;
 }
 
@@ -162,6 +191,12 @@
       --text-color: #{to-rgb($black)};
       --text-color-opacity: 0.6;
       color: rgb(var(--text-color), var(--text-color-opacity));
+    }
+
+    .onboarding-check-text,
+    .onboarding-check-title {
+      position: sticky; // 避免被橘色圓圈壓住
+      z-index: 2;
     }
 
     &::after {
@@ -180,6 +215,7 @@
   // 不同尺寸與版型
   &-lg {
     height: 160px;
+
     .onboarding-check-label {
       &::after {
         bottom: -48px;
@@ -187,6 +223,7 @@
       }
     }
   }
+
   &-full {
     height: 100%;
 
@@ -201,33 +238,39 @@
   }
 
   // checked 樣式
-  &-input:not(:checked) + &-label {
+  &-input:not(:checked)+&-label {
     overflow: hidden;
   }
+
   &:has(.onboarding-check-input:checked) {
     overflow: hidden;
+
     .card {
       --bs-card-bg: #{$primary-active};
       --bs-card-border-color: #{$primary-active};
       --title-color: #{$white};
+
       .onboarding-check-text {
         --text-color: #{$white};
         --text-color-opacity: 1;
       }
     }
   }
+
   .onboarding-gender-img {
     width: 99px;
     height: 99px;
     bottom: 4.33px;
     right: 3.5px;
   }
+
   .onboarding-interest-img {
     width: 80px;
     height: 80px;
     bottom: 2px;
     right: 1.5px;
   }
+
   .onboarding-dietary-img {
     width: 64px;
     height: 64px;
@@ -242,23 +285,29 @@
     width: 100%;
     margin-top: -1px;
     height: 25px;
-    background: linear-gradient(
-      180deg,
-      #fefcfb 0%,
-      rgba(254, 252, 251, 0) 100%
-    );
+    background: linear-gradient(180deg,
+        #fefcfb 0%,
+        rgba(254, 252, 251, 0) 100%);
   }
+
   &-b::before {
     content: "";
     display: block;
     width: 100%;
     margin-bottom: -1px;
     height: 25px;
-    background: linear-gradient(
-      180deg,
-      rgba(254, 252, 251, 0) 0%,
-      rgba(254, 252, 251, 1) 100%
-    );
+    background: linear-gradient(180deg,
+        rgba(254, 252, 251, 0) 0%,
+        rgba(254, 252, 251, 1) 100%);
+  }
+
+  &-b {
+    position: absolute;
+    bottom: 33px;
+
+    @media (max-width: 450px) {
+      bottom: 0px;
+    }
   }
 }
 
@@ -271,6 +320,7 @@
   &::-webkit-scrollbar {
     display: none;
   }
+
   // Firefox
   scrollbar-width: none;
 }
@@ -282,8 +332,10 @@
   border: 0;
   background-color: $bg-body;
   line-height: 1.2;
-  caret-color:$primary-default;
-  &:focus, &:focus-visible {
+  caret-color: $primary-default;
+
+  &:focus,
+  &:focus-visible {
     box-shadow: none;
   }
 }
@@ -294,8 +346,7 @@
   background-image: unset;
   background-color: $primary-default;
   --bs-btn-hover-bg: #{$primary-active};
-  --bs-btn-active-bg: var(--bs-btn-hover-bg)
-  --bs-btn-focus-box-shadow: none;
+  --bs-btn-active-bg: var(--bs-btn-hover-bg) --bs-btn-focus-box-shadow: none;
   --bs-btn-disabled-bg: #{$primary-default};
   --bs-btn-disabled-opacity: 0.5
 }
@@ -315,6 +366,7 @@
   &:active {
     background-color: rgba(var(--btn-active-bg), var(--btn-active-bg-opacity));
   }
+
   &.disabled,
   &:disabled {
     opacity: 0.5;
@@ -327,6 +379,7 @@
     --btn-active-bg: #{to-rgb($bg-avatar)};
     --btn-color: #{to-rgb($primary-default)};
   }
+
   &-neutral {
     --btn-active-bg: #{to-rgb($black)};
     --btn-active-bg-opacity: 0.5;
@@ -339,15 +392,29 @@
 .fake-keyboard {
   margin-bottom: -336px;
   opacity: 0;
+
+  @media (max-width: 450px) {
+    margin-bottom: -369px;
+  }
+
   &.open {
     transition: all 0.8s ease-in-out;
     margin-bottom: -33px;
     opacity: 1;
+
+    @media (max-width: 450px) {
+      margin-bottom: 0px;
+    }
   }
+
   &.close {
     transition: all 0.8s ease-in-out;
     margin-bottom: -336px;
     opacity: 0;
+
+    @media (max-width: 450px) {
+      margin-bottom: -90%;
+    }
   }
 }
 
@@ -356,26 +423,36 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
+
   &-text {
-    top: 80px;
+    top: 90px;
     color: $primary-active;
     -webkit-text-stroke: 0.5px rgba(242, 242, 215, 0.02);
     text-shadow: 0px 0px 24px rgba(250, 199, 109, 1);
+
+    @media (max-width: 450px) {
+      top: 32px;
+      font-size: 16px !important;
+    }
   }
 }
 
 /* 角色頁開始 */
 .character-image {
   position: relative;
+
   img {
     width: 208px;
     height: 208px;
   }
-  &::before, &::after {
+
+  &::before,
+  &::after {
     content: '';
     display: block;
-    position: absolute; 
+    position: absolute;
   }
+
   &::before {
     width: 28px;
     height: 28px;
@@ -383,6 +460,7 @@
     top: 40px;
     right: -22.5px;
   }
+
   &::after {
     width: 24px;
     height: 24px;
@@ -395,10 +473,7 @@
 .bg-deco-r-b {
   position: relative;
   overflow: hidden;
-  * {
-    position: sticky;
-    z-index: 2;
-  }
+
   &::after {
     content: '';
     background-color: #F9EBDB;
@@ -411,4 +486,36 @@
     right: -73px;
   }
 }
-/* 角色頁結束 */ 
+
+.animation-deco {
+  background-color: #db773d;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  right: 67px;
+  bottom: 52px;
+  transform: translate(45%, 45%) scale(1);
+  transition: transform 0.6s linear, bottom 0.6s linear, right 0.6s linear, ;
+
+  @media (max-width: 450px) {
+    bottom: 19px;
+  }
+}
+
+.character-transition {
+  overflow: hidden !important;
+
+  >*:not(.animation-deco) {
+    transition: opacity 0.6s linear;
+    opacity: 0;
+  }
+
+  .animation-deco {
+    bottom: 50%;
+    right: 50%;
+    transform: translate(45%, 45%) scale(150);
+  }
+}
+
+/* 角色頁結束 */
