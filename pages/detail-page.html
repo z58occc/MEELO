@@ -392,30 +392,7 @@
      </div>
     </div>
 
-    <nav class="nav bg-white">
-  <ul class="list-unstyled d-flex pt-2 px-2 pb-1 mb-0 justify-content-between w-100 align-items-center">
-    <li class="nav-item py-2" data-tab="home">
-      <img class="mx-auto d-block" src="../assets/images/index-img/Vector.png" alt="icon home">
-    </li>
-    <li class="nav-item py-2" data-tab="explore">
-      <img class="mx-auto d-block" src="../assets/images/gacha-page/navicon-1.png" alt="icon explore">
-    </li>
-    <li class="nav-item py-2 rounded-pill position-relative" data-tab="gacha">
-      <img class="mx-auto d-block" src="../assets/images/index-img/Vector2.png" alt="icon gacha">
-      <img class="position-absolute red-badge" src="../assets/images/gacha-page/red-badge.png" alt="red-badge">
-    </li>
-    <li class="nav-item py-2 position-relative" data-tab="message">
-      <img class="mx-auto d-block" src="../assets/images/gacha-page/navicon-3.png" alt="icon message">
-      <img class="position-absolute red-badge" src="../assets/images/gacha-page/red-badge.png" alt="red-badge">
-    </li>
-    <li class="nav-item py-2" data-tab="user">
-      <img class="mx-auto d-block" src="../assets/images/gacha-page/User.png" alt="icon user">
-    </li>
-  </ul>
-    </nav>
-    <footer class="footer pt-20 pb-2 bg-white ">
-      <div class="foot bg-dark mx-auto"></div>
-    </footer>
+     <%- include('./layout/footer.ejs',{active:"home"}) %>
 
 <script>
   // 預設 active
