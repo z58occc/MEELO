@@ -532,6 +532,12 @@
             data-next="interest"
             data-is-disable="false"
           ></div>
+          <!-- holo-strart -->
+          <div class="halo halo-1"></div>
+          <div class="halo halo-2"></div>
+          <div class="halo halo-3"></div>
+          <div class="halo halo-4"></div>
+          <!-- holo-end -->
         </div>
       </div>
     </main>
@@ -677,9 +683,12 @@
           e.preventDefault();
           if (nextData === "character-creating") {
             ratingEl.dataset.progress = 100;
+            const mobileContainer = document.querySelector(".mobile-container");
+            mobileContainer.classList.add("halo-anmation");
+
             setTimeout(() => {
               window.location.href = `${nextData}.html`;
-            }, 1250);
+            }, 1200);
             return;
           } else {
             const formContent = document.querySelectorAll(`.${state}-content`);
