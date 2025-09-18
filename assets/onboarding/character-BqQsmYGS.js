@@ -1,0 +1,1 @@
+import"../main-CtxC6Snv.js";const t=document.querySelector(".mobile-container"),e=document.querySelector("#start-btn");e.addEventListener("click",()=>{console.dir(t),t.classList.add("character-transition"),setTimeout(()=>{window.location.replace("../index.html")},900)});
