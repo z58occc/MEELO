@@ -1,17 +1,16 @@
 
-.bg{ 
-   position: relative;
-  width: 100%;
-  height: 260px; /* 初始高度 */
-  height: 100dvh; /* 使用視窗高度 */
-  background: 
-    url("/assets/images/index-img/Hero-Image-full.png") 
-    no-repeat center center/cover;
-   overflow: hidden;
-   position: relative;
-   z-index: 1;
-  
+.bg {
+position: relative;
+width: 100%;
+height: 182px; /* 初始高度 */
+min-height: 100dvh; /* 修改: 使用動態視窗高度，避免 iOS Safari 白邊 */
+background: url("/assets/images/index-img/Hero-Image-full.png") no-repeat center center/cover;
+overflow: hidden;
+z-index: 1;
+transition: height 0.3s ease; /* 修改: 平滑過渡動畫 */
 }
+
+
 .thread-card-radius{
   border-bottom-left-radius: 16px ;
   border-bottom-right-radius: 16px ;
@@ -36,7 +35,8 @@ $hero-action-card: linear-gradient(135deg, #fbe6da 0%, #ffffff 70%);
   background: $hero-action-card;
 }
 .mySwipers {
-  height: 100dvh; /* 讓整個 Swiper 高度隨螢幕比例調整 */
+  height: 100%;       /* 讓 Swiper 填滿父容器 */
+  min-height: 100dvh; /* 最小高度仍保持全屏 */
 }
 
 /* FAB 固定右下角 */

@@ -19,7 +19,13 @@
               <h2 class="text-text-primary fw-bold fs-6 lh-base">在我們眼中，你是... </h2>
               <p class="text-black text-opacity-60 mb-0 position-sticky z-2">熱愛未知，享受風景與故事，總在下一段旅程中找尋自我。</p>
             </div>
+          <div class="border border-primary-default mt-6t mb-4t rounded-5 text-start bg-white shadow">
+            <div class="bg-deco-r-b p-4t rounded-5">
+              <h2 class="text-text-primary fw-bold fs-6 lh-base">在我們眼中，你是... </h2>
+              <p class="text-black text-opacity-60 mb-0 position-sticky z-2">熱愛未知，享受風景與故事，總在下一段旅程中找尋自我。</p>
+            </div>
           </div>
+          <div class="row gx-4t mb-auto pb-6t w-100">
           <div class="row gx-4t mb-auto pb-6t w-100">
             <div class="col-6 ps-0">
               <div class="p-4t border rounded-5 bg-white">
@@ -37,17 +43,34 @@
             </div>
           </div>
           <button
+          <button
             class="position-sticky z-1 btn btn-primary text-white fw-bold w-100 rounded-pill py-3t d-flex justify-content-center"
+            type="button"
+            id="start-btn"
             type="button"
             id="start-btn"
             >開始探索
             <span class="icon-mask icon-arrow-right bg-white ms-3t"></span>
           </button>
+          </button>
         </div>
+        <div class="animation-deco"></div>
         <div class="animation-deco"></div>
       </div>
     </main>
     <script type="module" src="../../main.js"></script>
+    <script type="module">
+      const mobileContainer = document.querySelector('.mobile-container')
+      const startBtn = document.querySelector('#start-btn')
+
+      startBtn.addEventListener('click', () => {
+        console.dir(mobileContainer)
+        mobileContainer.classList.add('character-transition')
+        setTimeout(() => {
+          window.location.replace('../index.html')
+        }, 900)
+      })
+    </script>
     <script type="module">
       const mobileContainer = document.querySelector('.mobile-container')
       const startBtn = document.querySelector('#start-btn')
