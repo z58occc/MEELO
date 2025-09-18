@@ -28,17 +28,17 @@
     background: $bg-body;
     width: 375px;
     height: 812px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-
+    
     @media (max-width: 450px) {
       width: 100%;
       height: 100%;
       border-radius: 0;
+    }
+    .mobile-content {
+      height: calc(100% - 83px);
 
-      >.container {
-        height: 100vh;
+      @media (max-width: 450px) {
+      height: 100vh;
       }
     }
 
@@ -64,6 +64,7 @@
     }
 
     &.content-full {
+      overflow: hidden;
       &::before {
         position: absolute;
         z-index: 1;
@@ -72,6 +73,9 @@
 
       &::after {
         display: none;
+      }
+      .mobile-content {
+        height: 100%;
       }
     }
   }
@@ -161,7 +165,6 @@
   bottom: 20px;
   left: 119.5px;
 }
-
 // 開始頁 end
 
 .optionLayout {
@@ -418,7 +421,39 @@
   }
 }
 
-// 動畫
+/* 表單相關動畫開始 */
+.dynamic-name {
+  margin-left: -16px;
+  width: 64px;
+  display: flex;
+  justify-content: end;
+
+  .dynamic-first {
+    transition: all 0.4s ease 1s;
+  }
+
+  .dynamic-sec {
+    transition: all 0.4s ease 1s;
+    margin-right: -100%;
+    opacity: 0;
+  }
+  &.switch-name {
+    margin-left: 0;
+  
+    .dynamic-first {
+      margin-left: -100%;
+      opacity: 0;
+    }
+  
+    .dynamic-sec {
+      margin-right: 0;
+      opacity: 1;
+    }
+  }
+}
+/* 表單相關動畫結束 */
+
+/* 建立角色動畫頁開始 */
 .character-creating {
   object-fit: cover;
   width: 100%;
@@ -429,13 +464,9 @@
     color: $primary-active;
     -webkit-text-stroke: 0.5px rgba(242, 242, 215, 0.02);
     text-shadow: 0px 0px 24px rgba(250, 199, 109, 1);
-
-    @media (max-width: 450px) {
-      top: 32px;
-      font-size: 16px !important;
-    }
   }
 }
+/* 建立角色動畫頁結束 */
 
 /* 角色頁開始 */
 .character-image {
@@ -517,5 +548,4 @@
     transform: translate(45%, 45%) scale(150);
   }
 }
-
 /* 角色頁結束 */
