@@ -7,7 +7,12 @@
       class="d-flex btn-ghost btn-ghost-accent disabled"
       href="<%= nextPage %>"
       id="prevPageBtn"
-      >下一步<i class="icon-mask icon-arrow-right ms-3t"></i
+      >
+        <span class="dynamic-name <%= nextPage === 'character-creating.html' ? 'switch-name' : ''  %>">
+          <span class="dynamic-first">下一步</span>
+          <span class="dynamic-sec">查看結果</span>
+        </span>
+      <i class="icon-mask icon-arrow-right ms-3t"></i
     ></a>
   </div>
 </div>

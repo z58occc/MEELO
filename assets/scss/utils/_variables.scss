@@ -1651,7 +1651,8 @@ $progress-bar-color:                $white !default;
 $progress-bar-bg:                   $primary-default !default; // custom
 // $progress-bar-bg:                   $primary !default;
 $progress-bar-animation-timing:     1s linear infinite !default;
-$progress-bar-transition:           width .6s ease !default;
+$progress-bar-transition:           width .3s ease-out !default; // custom
+// $progress-bar-transition:           width .6s ease !default;
 // scss-docs-end progress-variables
 
 

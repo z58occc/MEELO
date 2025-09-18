@@ -28,16 +28,17 @@
     background: $bg-body;
     width: 375px;
     height: 812px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
 
     @media (max-width: 450px) {
       width: 100%;
       height: 100%;
       border-radius: 0;
+    }
 
-      >.container {
+    .mobile-content {
+      height: calc(100% - 83px);
+
+      @media (max-width: 450px) {
         height: 100vh;
       }
     }
@@ -64,6 +65,8 @@
     }
 
     &.content-full {
+      overflow: hidden;
+
       &::before {
         position: absolute;
         z-index: 1;
@@ -72,6 +75,10 @@
 
       &::after {
         display: none;
+      }
+
+      .mobile-content {
+        height: 100%;
       }
     }
   }
@@ -418,7 +425,206 @@
   }
 }
 
-// 動畫
+/* 表單相關動畫開始 */
+.form-fade-default {
+  display: none;
+}
+
+.form-fade-in {
+  animation: fadeIn 0.15s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.form-fade-out {
+  animation: fadeOut 0.15s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  99% {
+    opacity: 0;
+    display: none;
+  }
+
+  100% {
+    display: none;
+  }
+}
+
+.dynamic-name {
+  margin-left: -16px;
+  width: 64px;
+  display: flex;
+  justify-content: end;
+
+  .dynamic-first {
+    transition: all 0.4s ease 0.2s;
+  }
+
+  .dynamic-sec {
+    transition: all 0.4s ease 0.2s;
+    margin-right: -100%;
+    opacity: 0;
+  }
+
+  &.switch-name {
+    margin-left: 0;
+
+    .dynamic-first {
+      margin-left: -100%;
+      opacity: 0;
+    }
+
+    .dynamic-sec {
+      margin-right: 0;
+      opacity: 1;
+    }
+  }
+}
+
+.halo-anmation {
+  overflow: hidden;
+
+  .halo {
+    background: radial-gradient(50% 50% at 50% 50%,
+        #fee09a 0%,
+        #fde6b8 5%,
+        #fee09a 50%,
+        #fee09a 53%,
+        rgba(254, 224, 154, 0) 93.03%);
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 20;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    animation: var(--animation-name, halo-1) 1.2s ease-in-out forwards 0s;
+
+    &-1 {
+      --animation-name: halo-1;
+    }
+
+    &-2 {
+      --animation-name: halo-2;
+    }
+
+    &-3 {
+      --animation-name: halo-3;
+    }
+
+    &-4 {
+      --animation-name: halo-4;
+    }
+  }
+}
+
+// 光暈一
+@keyframes halo-1 {
+  0% {
+    left: -60vw;
+    top: 10vh;
+  }
+
+  66% {
+    left: 20vw;
+    top: 30vh;
+    transform: translate(-50%, -50%) scale(18);
+    opacity: 1;
+  }
+
+  100% {
+    left: 50vw;
+    top: -10vh;
+    transform: translate(-50%, -50%) scale(1.6);
+    opacity: 0;
+  }
+}
+
+// 光暈二
+@keyframes halo-2 {
+  0% {
+    left: -60vw;
+    top: 50vh;
+  }
+
+  66% {
+    left: 50vw;
+    top: 70vh;
+    transform: translate(-50%, -50%) scale(15.5);
+    opacity: 1;
+  }
+
+  100% {
+    left: 50vw;
+    top: -10vh;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+  }
+}
+
+// 光暈三
+@keyframes halo-3 {
+  0% {
+    left: -60vw;
+    top: 80vh;
+  }
+
+  66% {
+    left: 40vw;
+    top: 60vh;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(15);
+  }
+  100% {
+    left: 50vw;
+    top: -10vh;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.6);
+  }
+}
+
+// 光暈四
+@keyframes halo-4 {
+  0% {
+    left: 0vw;
+    top: 110%;
+  }
+
+  66% {
+    left: 10vw;
+    top: 80%;
+    transform: scale(20.5);
+    opacity: 1;
+  }
+  100% {
+    left: 50vw;
+    top: -10vh;
+    transform: scale(0.9);
+    opacity: 0;
+  }
+}
+
+/* 表單相關動畫結束 */
+
+/* 建立角色動畫頁開始 */
 .character-creating {
   object-fit: cover;
   width: 100%;
@@ -429,13 +635,10 @@
     color: $primary-active;
     -webkit-text-stroke: 0.5px rgba(242, 242, 215, 0.02);
     text-shadow: 0px 0px 24px rgba(250, 199, 109, 1);
-
-    @media (max-width: 450px) {
-      top: 32px;
-      font-size: 16px !important;
-    }
   }
 }
+
+/* 建立角色動畫頁結束 */
 
 /* 角色頁開始 */
 .character-image {
