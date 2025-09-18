@@ -16,15 +16,19 @@ document.querySelectorAll("a").forEach((el) => {
   });
 });
 
-nav.addEventListener("click", function (e) {
-  //導覽列icon切換
-  navImgs.forEach((el) => (el.className = el.className.replace("-on", "-off")));
-  navItems.forEach((el) => el.classList.remove("bg-callout", "rounded-pill"));
+if (nav) {
+  nav.addEventListener("click", function (e) {
+    //導覽列icon切換
+    navImgs.forEach(
+      (el) => (el.className = el.className.replace("-on", "-off"))
+    );
+    navItems.forEach((el) => el.classList.remove("bg-callout", "rounded-pill"));
 
-  const navItem = e.target.closest(".nav-item");
-  if (!navItem) return;
-  const navImg = navItem.querySelector(".nav-item-img");
+    const navItem = e.target.closest(".nav-item");
+    if (!navItem) return;
+    const navImg = navItem.querySelector(".nav-item-img");
 
-  navImg.className = navImg.className.replace("-off", "-on");
-  navItem.classList.add("bg-callout", "rounded-pill");
-});
+    navImg.className = navImg.className.replace("-off", "-on");
+    navItem.classList.add("bg-callout", "rounded-pill");
+  });
+}
