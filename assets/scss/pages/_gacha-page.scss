@@ -6,10 +6,10 @@
 
 .black-filter {
   position: absolute;
-  border-radius: 25px;
-  inset: 16px;
+  border-radius: 40px;
+  inset: 12px;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 100;
+  z-index: 90;
 }
 .hints {
   position: absolute;
@@ -24,7 +24,7 @@
   max-width: 100%;
 }
 .main {
-  min-height: 621px;
+  height: 621px;
   overflow-y: auto;
   .bg-card {
     width: 95.48533%;
@@ -175,7 +175,7 @@
 .frame {
   margin-top: 32px;
   width: 427px;
-  max-height: 858px;
+  max-height: 856px;
   background-repeat: no-repeat;
   padding: 24px;
 }
@@ -183,7 +183,7 @@
   width: 24px;
   height: 24px;
 }
-.bg-gray-01{
+.bg-gray-01 {
   background-color: rgba(0, 0, 0, 0.4);
 }
 @media (max-width: 450px) {
@@ -198,8 +198,7 @@
     inset: 0;
     border-radius: 0;
   }
-  .pb-85{
+  .pb-85 {
     padding-bottom: 85px;
   }
 }
-

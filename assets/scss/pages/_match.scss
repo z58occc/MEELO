@@ -1,3 +1,6 @@
+.match-main {
+  height: 100%;
+}
 .fw-900 {
   font-weight: 900;
 }
@@ -39,21 +42,16 @@
   background-size: cover;
   z-index: 1;
   filter: brightness(0.65) blur(4px);
+  margin-top: -10px;
   border-radius: 40px;
-  margin-left: 8px;
-  margin-right: 8px;
-  margin-top: 6px;
 }
 .match-down {
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  margin-left: 8px;
-  margin-right: 8px;
   border: white solid 1px;
   position: absolute;
   bottom: -220px;
+  height: 0;
   left: 0;
   right: 0;
   animation-name: slide-in-up;
@@ -64,11 +62,15 @@
 @keyframes slide-in-up {
   from {
     position: absolute;
-    bottom: -220px;
+    bottom: 0;
+    height: 0;
+    z-index: -1;
   }
   to {
     position: absolute;
     bottom: 0;
+    height: 220px;
+    z-index: 8;
   }
 }
 .match-close-btn {
@@ -134,5 +136,9 @@
     margin: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+  }
+  .match-main {
+    height: 100vh;
+    width: 100%;
   }
 }
