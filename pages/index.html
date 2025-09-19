@@ -15,7 +15,7 @@
     </style>
   </head>
   <body>
-   <div class="bg" id="heroBg">
+   <div class="bg" >
     
      <div class="status-bar py-3 px-4 d-flex justify-content-between">
     <span class="fw-medium fs-17 text-white">9:41</span>
@@ -796,16 +796,17 @@ fabClose.addEventListener('click', () => {
 });
     </script>
    <script>
-     const heroBg = document.getElementById('heroBg'); /* 修改: 抓 heroBg */
-    const shrinkPoint = 182 - 106; // 76px
+  /* ===== Hero BG 收縮控制 ===== */
+    const heroBg = document.getElementById("heroBg"); /* 修改 */
+    const init = 182, min = 106; /* 修改 */
 
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > shrinkPoint) {
-        heroBg.classList.add('sticky'); /* 修改 */
-        heroBg.style.top = "0"; 
+    window.addEventListener("scroll", () => {
+      const y = window.scrollY;
+      if (y > (init - min)) {
+        heroBg.classList.add("shrink");
       } else {
-        heroBg.classList.remove('sticky'); /* 修改 */
-        heroBg.style.top = `-${window.scrollY}px`; 
+        heroBg.classList.remove("shrink");
+        heroBg.style.height = (init - y) + "px"; /* 修改 */
       }
     });
    </script>
