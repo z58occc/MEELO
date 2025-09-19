@@ -1,14 +1,13 @@
 
 .bg {
-position: relative;
+position: absolute;
 width: 100%;
-height: auto; 
+height:  var(--header-init); 
 background: url("/assets/images/index-img/Hero-Image-full.png") no-repeat center center/cover;
 overflow: hidden;
 z-index: 1;
 transition: height 0.3s ease; /* 修改: 平滑過渡動畫 */
 }
-
 
 .thread-card-radius{
   border-bottom-left-radius: 16px ;
