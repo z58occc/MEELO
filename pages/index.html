@@ -15,7 +15,7 @@
     </style>
   </head>
   <body>
-   <div class="bg" >
+   <div class="bg" id="heroBg">
     
      <div class="status-bar py-3 px-4 d-flex justify-content-between">
     <span class="fw-medium fs-17 text-white">9:41</span>
@@ -32,6 +32,8 @@
     </ul>
 
      </div>
+
+
     <div class="px-3 mb-5 ">
       <div class="d-flex justify-content-between align-items-center  py-12">
       <div class="d-flex align-items-center gap-2">
@@ -75,9 +77,9 @@
    
 
     
-    <div class=" bg-background-page pt-4 px-3 hero-card" style="border-top-left-radius: 24px; border-top-right-radius: 24px; " >
+    <div class=" bg-background-page pt-4 px-3 hero-card " style="border-top-left-radius: 24px; border-top-right-radius: 24px;" >
     
-    <div class="fab-container " >
+    <div class="fab-container" >
     <button id="fabBtn" class="fab-main">
      <div>
       <img src="/assets/images/index-img/Fab-default.svg" alt="Icon / Plus">
@@ -85,9 +87,8 @@
     </button>
     </div>
 
-    
-      <!-- 分類 -->
-      <div class="d-flex justify-content-between mb-3 category-bar">
+        <!-- 分類 -->
+      <div class="d-flex justify-content-between mb-3 category-bar position-absolute"  style="width: 90%;">
         <a class="d-inline-block text-decoration-none" type="button" 
         data-bs-toggle="offcanvas" 
         data-bs-target="#travelOffcanvas" 
@@ -113,8 +114,10 @@
           </nav>
         </div>
       </div>
+    
+      
       <!-- SWIPER -->
-      <div class="swiper mySwipers " >
+      <div class="swiper mySwipers mt-5" >
         <div class=" swiper-wrapper ">
       <div class="Thread-card swiper-slide">
         <div class="d-flex align-items-center gap-2 mb-2">
@@ -792,8 +795,21 @@ fabClose.addEventListener('click', () => {
   }, 300);
 });
     </script>
+   <script>
+     const heroBg = document.getElementById('heroBg'); /* 修改: 抓 heroBg */
+    const shrinkPoint = 182 - 106; // 76px
 
-    </script>
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > shrinkPoint) {
+        heroBg.classList.add('sticky'); /* 修改 */
+        heroBg.style.top = "0"; 
+      } else {
+        heroBg.classList.remove('sticky'); /* 修改 */
+        heroBg.style.top = `-${window.scrollY}px`; 
+      }
+    });
+   </script>
+  
     <script type="module" src="../main.js"></script>
   </body>
   
