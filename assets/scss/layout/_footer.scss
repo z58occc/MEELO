@@ -34,3 +34,9 @@
   border-bottom-left-radius: 1000px;
   border-bottom-right-radius: 1000px;
 }
+@media (max-width: 450px) {
+  .footer {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}

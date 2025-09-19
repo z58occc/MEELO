@@ -1,9 +1,9 @@
-.header{
-  .logo{
+.header {
+  .logo {
     height: 28px;
   }
 }
-.status-bar{
+.status-bar {
   border-top-left-radius: 1000px;
   border-top-right-radius: 1000px;
 }
@@ -175,12 +175,35 @@
 .rounded-1000 {
   border-radius: 1000px;
 }
-.frame{
+.frame {
+  margin-top: 32px;
   width: 427px;
   max-height: 858px;
   background-repeat: no-repeat;
+  background-image: url(/assets/images/gacha-page/iphone-11-pro.png);
+  padding: 18px;
 }
-.filter-icon{
+.filter-icon {
   width: 24px;
   height: 24px;
+}
+.bg-gray-01{
+  background-color: rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 450px) {
+  .frame {
+    margin-top: 0;
+    background-image: none;
+    padding: 0;
+    width: 100%;
+  }
+  .black-filter {
+    inset: 0;
+    border-radius: 0;
+  }
+  .status-bar {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  
 }
