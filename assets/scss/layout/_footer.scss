@@ -1,4 +1,6 @@
 .nav {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   .nav-img-1-off {
     content: url("/assets/images/nav-icon/home-off.svg");
   }
@@ -29,14 +31,23 @@
   .nav-img-5-on {
     content: url("/assets/images/nav-icon/user-on.svg");
   }
+  .bottom-line {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
 }
-.footer {
-  border-bottom-left-radius: 1000px;
-  border-bottom-right-radius: 1000px;
-}
+
 @media (max-width: 450px) {
-  .footer {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+  .nav {
+    position: absolute;
+    bottom: 0;
+    .bottom-line {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  .i-frame {
+    display: none;
   }
 }

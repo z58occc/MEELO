@@ -1,4 +1,4 @@
-<nav class="nav bg-white">
+<nav class="nav bg-white w-100">
   <ul class="list-unstyled d-flex pt-2 px-2 pb-1 mb-0 justify-content-between w-100 align-items-center">
     <li class="nav-item py-2 <%= active === 'home' ? 'bg-callout rounded-pill' : '' %> ">
       <a href="./index.html">
@@ -24,7 +24,5 @@
       <img class="nav-img-5-off nav-item-img mx-auto d-block" alt="icon user">
     </li>
   </ul>
-
+  <%- include('./bottomLine.ejs') %>
 </nav>
-
-<%- include('./bottomLine.ejs') %>

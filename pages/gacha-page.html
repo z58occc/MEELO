@@ -9,9 +9,10 @@
   <link rel="stylesheet" href="../assets/scss/devices/devices.css">
 </head>
 
-<body class="d-flex justify-content-center align-items-center  bg-gray-01">
-  <div class="frame position-relative   overflow-hidden "
-    >
+<body class="d-flex flex-column justify-content-center align-items-center  bg-gray-01 vh-100 w-100">
+  <div class=" frame position-relative   overflow-hidden ">
+   <img class="pe-none position-absolute top-0 end-0 start-0 bottom-0 z-100 i-frame"
+      src="../assets/images/gacha-page/iphone-13-mini.png" alt="iphone-13-mini"> 
     <div id="filter" class="black-filter">
     </div>
     <div id="hint" onclick="closeHint();
@@ -32,7 +33,7 @@
       </div>
     </div>
 
-    <div class="status-bar pt-3 pb-12 px-4 bg-callout d-flex  justify-content-between ">
+    <div class="status-bar pt-3 pb-12 px-4 bg-callout d-flex  justify-content-between w-100 ">
       <span class="fw-medium fs-17">9:41</span>
       <ul class="d-flex list-unstyled gap-7 mb-0">
         <li>
@@ -49,13 +50,13 @@
     </div>
 
 
-    <header class="header d-flex py-14 px-3 justify-content-between bg-callout ">
+    <header class="header d-flex py-14 px-3 justify-content-between bg-callout w-100">
       <div></div>
       <img class="logo" src="../assets/images/gacha-page/logo.svg" alt="meelo logo">
       <img class="object-fit-cover filter-icon" src="../assets/images/gacha-page/filter.svg" alt="icon filter">
     </header>
 
-    <div class="main bg-white">
+    <div class="main  flex-fill w-100 bg-callout">
       <main class="main bg-callout px-3 py-205 position-relative overflow-hidden">
         <img class="bg-card   position-absolute z-2" src="../assets/images/gacha-page/bg-card-1.png" alt="bg-card-2 ">
         <img class="bg-card  position-absolute z-1" src="../assets/images/gacha-page/bg-card-2.png" alt="bg-card-1 ">
