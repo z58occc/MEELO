@@ -1,8 +1,12 @@
-
+:root {
+      --header-max-height: 182px; /* 修改 */
+      --header-min-height: 106px; /* 修改 */
+      --footer-height: 60px;
+    }
 .bg {
-position: absolute;
+position: relative;
 width: 100%;
-height:  var(--header-init); 
+height: auto; 
 background: url("/assets/images/index-img/Hero-Image-full.png") no-repeat center center/cover;
 overflow: hidden;
 z-index: 1;
@@ -26,15 +30,18 @@ transition: height 0.3s ease; /* 修改: 平滑過渡動畫 */
   overflow: hidden;
 }
 
-
 $hero-action-card: linear-gradient(135deg, #fbe6da 0%, #ffffff 70%);
 
 .bg-hero-action-card {
   background: $hero-action-card;
 }
 .mySwipers {
-  height: 100%;       /* 讓 Swiper 填滿父容器 */
-  min-height: 100dvh; /* 最小高度仍保持全屏 */
+      height: auto;
+      min-height: 100vh;
+    }
+
+.Thread-card {
+  margin-bottom: 16px;
 }
 
 /* FAB 固定右下角 */
