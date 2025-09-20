@@ -15,7 +15,8 @@
     </style>
   </head>
   <body>
-   <div class="bg" >
+    
+   <div class="bg"  id="header">
     
      <div class="status-bar py-3 px-4 d-flex justify-content-between">
     <span class="fw-medium fs-17 text-white">9:41</span>
@@ -77,7 +78,7 @@
    
 
     
-    <div class=" bg-background-page pt-4 px-3 hero-card " style="border-top-left-radius: 24px; border-top-right-radius: 24px;" >
+    <div class=" bg-background-page pt-4 px-3 " style="border-top-left-radius: 24px; border-top-right-radius: 24px;" >
     
     <div class="fab-container" >
     <button id="fabBtn" class="fab-main">
@@ -795,21 +796,18 @@ fabClose.addEventListener('click', () => {
   }, 300);
 });
     </script>
-   <script>
-  /* ===== Hero BG 收縮控制 ===== */
-    const heroBg = document.getElementById("heroBg"); /* 修改 */
-    const init = 182, min = 106; /* 修改 */
+     <script>
+   // 折疊 Header JS
+    const header = document.getElementById("header");
+    const maxHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--header-max-height"));
+    const minHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--header-min-height"));
 
     window.addEventListener("scroll", () => {
-      const y = window.scrollY;
-      if (y > (init - min)) {
-        heroBg.classList.add("shrink");
-      } else {
-        heroBg.classList.remove("shrink");
-        heroBg.style.height = (init - y) + "px"; /* 修改 */
-      }
+      const scrollY = window.scrollY;
+      const newHeight = Math.max(minHeight, maxHeight - scrollY);
+      header.style.height = newHeight + "px";
     });
-   </script>
+  </script>
   
     <script type="module" src="../main.js"></script>
   </body>
