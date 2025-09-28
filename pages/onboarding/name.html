@@ -8,7 +8,10 @@
   <body>
     <main class="mobile-frame">
       <div class="mobile-container overflow-hidden">
-        <div class="mobile-content flex-grow-1 pt-6t d-flex flex-column position-relative">
+        <div class="mobile-notch"></div>
+        <div
+          class="mobile-content flex-grow-1 pt-6t d-flex flex-column position-relative"
+        >
           <section class="container position-sticky z-2 page-scoll-mask-t">
             <%- include('./layout/onboarding/progress.ejs', {progress: "3.499"})
             %>
@@ -20,7 +23,9 @@
             >
               你的暱稱是...
             </label>
-            <div class="flex-grow-1 lh-sm d-flex flex-column justify-content-center">
+            <div
+              class="flex-grow-1 lh-sm d-flex flex-column justify-content-center"
+            >
               <input
                 class="form-control input-ghost caret text-text-primary text-center w-100 mb-2"
                 value=""
@@ -28,7 +33,9 @@
                 name="name"
                 id="name"
               />
-              <p class="text-black text-opacity-40 fs-18 mb-0"><span id="input-length">0</span>/8</p>
+              <p class="text-black text-opacity-40 fs-18 mb-0">
+                <span id="input-length">0</span>/8
+              </p>
             </div>
           </section>
           <section class="container page-scoll-mask-b position-sticky">
@@ -70,7 +77,6 @@
       const randomBtn = document.querySelector("#random-btn");
       const inputLengthText = document.querySelector("#input-length");
 
-      
       document.addEventListener("DOMContentLoaded", () => {
         if (nameInput) {
           nameInput.focus();
@@ -101,7 +107,7 @@
         const { value: name } = nameInput;
         if (name.length < 4) {
           nameInput.value = `${name}${defaultName[name.length]}`;
-          inputLengthText.textContent = nameInput.value.length
+          inputLengthText.textContent = nameInput.value.length;
         }
         nameInput.focus();
       });
@@ -109,7 +115,7 @@
       randomBtn.addEventListener("click", (event) => {
         event.preventDefault();
         nameInput.value = generateNickName();
-        inputLengthText.textContent = nameInput.value.length
+        inputLengthText.textContent = nameInput.value.length;
       });
 
       function generateNickName() {
