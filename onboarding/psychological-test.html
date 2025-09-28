@@ -4,545 +4,593 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meelo | onBoarding</title>
-    <script type="module" crossorigin src="/MEELO/assets/onboarding/psychological-test-Cw8TltNm.js"></script>
-    <link rel="modulepreload" crossorigin href="/MEELO/assets/main-CopXx-uG.js">
-    <link rel="stylesheet" crossorigin href="/MEELO/assets/main-C6Sc3xto.css">
+    <script type="module" crossorigin src="/MEELO/assets/onboarding\psychological-test-C8eIh5Bt.js"></script>
+    <link rel="modulepreload" crossorigin href="/MEELO/assets/main-DVZs8SV7.js">
+    <link rel="stylesheet" crossorigin href="/MEELO/assets/main-BKDlJ0jV.css">
   </head>
   <body>
     <main class="mobile-frame">
       <div class="mobile-container">
-        <div class="mobile-content pt-6t d-flex flex-column overflow-hidden">
-          <div class="container">
-            <div id="rating-root" data-progress="14.29"></div>
-          </div>
-          <!-- gender-start -->
-          <section
-            class="gender-content container position-sticky z-2 page-scoll-mask-t"
-          >
-            <h1 class="mt-6t mb-2 fs-3 fw-bold text-primary-default">Elly</h1>
-            <h2 class="mb-0 fs-4 fw-bold text-text-primary">你的性別是...</h2>
-          </section>
-          <section
-            class="gender-content container option-contain flex-grow-1 mb-16t"
-          >
-            <form id="genderForm" class="optionLayout row g-4t">
-              <div class="col-6">
-                <div class="onboarding-check rounded-4">
-                  <input
-                    class="onboarding-check-input d-none"
-                    type="radio"
-                    name="gender"
-                    id="female"
-                    value="female"
-                  />
-                  <label class="onboarding-check-label card h-100" for="female">
-                    <div class="card-body">
-                      <h3 class="onboarding-check-title fs-18 fw-bold">女性</h3>
-                      <img
-                        class="onboarding-gender-img position-absolute z-1"
-                        src="/MEELO/assets/gender-1-CHZjDBQ_.png"
-                        alt="性別選項-女性"
-                      />
-                    </div>
-                  </label>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="onboarding-check rounded-4">
-                  <input
-                    class="onboarding-check-input d-none"
-                    type="radio"
-                    name="gender"
-                    id="male"
-                    value="male"
-                  />
-                  <label class="onboarding-check-label card h-100" for="male">
-                    <div class="card-body">
-                      <h3 class="onboarding-check-title fs-18 fw-bold">男性</h3>
-                      <img
-                        class="onboarding-gender-img position-absolute z-1"
-                        src="/MEELO/assets/gender-2-Kxlm625T.png"
-                        alt="性別選項-男性"
-                      />
-                    </div>
-                  </label>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="onboarding-check rounded-4">
-                  <input
-                    class="onboarding-check-input d-none"
-                    type="radio"
-                    name="gender"
-                    id=" bigender"
-                    value="bigender"
-                  />
-                  <label
-                    class="onboarding-check-label card h-100"
-                    for=" bigender"
-                  >
-                    <div class="card-body">
-                      <h3 class="onboarding-check-title fs-18 fw-bold">
-                        雙性別
-                      </h3>
-                      <img
-                        class="onboarding-gender-img position-absolute z-1"
-                        src="/MEELO/assets/gender-3-WZEGvNtc.png"
-                        alt="性別選項-雙性別"
-                      />
-                    </div>
-                  </label>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="onboarding-check rounded-4">
-                  <input
-                    class="onboarding-check-input d-none"
-                    type="radio"
-                    name="gender"
-                    id="agender"
-                    value="agender"
-                  />
-                  <label
-                    class="onboarding-check-label card h-100"
-                    for="agender"
-                  >
-                    <div class="card-body">
-                      <h3 class="onboarding-check-title fs-18 fw-bold">
-                        無性別
-                      </h3>
-                      <img
-                        class="onboarding-gender-img position-absolute z-1"
-                        src="/MEELO/assets/gender-1-CHZjDBQ_.png"
-                        alt="性別選項-無性別"
-                      />
-                    </div>
-                  </label>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="onboarding-check rounded-4">
-                  <input
-                    class="onboarding-check-input d-none"
-                    type="radio"
-                    name="gender"
-                    id="disclose"
-                    value="disclose"
-                  />
-                  <label
-                    class="onboarding-check-label card h-100"
-                    for="disclose"
-                  >
-                    <div class="card-body">
-                      <h3 class="onboarding-check-title fs-18 fw-bold">
-                        不願透露
-                      </h3>
-                      <img
-                        class="onboarding-gender-img position-absolute z-1"
-                        src="/MEELO/assets/gender-5-Ca4mm1hL.png"
-                        alt="性別選項-不願透露"
-                      />
-                    </div>
-                  </label>
-                </div>
-              </div>
-            </form>
-          </section>
-          <!-- gender-end -->
-          <!-- interest-start -->
-          <section
-            class="form-fade-default interest-content container position-sticky z-2 page-scoll-mask-t"
-          >
-            <h1 class="mt-6t mb-2 fs-4 fw-bold text-text-primary">
-              你的興趣是...
-            </h1>
-            <p class="mb-0 fs-14 text-black text-opacity-60">最多選三項</p>
-          </section>
-          <section
-            class="form-fade-default interest-content container option-contain"
-          >
-            <form id="interestForm" class="optionLayout row g-4t pb-16t">
-              <div class="col-6">
-                <div class="onboarding-check onboarding-check-lg rounded-4">
-                  <input
-                    class="onboarding-check-input d-none"
-                    type="checkbox"
-                    name="interest"
-                    id="travel"
-                    value="travel"
-                  />
-                  <label class="onboarding-check-label card h-100" for="travel">
-                    <div class="card-body">
-                      <h3 class="fs-18 fw-bold">旅行</h3>
-                      <p class="onboarding-check-text fs-14">探索世界各地</p>
-                      <img
-                        class="onboarding-interest-img position-absolute z-1"
-                        src="/MEELO/assets/interest-1-DHJeVs5O.png"
-                        alt="興趣選項-旅行"
-                      />
-                    </div>
-                  </label>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="onboarding-check onboarding-check-lg rounded-4">
-                  <input
-                    class="onboarding-check-input d-none"
-                    type="checkbox"
-                    name="interest"
-                    id="foodie"
-                    value="foodie"
-                  />
-                  <label class="onboarding-check-label card h-100" for="foodie">
-                    <div class="card-body">
-                      <h3 class="fs-18 fw-bold">美食</h3>
-                      <p class="onboarding-check-text fs-14">挖掘各地美味</p>
-                      <img
-                        class="onboarding-interest-img position-absolute z-1"
-                        src="/MEELO/assets/interest-2-xfHFA_65.png"
-                        alt="興趣選項-美食"
-                      />
-                    </div>
-                  </label>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="onboarding-check onboarding-check-lg rounded-4">
-                  <input
-                    class="onboarding-check-input d-none"
-                    type="checkbox"
-                    name="interest"
-                    id="photograph"
-                    value="photograph"
-                  />
-                  <label
-                    class="onboarding-check-label card h-100"
-                    for="photograph"
-                  >
-                    <div class="card-body">
-                      <h3 class="fs-18 fw-bold">攝影</h3>
-                      <p class="onboarding-check-text fs-14">捕捉精彩瞬間</p>
-                      <img
-                        class="onboarding-interest-img position-absolute z-1"
-                        src="/MEELO/assets/interest-3-D9C-npQt.png"
-                        alt="興趣選項-攝影"
-                      />
-                    </div>
-                  </label>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="onboarding-check onboarding-check-lg rounded-4">
-                  <input
-                    class="onboarding-check-input d-none"
-                    type="checkbox"
-                    name="interest"
-                    id="exercise"
-                    value="exercise"
-                  />
-                  <label
-                    class="onboarding-check-label card h-100"
-                    for="exercise"
-                  >
-                    <div class="card-body">
-                      <h3 class="fs-18 fw-bold">運動</h3>
-                      <p class="onboarding-check-text fs-14">
-                        一起熱血揮灑汗水
-                      </p>
-                      <img
-                        class="onboarding-interest-img position-absolute z-1"
-                        src="/MEELO/assets/interest-4-DrZ1WAGX.png"
-                        alt="興趣選項-運動"
-                      />
-                    </div>
-                  </label>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="onboarding-check onboarding-check-lg rounded-4">
-                  <input
-                    class="onboarding-check-input d-none"
-                    type="checkbox"
-                    name="interest"
-                    id="music"
-                    value="music"
-                  />
-                  <label class="onboarding-check-label card h-100" for="music">
-                    <div class="card-body">
-                      <h3 class="fs-18 fw-bold">音樂</h3>
-                      <p class="onboarding-check-text fs-14">旋律裡找到自己</p>
-                      <img
-                        class="onboarding-interest-img position-absolute z-1"
-                        src="/MEELO/assets/interest-5-BJm5f4B3.png"
-                        alt="興趣選項-音樂"
-                      />
-                    </div>
-                  </label>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="onboarding-check onboarding-check-lg rounded-4">
-                  <input
-                    class="onboarding-check-input d-none"
-                    type="checkbox"
-                    name="interest"
-                    id="films-television"
-                    value="films-television"
-                  />
-                  <label
-                    class="onboarding-check-label card h-100"
-                    for="films-television"
-                  >
-                    <div class="card-body">
-                      <h3 class="fs-18 fw-bold">影視</h3>
-                      <p class="onboarding-check-text fs-14">追劇好片推薦</p>
-                      <img
-                        class="onboarding-interest-img position-absolute z-1"
-                        src="/MEELO/assets/interest-6-Dy-LEjTr.png"
-                        alt="興趣選項-影視"
-                      />
-                    </div>
-                  </label>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="onboarding-check onboarding-check-lg rounded-4">
-                  <input
-                    class="onboarding-check-input d-none"
-                    type="checkbox"
-                    name="interest"
-                    id="read"
-                    value="read"
-                  />
-                  <label class="onboarding-check-label card h-100" for="read">
-                    <div class="card-body">
-                      <h3 class="fs-18 fw-bold">閱讀</h3>
-                      <p class="onboarding-check-text fs-14">在字裡尋找世界</p>
-                      <img
-                        class="onboarding-interest-img position-absolute z-1"
-                        src="/MEELO/assets/interest-7-CoKYgV6P.png"
-                        alt="興趣選項-閱讀"
-                      />
-                    </div>
-                  </label>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="onboarding-check onboarding-check-lg rounded-4">
-                  <input
-                    class="onboarding-check-input d-none"
-                    type="checkbox"
-                    name="interest"
-                    id="learning"
-                    value="learning"
-                  />
-                  <label
-                    class="onboarding-check-label card h-100"
-                    for="learning"
-                  >
-                    <div class="card-body">
-                      <h3 class="fs-18 fw-bold">學習</h3>
-                      <p class="onboarding-check-text fs-14">點亮未知的旅程</p>
-                      <img
-                        class="onboarding-interest-img position-absolute z-1"
-                        src="/MEELO/assets/interest-8-DWLd2Poj.png"
-                        alt="興趣選項-學習"
-                      />
-                    </div>
-                  </label>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="onboarding-check onboarding-check-lg rounded-4">
-                  <input
-                    class="onboarding-check-input d-none"
-                    type="checkbox"
-                    name="interest"
-                    id="video-games"
-                    value="video-games"
-                  />
-                  <label
-                    class="onboarding-check-label card h-100"
-                    for="video-games"
-                  >
-                    <div class="card-body">
-                      <h3 class="fs-18 fw-bold">遊戲</h3>
-                      <p class="onboarding-check-text fs-14">
-                        享受每場冒險樂趣
-                      </p>
-                      <img
-                        class="onboarding-interest-img position-absolute z-1"
-                        src="/MEELO/assets/interest-9-Dl93ctGg.png"
-                        alt="興趣選項-遊戲"
-                      />
-                    </div>
-                  </label>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="onboarding-check onboarding-check-lg rounded-4">
-                  <input
-                    class="onboarding-check-input d-none"
-                    type="checkbox"
-                    name="interest"
-                    id="outdoor-activities"
-                    value="outdoor-activities"
-                  />
-                  <label
-                    class="onboarding-check-label card h-100"
-                    for="outdoor-activities"
-                  >
-                    <div class="card-body">
-                      <h3 class="fs-18 fw-bold">戶外活動</h3>
-                      <p class="onboarding-check-text fs-14">探索世界各地</p>
-                      <img
-                        class="onboarding-interest-img position-absolute z-1"
-                        src="/MEELO/assets/interest-10-BGyU58S2.png"
-                        alt="興趣選項-戶外活動"
-                      />
-                    </div>
-                  </label>
-                </div>
-              </div>
-            </form>
-          </section>
-          <!-- interest-end -->
-          <!-- dietary-start -->
-          <section
-            class="form-fade-default dietary-content container position-sticky z-2 page-scoll-mask-t"
-          >
-            <h1 class="py-6t mb-0 fs-4 fw-bold text-text-primary">
-              喜歡的美食是...
-            </h1>
-          </section>
-          <section
-            class="form-fade-default dietary-content container option-contain flex-grow-1 mb-16t pt-0"
-          >
-            <form id="dietaryForm" class="dietaryLayout g-4t h-100">
-              <div class="onboarding-check onboarding-check-full rounded-4">
-                <input
-                  class="onboarding-check-input d-none"
-                  type="radio"
-                  name="dietary"
-                  id="local"
-                  value="local"
-                />
-                <label class="onboarding-check-label card h-100" for="local">
-                  <div class="card-body d-flex align-items-center">
-                    <img
-                      class="onboarding-dietary-img position-absolute z-1 position-absolute top-50 translate-middle"
-                      src="/MEELO/assets/dietary-1-B3Hoev4S.png"
-                      alt="美食選項-在地靈魂派"
-                    />
-                    <div class="ps-6t ms-16t">
-                      <h2 class="onboarding-check-title fs-18 fw-bold">
-                        在地靈魂派
-                      </h2>
-                      <p class="onboarding-check-text mb-0 fs-14">
-                        鹽酥雞、牛肉麵、蚵仔煎不能少，夜市是我第二個家
-                      </p>
-                    </div>
-                  </div>
-                </label>
-              </div>
-              <div class="onboarding-check onboarding-check-full rounded-4">
-                <input
-                  class="onboarding-check-input d-none"
-                  type="radio"
-                  name="dietary"
-                  id="exotic"
-                  value="exotic"
-                />
-                <label class="onboarding-check-label card h-100" for="exotic">
-                  <div class="card-body d-flex align-items-center">
-                    <img
-                      class="onboarding-dietary-img position-absolute z-1 position-absolute top-50 translate-middle"
-                      src="/MEELO/assets/dietary-2-DZ6cujEn.png"
-                      alt="美食選項-異國冒險家"
-                    />
-                    <div class="ps-6t ms-16t">
-                      <h2 class="onboarding-check-title fs-18 fw-bold">
-                        異國冒險家
-                      </h2>
-                      <p class="onboarding-check-text mb-0 fs-14">
-                        韓式炸雞、泰式綠咖哩通通愛，胃口沒有國界
-                      </p>
-                    </div>
-                  </div>
-                </label>
-              </div>
-              <div class="onboarding-check onboarding-check-full rounded-4">
-                <input
-                  class="onboarding-check-input d-none"
-                  type="radio"
-                  name="dietary"
-                  id="ritual"
-                  value="ritual"
-                />
-                <label class="onboarding-check-label card h-100" for="ritual">
-                  <div class="card-body d-flex align-items-center">
-                    <img
-                      class="onboarding-dietary-img position-absolute z-1 position-absolute top-50 translate-middle"
-                      src="/MEELO/assets/dietary-3-CsgNRTW7.png"
-                      alt="美食選項-儀式感食客"
-                    />
-                    <div class="ps-6t ms-16t">
-                      <h2 class="onboarding-check-title fs-18 fw-bold">
-                        儀式感食客
-                      </h2>
-                      <p class="onboarding-check-text mb-0 fs-14">
-                        喜歡擺盤漂亮，有氛圍的早午餐或甜點店
-                      </p>
-                    </div>
-                  </div>
-                </label>
-              </div>
-              <div class="onboarding-check onboarding-check-full rounded-4">
-                <input
-                  class="onboarding-check-input d-none"
-                  type="radio"
-                  name="dietary"
-                  id="experimentalist"
-                  value="experimentalist"
-                />
-                <label
-                  class="onboarding-check-label card h-100"
-                  for="experimentalist"
-                >
-                  <div class="card-body d-flex align-items-center">
-                    <img
-                      class="onboarding-dietary-img position-absolute z-1 position-absolute top-50 translate-middle"
-                      src="/MEELO/assets/dietary-4-C-JiET9s.png"
-                      alt="美食選項-料理實驗家"
-                    />
-                    <div class="ps-6t ms-16t">
-                      <h2 class="onboarding-check-title fs-18 fw-bold">
-                        料理實驗家
-                      </h2>
-                      <p class="onboarding-check-text mb-0 fs-14">
-                        自己動手做最過癮，不只是吃，還要享受料理的樂趣
-                      </p>
-                    </div>
-                  </div>
-                </label>
-              </div>
-            </form>
-          </section>
-          <!-- dietary-end -->
+        <div class="mobile-notch"></div>
+        <div id="psychological-test" style="height: calc(100% - 83px)">
           <div
-            id="rating-footer"
-            data-prev="name"
-            data-next="interest"
-            data-is-disable="false"
-          ></div>
-          <!-- holo-strart -->
-          <div class="halo halo-1"></div>
-          <div class="halo halo-2"></div>
-          <div class="halo halo-3"></div>
-          <div class="halo halo-4"></div>
-          <!-- holo-end -->
+            class="mobile-content h-100 pt-6t d-flex flex-column overflow-hidden"
+          >
+            <div class="container">
+              <div id="rating-root" data-progress="14.29"></div>
+            </div>
+            <!-- gender-start -->
+            <section
+              class="gender-content container position-sticky z-2 page-scoll-mask-t"
+            >
+              <h1 class="mt-6t mb-2 fs-3 fw-bold text-primary-default">Elly</h1>
+              <h2 class="mb-0 fs-4 fw-bold text-text-primary">你的性別是...</h2>
+            </section>
+            <section
+              class="gender-content container option-contain flex-grow-1 mb-16t"
+            >
+              <form id="genderForm" class="optionLayout row g-4t">
+                <div class="col-6">
+                  <div class="onboarding-check rounded-4">
+                    <input
+                      class="onboarding-check-input d-none"
+                      type="radio"
+                      name="gender"
+                      id="female"
+                      value="female"
+                    />
+                    <label
+                      class="onboarding-check-label card h-100"
+                      for="female"
+                    >
+                      <div class="card-body">
+                        <h3 class="onboarding-check-title fs-18 fw-bold">
+                          女性
+                        </h3>
+                        <img
+                          class="onboarding-gender-img position-absolute z-1"
+                          src="/MEELO/assets/gender-1-CHZjDBQ_.png"
+                          alt="性別選項-女性"
+                        />
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="onboarding-check rounded-4">
+                    <input
+                      class="onboarding-check-input d-none"
+                      type="radio"
+                      name="gender"
+                      id="male"
+                      value="male"
+                    />
+                    <label class="onboarding-check-label card h-100" for="male">
+                      <div class="card-body">
+                        <h3 class="onboarding-check-title fs-18 fw-bold">
+                          男性
+                        </h3>
+                        <img
+                          class="onboarding-gender-img position-absolute z-1"
+                          src="/MEELO/assets/gender-2-Kxlm625T.png"
+                          alt="性別選項-男性"
+                        />
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="onboarding-check rounded-4">
+                    <input
+                      class="onboarding-check-input d-none"
+                      type="radio"
+                      name="gender"
+                      id=" bigender"
+                      value="bigender"
+                    />
+                    <label
+                      class="onboarding-check-label card h-100"
+                      for=" bigender"
+                    >
+                      <div class="card-body">
+                        <h3 class="onboarding-check-title fs-18 fw-bold">
+                          雙性別
+                        </h3>
+                        <img
+                          class="onboarding-gender-img position-absolute z-1"
+                          src="/MEELO/assets/gender-3-WZEGvNtc.png"
+                          alt="性別選項-雙性別"
+                        />
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="onboarding-check rounded-4">
+                    <input
+                      class="onboarding-check-input d-none"
+                      type="radio"
+                      name="gender"
+                      id="agender"
+                      value="agender"
+                    />
+                    <label
+                      class="onboarding-check-label card h-100"
+                      for="agender"
+                    >
+                      <div class="card-body">
+                        <h3 class="onboarding-check-title fs-18 fw-bold">
+                          無性別
+                        </h3>
+                        <img
+                          class="onboarding-gender-img position-absolute z-1"
+                          src="/MEELO/assets/gender-1-CHZjDBQ_.png"
+                          alt="性別選項-無性別"
+                        />
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="onboarding-check rounded-4">
+                    <input
+                      class="onboarding-check-input d-none"
+                      type="radio"
+                      name="gender"
+                      id="disclose"
+                      value="disclose"
+                    />
+                    <label
+                      class="onboarding-check-label card h-100"
+                      for="disclose"
+                    >
+                      <div class="card-body">
+                        <h3 class="onboarding-check-title fs-18 fw-bold">
+                          不願透露
+                        </h3>
+                        <img
+                          class="onboarding-gender-img position-absolute z-1"
+                          src="/MEELO/assets/gender-5-Ca4mm1hL.png"
+                          alt="性別選項-不願透露"
+                        />
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </section>
+            <!-- gender-end -->
+            <!-- interest-start -->
+            <section
+              class="form-fade-default interest-content container position-sticky z-2 page-scoll-mask-t"
+            >
+              <h1 class="mt-6t mb-2 fs-4 fw-bold text-text-primary">
+                你的興趣是...
+              </h1>
+              <p class="mb-0 fs-14 text-black text-opacity-60">最多選三項</p>
+            </section>
+            <section
+              class="form-fade-default interest-content container option-contain"
+            >
+              <form id="interestForm" class="optionLayout row g-4t pb-16t">
+                <div class="col-6">
+                  <div class="onboarding-check onboarding-check-lg rounded-4">
+                    <input
+                      class="onboarding-check-input d-none"
+                      type="checkbox"
+                      name="interest"
+                      id="travel"
+                      value="travel"
+                    />
+                    <label
+                      class="onboarding-check-label card h-100"
+                      for="travel"
+                    >
+                      <div class="card-body">
+                        <h3 class="fs-18 fw-bold">旅行</h3>
+                        <p class="onboarding-check-text fs-14">探索世界各地</p>
+                        <img
+                          class="onboarding-interest-img position-absolute z-1"
+                          src="/MEELO/assets/interest-1-DHJeVs5O.png"
+                          alt="興趣選項-旅行"
+                        />
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="onboarding-check onboarding-check-lg rounded-4">
+                    <input
+                      class="onboarding-check-input d-none"
+                      type="checkbox"
+                      name="interest"
+                      id="foodie"
+                      value="foodie"
+                    />
+                    <label
+                      class="onboarding-check-label card h-100"
+                      for="foodie"
+                    >
+                      <div class="card-body">
+                        <h3 class="fs-18 fw-bold">美食</h3>
+                        <p class="onboarding-check-text fs-14">挖掘各地美味</p>
+                        <img
+                          class="onboarding-interest-img position-absolute z-1"
+                          src="/MEELO/assets/interest-2-xfHFA_65.png"
+                          alt="興趣選項-美食"
+                        />
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="onboarding-check onboarding-check-lg rounded-4">
+                    <input
+                      class="onboarding-check-input d-none"
+                      type="checkbox"
+                      name="interest"
+                      id="photograph"
+                      value="photograph"
+                    />
+                    <label
+                      class="onboarding-check-label card h-100"
+                      for="photograph"
+                    >
+                      <div class="card-body">
+                        <h3 class="fs-18 fw-bold">攝影</h3>
+                        <p class="onboarding-check-text fs-14">捕捉精彩瞬間</p>
+                        <img
+                          class="onboarding-interest-img position-absolute z-1"
+                          src="/MEELO/assets/interest-3-D9C-npQt.png"
+                          alt="興趣選項-攝影"
+                        />
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="onboarding-check onboarding-check-lg rounded-4">
+                    <input
+                      class="onboarding-check-input d-none"
+                      type="checkbox"
+                      name="interest"
+                      id="exercise"
+                      value="exercise"
+                    />
+                    <label
+                      class="onboarding-check-label card h-100"
+                      for="exercise"
+                    >
+                      <div class="card-body">
+                        <h3 class="fs-18 fw-bold">運動</h3>
+                        <p class="onboarding-check-text fs-14">
+                          一起熱血揮灑汗水
+                        </p>
+                        <img
+                          class="onboarding-interest-img position-absolute z-1"
+                          src="/MEELO/assets/interest-4-DrZ1WAGX.png"
+                          alt="興趣選項-運動"
+                        />
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="onboarding-check onboarding-check-lg rounded-4">
+                    <input
+                      class="onboarding-check-input d-none"
+                      type="checkbox"
+                      name="interest"
+                      id="music"
+                      value="music"
+                    />
+                    <label
+                      class="onboarding-check-label card h-100"
+                      for="music"
+                    >
+                      <div class="card-body">
+                        <h3 class="fs-18 fw-bold">音樂</h3>
+                        <p class="onboarding-check-text fs-14">
+                          旋律裡找到自己
+                        </p>
+                        <img
+                          class="onboarding-interest-img position-absolute z-1"
+                          src="/MEELO/assets/interest-5-BJm5f4B3.png"
+                          alt="興趣選項-音樂"
+                        />
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="onboarding-check onboarding-check-lg rounded-4">
+                    <input
+                      class="onboarding-check-input d-none"
+                      type="checkbox"
+                      name="interest"
+                      id="films-television"
+                      value="films-television"
+                    />
+                    <label
+                      class="onboarding-check-label card h-100"
+                      for="films-television"
+                    >
+                      <div class="card-body">
+                        <h3 class="fs-18 fw-bold">影視</h3>
+                        <p class="onboarding-check-text fs-14">追劇好片推薦</p>
+                        <img
+                          class="onboarding-interest-img position-absolute z-1"
+                          src="/MEELO/assets/interest-6-Dy-LEjTr.png"
+                          alt="興趣選項-影視"
+                        />
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="onboarding-check onboarding-check-lg rounded-4">
+                    <input
+                      class="onboarding-check-input d-none"
+                      type="checkbox"
+                      name="interest"
+                      id="read"
+                      value="read"
+                    />
+                    <label class="onboarding-check-label card h-100" for="read">
+                      <div class="card-body">
+                        <h3 class="fs-18 fw-bold">閱讀</h3>
+                        <p class="onboarding-check-text fs-14">
+                          在字裡尋找世界
+                        </p>
+                        <img
+                          class="onboarding-interest-img position-absolute z-1"
+                          src="/MEELO/assets/interest-7-CoKYgV6P.png"
+                          alt="興趣選項-閱讀"
+                        />
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="onboarding-check onboarding-check-lg rounded-4">
+                    <input
+                      class="onboarding-check-input d-none"
+                      type="checkbox"
+                      name="interest"
+                      id="learning"
+                      value="learning"
+                    />
+                    <label
+                      class="onboarding-check-label card h-100"
+                      for="learning"
+                    >
+                      <div class="card-body">
+                        <h3 class="fs-18 fw-bold">學習</h3>
+                        <p class="onboarding-check-text fs-14">
+                          點亮未知的旅程
+                        </p>
+                        <img
+                          class="onboarding-interest-img position-absolute z-1"
+                          src="/MEELO/assets/interest-8-DWLd2Poj.png"
+                          alt="興趣選項-學習"
+                        />
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="onboarding-check onboarding-check-lg rounded-4">
+                    <input
+                      class="onboarding-check-input d-none"
+                      type="checkbox"
+                      name="interest"
+                      id="video-games"
+                      value="video-games"
+                    />
+                    <label
+                      class="onboarding-check-label card h-100"
+                      for="video-games"
+                    >
+                      <div class="card-body">
+                        <h3 class="fs-18 fw-bold">遊戲</h3>
+                        <p class="onboarding-check-text fs-14">
+                          享受每場冒險樂趣
+                        </p>
+                        <img
+                          class="onboarding-interest-img position-absolute z-1"
+                          src="/MEELO/assets/interest-9-Dl93ctGg.png"
+                          alt="興趣選項-遊戲"
+                        />
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="onboarding-check onboarding-check-lg rounded-4">
+                    <input
+                      class="onboarding-check-input d-none"
+                      type="checkbox"
+                      name="interest"
+                      id="outdoor-activities"
+                      value="outdoor-activities"
+                    />
+                    <label
+                      class="onboarding-check-label card h-100"
+                      for="outdoor-activities"
+                    >
+                      <div class="card-body">
+                        <h3 class="fs-18 fw-bold">戶外活動</h3>
+                        <p class="onboarding-check-text fs-14">探索世界各地</p>
+                        <img
+                          class="onboarding-interest-img position-absolute z-1"
+                          src="/MEELO/assets/interest-10-BGyU58S2.png"
+                          alt="興趣選項-戶外活動"
+                        />
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </section>
+            <!-- interest-end -->
+            <!-- dietary-start -->
+            <section
+              class="form-fade-default dietary-content container position-sticky z-2 page-scoll-mask-t"
+            >
+              <h1 class="py-6t mb-0 fs-4 fw-bold text-text-primary">
+                喜歡的美食是...
+              </h1>
+            </section>
+            <section
+              class="form-fade-default dietary-content container option-contain flex-grow-1 mb-16t pt-0"
+            >
+              <form id="dietaryForm" class="dietaryLayout g-4t h-100">
+                <div class="onboarding-check onboarding-check-full rounded-4">
+                  <input
+                    class="onboarding-check-input d-none"
+                    type="radio"
+                    name="dietary"
+                    id="local"
+                    value="local"
+                  />
+                  <label class="onboarding-check-label card h-100" for="local">
+                    <div class="card-body d-flex align-items-center">
+                      <img
+                        class="onboarding-dietary-img position-absolute z-1 position-absolute top-50 translate-middle"
+                        src="/MEELO/assets/dietary-1-B3Hoev4S.png"
+                        alt="美食選項-在地靈魂派"
+                      />
+                      <div class="ps-6t ms-16t">
+                        <h2 class="onboarding-check-title fs-18 fw-bold">
+                          在地靈魂派
+                        </h2>
+                        <p class="onboarding-check-text mb-0 fs-14">
+                          鹽酥雞、牛肉麵、蚵仔煎不能少，夜市是我第二個家
+                        </p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="onboarding-check onboarding-check-full rounded-4">
+                  <input
+                    class="onboarding-check-input d-none"
+                    type="radio"
+                    name="dietary"
+                    id="exotic"
+                    value="exotic"
+                  />
+                  <label class="onboarding-check-label card h-100" for="exotic">
+                    <div class="card-body d-flex align-items-center">
+                      <img
+                        class="onboarding-dietary-img position-absolute z-1 position-absolute top-50 translate-middle"
+                        src="/MEELO/assets/dietary-2-DZ6cujEn.png"
+                        alt="美食選項-異國冒險家"
+                      />
+                      <div class="ps-6t ms-16t">
+                        <h2 class="onboarding-check-title fs-18 fw-bold">
+                          異國冒險家
+                        </h2>
+                        <p class="onboarding-check-text mb-0 fs-14">
+                          韓式炸雞、泰式綠咖哩通通愛，胃口沒有國界
+                        </p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="onboarding-check onboarding-check-full rounded-4">
+                  <input
+                    class="onboarding-check-input d-none"
+                    type="radio"
+                    name="dietary"
+                    id="ritual"
+                    value="ritual"
+                  />
+                  <label class="onboarding-check-label card h-100" for="ritual">
+                    <div class="card-body d-flex align-items-center">
+                      <img
+                        class="onboarding-dietary-img position-absolute z-1 position-absolute top-50 translate-middle"
+                        src="/MEELO/assets/dietary-3-CsgNRTW7.png"
+                        alt="美食選項-儀式感食客"
+                      />
+                      <div class="ps-6t ms-16t">
+                        <h2 class="onboarding-check-title fs-18 fw-bold">
+                          儀式感食客
+                        </h2>
+                        <p class="onboarding-check-text mb-0 fs-14">
+                          喜歡擺盤漂亮，有氛圍的早午餐或甜點店
+                        </p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="onboarding-check onboarding-check-full rounded-4">
+                  <input
+                    class="onboarding-check-input d-none"
+                    type="radio"
+                    name="dietary"
+                    id="experimentalist"
+                    value="experimentalist"
+                  />
+                  <label
+                    class="onboarding-check-label card h-100"
+                    for="experimentalist"
+                  >
+                    <div class="card-body d-flex align-items-center">
+                      <img
+                        class="onboarding-dietary-img position-absolute z-1 position-absolute top-50 translate-middle"
+                        src="/MEELO/assets/dietary-4-C-JiET9s.png"
+                        alt="美食選項-料理實驗家"
+                      />
+                      <div class="ps-6t ms-16t">
+                        <h2 class="onboarding-check-title fs-18 fw-bold">
+                          料理實驗家
+                        </h2>
+                        <p class="onboarding-check-text mb-0 fs-14">
+                          自己動手做最過癮，不只是吃，還要享受料理的樂趣
+                        </p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </form>
+            </section>
+
+            <!-- dietary-end -->
+            <div
+              id="rating-footer"
+              data-prev="name"
+              data-next="interest"
+              data-is-disable="false"
+            ></div>
+          </div>
         </div>
+        <!-- holo-strart -->
+        <div class="halo halo-1"></div>
+        <div class="halo halo-2"></div>
+        <div class="halo halo-3"></div>
+        <div class="halo halo-4"></div>
+        <!-- holo-end -->
+        <!-- character-creating-start -->
+        <div id="character-creating" class="d-none h-100">
+          <div class="mobile-content position-relative d-none">
+            <p
+              class="position-absolute z-1 character-creating-text text-center w-100 fw-bold fs-5 lh-sm"
+            >
+              你點亮的答案如訊息光點，<br />
+              正在拼湊出屬於你的角色輪廓...
+            </p>
+            <video
+              class="character-creating"
+              src="/MEELO/assets/character-creating-q7L2fuQ6.mp4"
+              autoplay
+              loop
+              muted
+              playsinline
+            ></video>
+          </div>
+        </div>
+        <!-- character-creating-end -->
       </div>
-    </main>
+    </main>
   </body>
 </html>
