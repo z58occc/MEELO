@@ -29,7 +29,7 @@ npm start
 <br>
 
 ⚙️ 使用技術\
-前端
+前端\
 React\
 Bootstrap\
 Sass\
