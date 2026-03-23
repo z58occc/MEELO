@@ -25,7 +25,7 @@ npm start
 ✨ 已切版頁面
  - [onboarding(新手引導)](https://z58occc.github.io/MEELO/onboarding/get-start.html)
  - [首頁](https://z58occc.github.io/MEELO/)
- - [抽卡頁](https://z58occc.github.io/MEELO/gacha-page.html)
+ - [抽卡頁](https://z58occc.github.io/MEELO/gacha-page.html) （以Chrome手機模式檢視,模擬滑動卡片功能）
 <br>
 
 ⚙️ 使用技術\
